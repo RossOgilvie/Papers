@@ -1,0 +1,159 @@
+%\ProvidesPackage{ross}[Local macros by Ross Ogilvie]
+
+%% Nag about syntax errors
+% \usepackage[l2tabu, orthodox]{nag}
+
+%% Common packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+% A package to help with the labelling of enumerates
+\usepackage{enumitem}
+%make lists use bracketed roman numerals
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+% For row spanning columns in tables
+\usepackage{multirow}
+
+% For plots
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta}
+
+% To make tikz pics in their own tex file, but still be able to \include them
+\usepackage{standalone}
+
+% For todo note and missing figures
+\usepackage{todonotes}
+
+% For captions beside the figure
+% \usepackage{floatrow}
+% To put the caption to the side of a figure
+\usepackage{sidecap}
+% Center the caption vertically
+\sidecaptionvpos{figure}{c}
+% To adjust the formatting of captions
+% Have "Figure 1.2" and then a newline before the caption
+\usepackage[labelsep=newline]{caption}
+
+
+
+
+% Make references into hyperlinks, but invisibly
+\usepackage[hidelinks]{hyperref}
+
+
+
+
+% NOW FOR SOME COMMANDS
+
+% Adjust the paragraph styling
+\setlength{\parskip}{2ex}
+\setlength{\parindent}{0in}
+
+%%% Set up per section numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+%Add math environs
+\newtheorem{defn}[equation]{Definition}
+\newtheorem{lem}[equation]{Lemma}
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{remark}[equation]{Remark}
+
+% Force a label on a * equation environment
+\newcommand{\labelthis}[1]{\addtocounter{equation}{1}\tag{\theequation}\label{#1}}
+
+%% A command to make figures with a caption along side
+\newcommand{\makefigure}[2]{
+\begin{SCfigure}
+\includegraphics[width=0.6\textwidth]{#2}
+\caption{#1}
+\end{SCfigure}
+}
+
+%% A command to make tikz figures from external file with a caption along side
+\newcommand{\maketikzfigure}[2]{
+\begin{SCfigure}
+\includestandalone[width=0.6\textwidth]{#2}
+\caption{#1}
+\end{SCfigure}
+}
+
+%% A command to center margin-breaking equations
+\newsavebox{\overlongequation}
+\newenvironment{longeqn}
+{\begin{displaymath}\begin{lrbox}{\overlongequation}$\displaystyle}
+{$\end{lrbox}\makebox[0pt]{\usebox{\overlongequation}}\end{displaymath}}
+
+%% Command to force alignment within align enviroments
+\newcommand{\pushright}[1]{\ifmeasuring@#1\else\omit\hfill$\displaystyle#1$\fi\ignorespaces}
+\newcommand{\pushleft}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\hfill\fi\ignorespaces}
+
+
+% make bars really mean overline, which look much better.
+\renewcommand*{\bar}{\overline}
+%useful commands
+\newcommand{\bra}[1]{\left(#1\right)}
+\newcommand{\bfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{{\left\Vert#1\right\Vert}}
+\newcommand{\iprod}[2]{\left\langle #1 , #2 \right\rangle}
+\newcommand{\Set}[2]{\left\{\; #1 \;\middle|\; #2 \;\right\}}
+\newcommand{\vt}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\cross}[4]{\left[#1,#2;\, #3, #4\right]}
+\newcommand{\cji}[1]{\overline{#1}^{-1}}
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\diffeo}{\cong}
+
+
+
+\DeclareMathOperator{\atan}{atan}
+\DeclareMathOperator{\acos}{acos}
+\DeclareMathOperator{\asin}{asin}
+\DeclareMathOperator{\atanh}{atanh}
+\DeclareMathOperator{\acosh}{acosh}
+\DeclareMathOperator{\asinh}{asinh}
+
+\DeclareMathOperator{\rem}{rem}
+\DeclareMathOperator{\Wind}{Wind}
+\DeclareMathOperator{\id}{id}
+
+% \newcommand{\aside}[1]{{\it ASIDE:} #1}
+
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator*{\img}{img}
+% \DeclareMathOperator*{\deg}{deg}
+\DeclareMathOperator*{\tr}{tr}
+\DeclareMathOperator*{\ad}{ad}
+\DeclareMathOperator*{\Ad}{Ad}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\pp}{pp.}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+
+\newcommand{\iu}{i}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RInf}{\mathbb{R}\cup\{\infty\}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\RP}{\mathbb{R}\text{P}}
+\newcommand{\CP}{\mathbb{C}\text{P}}
+\renewcommand{\P}{\mathbb{P}}
+% \newcommand{\T}{\mathbb{T}}
+\renewcommand{\S}{\mathbb{S}}
+\renewcommand{\H}{\mathbb{H}}
+% \newcommand{\M}{\mathcal{M}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\su}{\mathfrak{su}}
+\renewcommand{\sl}{\mathfrak{sl}}
