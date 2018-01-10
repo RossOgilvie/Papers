@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: titlepage.aux
+A level-1 auxiliary file: frontmatter.aux
+A level-1 auxiliary file: preliminaries.aux
+A level-1 auxiliary file: deform_lemma.aux
+A level-1 auxiliary file: genus_zero.aux
+A level-1 auxiliary file: genus_one.aux
+A level-1 auxiliary file: moduli_boundary.aux
+A level-1 auxiliary file: glossary.aux
+A level-1 auxiliary file: elliptic_integral.aux
+The style file: thesis.bst
+Database file #1: zotero.bib
+Warning--I didn't find a database entry for "Almgren1966"
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Warning--empty journal in Kilian2008
+Warning--missing publisher in Miranda1995
+You've used 36 entries,
+            3143 wiz_defined-function locations,
+            902 strings with 10289 characters,
+and the built_in function-call counts, 24893 in all, are:
+= -- 2505
+> -- 538
+< -- 18
++ -- 176
+- -- 167
+* -- 1726
+:= -- 2936
+add.period$ -- 113
+call.type$ -- 36
+change.case$ -- 202
+chr.to.int$ -- 36
+cite$ -- 38
+duplicate$ -- 2478
+empty$ -- 2013
+format.name$ -- 239
+if$ -- 5069
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 302
+newline$ -- 185
+num.names$ -- 108
+pop$ -- 988
+preamble$ -- 1
+purify$ -- 241
+quote$ -- 0
+skip$ -- 463
+stack$ -- 0
+substring$ -- 2647
+swap$ -- 723
+text.length$ -- 18
+text.prefix$ -- 16
+top$ -- 0
+type$ -- 260
+warning$ -- 2
+while$ -- 210
+width$ -- 41
+write$ -- 397
+(There were 3 warnings)
