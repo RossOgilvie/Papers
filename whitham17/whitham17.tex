@@ -9,7 +9,7 @@
 \maketitle
 
 \begin{abstract}
-In this paper we investigate the space of harmonic maps from a 2-torus to $\S^3$ using the spectral curve correspondence and Whitham deformations. In an open and dense subset of a parameter space we find that the space of harmonic maps is smooth and has dimension two. We also show the points that correspond to minimal tori (conformal harmonic maps) are either smooth points of dimension two or singular.
+In this paper we investigate the space of harmonic maps from a 2-torus to $\S^3$ using the spectral curve correspondence and Whitham deformations. In an open and dense subset of a parameter space we find that the space of harmonic maps is smooth and has dimension two. We also show that the points that correspond to minimal tori (conformal harmonic maps) are either smooth points of dimension two or singular.
 \end{abstract}
 
 \section{Introduction}
@@ -181,9 +181,9 @@ Consider a smooth family of hyperelliptic curves $\Sigma(t)$ and
 a smooth family of meromorphic functions $f(t)$, for $t\in(-\epsilon,\epsilon)$.
 Fix a point $p\in\Sigma(0)$ that lies over $\beta \in \CP^1$.
 
-Suppose $p$ is a not ramification point. If $f(t)$ is holomorphic for every $t$ then $\dot{f}$ is holomorphic. If ${(\zeta - \beta)}^n f(t)$ is holomorphic for every $t$ then $\dot{f}$ has a pole of at most order $n$ at $p$. 
+Suppose $p$ is a not ramification point. If $f(t)$ is holomorphic for every $t$ then $\dot{f}$ is holomorphic. If ${(\zeta - \beta)}^n f(t)$ is holomorphic for every $t$ then $\dot{f}$ may have a pole of at most order $n$ at $p$. 
 
-Suppose that $p$ is a ramification point. If $f(t)$ is holomorphic for every $t$ then $\dot{f}$ is may have at worst a simple pole at $p$.
+Suppose that $p$ is a ramification point. If $f(t)$ is holomorphic for every $t$ then $\dot{f}$ may have at worst a simple pole at $p$.
 %  If ${(\zeta - \beta)}^n f(t)$ is holomorphic for every $t$ then $\dot{f}$ has a pole of at most order $2n+1$ at $p$.
 
 \begin{proof}
@@ -361,7 +361,7 @@ FF^1G\tilde{b}^1 FF^2\tilde{c}^2 - FF^2G\tilde{b}^2 FF^1\tilde{c}^1 &= FG\tilde{
 \labelthis{eqn:Q reduced}
 \end{align*}
 
-To recap, any tangent vector $(\dot P, \dot b^1, \dot b^2)$ to $\mathcal{M}_g$ must satisfy~\eqref{eqn:residueTangent}. They give rise to a pair of polynomials $(c^1,c^2)\in\mathcal{P}^{g+1}_\R \times \mathcal{P}^{g+1}_\R$ through~\eqref{eqn:EMPDi}. The polynomials $(c^1,c^2)$ must themselves factorise as per~\eqref{eqn:def c Q tilde} and satisfy~\eqref{eqn:Q reduced} for some real polynomial $\tilde{Q}$ of degree at most $2$. These are necessary and sufficient conditions for a triple of polynomials to be a tangent vector to $\mathcal{M}_g$. Under various additional assumptions, Lemmata~\ref{lem:tangent generic},~\ref{lem:tangent G}, and~\ref{lem:tangent conformal} find all solutions to these equations.
+To recap, any tangent vector $(\dot P, \dot b^1, \dot b^2)$ to $\mathcal{M}_g$ must satisfy~\eqref{eqn:residueTangent}. Each tangent vector gives rise to a pair of polynomials $(c^1,c^2)\in\mathcal{P}^{g+1}_\R \times \mathcal{P}^{g+1}_\R$ through~\eqref{eqn:EMPDi}. The polynomials $(c^1,c^2)$ must themselves factorise as per~\eqref{eqn:def c Q tilde} and satisfy~\eqref{eqn:Q reduced} for some real polynomial $\tilde{Q}$ of degree at most $2$. These are necessary and sufficient conditions for a triple of polynomials to be a tangent vector to $\mathcal{M}_g$. Under various additional assumptions, Lemmata~\ref{lem:tangent generic},~\ref{lem:tangent G}, and~\ref{lem:tangent conformal} find all solutions to these equations.
 
 
 
@@ -882,7 +882,7 @@ The point $p$ of $\mathcal{M}_g \cap \mathcal{V}$ falls under either Lemma~\ref{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conformal}\label{sec:conformal}
+\section{Conformal Harmonic Maps}\label{sec:conformal}
 
 From equation~\eqref{eqn:EMPDi all factors} onwards, we made the assumption that the spectral triple came from a nonconformal harmonic map. However, conformal harmonic maps are of particular interest because they are minimal immersions. We show in this section, under mild assumptions, that the points of $\mathcal{M}_g$ corresponding to conformal maps are also smooth points of dimension two. 
 
@@ -990,7 +990,7 @@ From this Lemma there is a result analogous to Theorem~\ref{thm:moduli manifold}
 The points of $\mathcal{M}_g \cap \mathcal{U}_{e}$, corresponding to conformal harmonic maps, are smooth points of $\mathcal{M}_g$ of dimension two.
 
 \begin{proof}
-The proof of this theorem is entirely similar to Theorem~\ref{thm:moduli manifold}. 
+Is entirely similar to Theorem~\ref{thm:moduli manifold}. 
 % At such a point $p\in\mathcal{M}_g \cap \mathcal{U}_{e}$ we have that $P(0) = 0$ and $\gcd(b^1,b^2)=\zeta$. Take a simply connected open neighbourhood $\mathcal{V}\subset \mathcal{U}$ of $p$ as before. We may use the same definition of $\Psi$, equation~\eqref{eqn:def Psi}, and by the implicit function theorem and Lemma~\ref{lem:tangent conformal} it follows that $p$ is also a smooth point of $\mathcal{M}_g$.
 \end{proof}
 \end{thm}
