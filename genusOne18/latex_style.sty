@@ -15,21 +15,15 @@
 \renewcommand{\labelenumi}{(\roman{enumi})}
 
 % For row spanning columns in tables
-\usepackage{multirow}
+% \usepackage{multirow}
 
 % For plots
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usetikzlibrary{arrows.meta}
 
-% To make tikz pics in their own tex file, but still be able to \include them
-\usepackage{standalone}
-
 % For commutative diagrams
 \usepackage[heads=littlevee]{diagrams}
-
-% For todo note and missing figures
-\usepackage{todonotes}
 
 % For captions beside the figure
 % \usepackage{floatrow}
@@ -41,6 +35,14 @@
 % Have "Figure 1.2" and then a newline before the caption
 \usepackage[labelsep=newline]{caption}
 
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% % reset header and footer to blank
+% \fancyhf{}
+% \renewcommand{\headrulewidth}{0pt}
+% % add page number and date in footer
+% \fancyfoot[CF]{\thepage}
+% \fancyfoot[RF]{\today}
 
 
 
@@ -71,30 +73,30 @@
 \newcommand{\labelthis}[1]{\addtocounter{equation}{1}\tag{\theequation}\label{#1}}
 
 %% A command to make figures with a caption along side
-\newcommand{\makefigure}[2]{
-\begin{SCfigure}
-\includegraphics[width=0.6\textwidth]{#2}
-\caption{#1}
-\end{SCfigure}
-}
+% \newcommand{\makefigure}[2]{
+% \begin{SCfigure}
+% \includegraphics[width=0.6\textwidth]{#2}
+% \caption{#1}
+% \end{SCfigure}
+% }
 
 %% A command to make tikz figures from external file with a caption along side
-\newcommand{\maketikzfigure}[2]{
-\begin{SCfigure}
-\includestandalone[width=0.6\textwidth]{#2}
-\caption{#1}
-\end{SCfigure}
-}
+% \newcommand{\maketikzfigure}[2]{
+% \begin{SCfigure}
+% \includestandalone[width=0.6\textwidth]{#2}
+% \caption{#1}
+% \end{SCfigure}
+% }
 
 %% A command to center margin-breaking equations
-\newsavebox{\overlongequation}
-\newenvironment{longeqn}
-{\begin{displaymath}\begin{lrbox}{\overlongequation}$\displaystyle}
-{$\end{lrbox}\makebox[0pt]{\usebox{\overlongequation}}\end{displaymath}}
+% \newsavebox{\overlongequation}
+% \newenvironment{longeqn}
+% {\begin{displaymath}\begin{lrbox}{\overlongequation}$\displaystyle}
+% {$\end{lrbox}\makebox[0pt]{\usebox{\overlongequation}}\end{displaymath}}
 
 %% Command to force alignment within align enviroments
-\newcommand{\pushright}[1]{\ifmeasuring@#1\else\omit\hfill$\displaystyle#1$\fi\ignorespaces}
-\newcommand{\pushleft}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\hfill\fi\ignorespaces}
+% \newcommand{\pushright}[1]{\ifmeasuring@#1\else\omit\hfill$\displaystyle#1$\fi\ignorespaces}
+% \newcommand{\pushleft}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\hfill\fi\ignorespaces}
 
 
 % make bars really mean overline, which look much better.

@@ -1,56 +1,31 @@
-% \documentclass[draft]{article}
 \documentclass{article}
 
 \usepackage{latex_style}
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-% reset header and footer to blank
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-% add page number and date in footer
-\fancyfoot[CF]{\thepage}
-\fancyfoot[RF]{\today}
-
 \begin{document}
 \title{Harmonic Tori in $\S^3$ with Low Genus Spectral Curves}
 \author{Emma Carberry and Ross Ogilvie}
-\date{}
 \maketitle
 
 \begin{abstract}
-% TODO
-Main Results
-What's the significance (eg getting topological structure), where in maths, hit some buzzwords
+In this paper we give explicit descriptions of the moduli space of harmonic tori in $\S^3$ with spectral curves of genus zero or one. 
+The former is simply a disc. We enumerate the path connected components of the latter and show that they are either `helicoids' or annuli, and that they densely foliate the parameter space.
+By using elliptic integrals to construct the spectral data we are able to give explicit formulae at every stage.
+This work fits within the integrable systems and Whitham deformation approaches to non-conformal harmonic (and constant mean curvature) maps. 
+% It aims to provide a concrete model to investigate hypotheses for higher spectral genus cases.
+Homogeneous harmonic tori (spectral genus zero) and the Gauss maps of Delaunay cylinders are used as illustrative examples.
 \end{abstract}
 
 \section{Introduction}\label{sec:Introduction}
 
-For every harmonic map from a 2-torus to $\S^3$, the spectral curve correspondence assigns each a hyperelliptic curve called a spectral curve~\cite{Hitchin1990}. This curve has further properties including marked points, differentials of the second kind, and a line bundle. The genus of the spectral curve is a natural invariant.
-In this paper we give explicit descriptions of the moduli space of harmonic tori in $\S^3$ with spectral curves of genus zero or one. 
+In this paper we give explicit descriptions of the moduli space of non-conformal harmonic maps from $\mathbb{T}^2$ to $\S^3$ with spectral curves of genus zero or one. Spectral curves arise from the correspondence between a harmonic map and a hyperelliptic curve with certain properties, as described in~\cite{Hitchin1990}. The properties of these spectral curves include marked points, differentials of the second kind, and a line bundle. The genus of the spectral curve is a natural invariant of the harmonic map.
 It was already known that the space of spectral curves of genus zero is an open disc.
-For spectral curves of genus one, we are able to enumerate the path connected components and show that they are either $(0,1)\times\R$ or annuli. In particular we construct adapted coordinates on a natural parameter space and show that the space of spectral curves resemble families of helicoids or discs (in the two cases respectively) dense in the parameter space.
+For spectral curves of genus one, we are able to enumerate the path connected components and show that they are two-dimensional surfaces, either simply connected or annuli. In particular we construct adapted coordinates on a natural parameter space and show that the space of spectral curves resemble families of helicoids or punctured discs (in the two cases respectively) dense in the parameter space.
 
-Our investigation was motivated by~\cite{Kilian2015a}, which examines tori with constant mean curvature (CMC) in $\S^3$. Harmonic surfaces are closely related to CMC surfaces, for example both have similar spectral correspondences. In that paper, it is established that CMC tori with spectral curves of genus zero or one come in one-dimensional families.
+Our investigation was motivated by~\cite{Kilian2015}, which examines tori with constant mean curvature (CMC) in $\S^3$. Harmonic surfaces are closely related to CMC surfaces; both have similar spectral correspondences. In that paper, it is established that CMC tori with spectral curves of genus zero or one come in one-dimensional families.
 In contrast, for harmonic tori it is known that generically the moduli space is two-dimensional~\cite{Carberry2019} (and in particular the spaces of spectral curves with genus zero, one, and two are smooth surfaces) and so there is a broader range of possibilities for the topology of the space and how it is embedded within the space of hyperelliptic curves.
 
-global hard. density papers. \cite{Carberry2016a}\cite{Carberry2016}
-
-local = deformation. Loop group and Whitham
-
-other cmc papers \cite{Hauswirth2016}
-
-isospectral deformations and pde stuff. bridge \cite{Kilian2010}. \cite{Flaschka1980}\cite{Krichever1995}
-
-Willmore?
-
-expository papers \cite{McIntosh2008}\cite{Carberry2013a}
-
-classics \cite{Pinkall1989}\cite{Bobenko1991}
-
-TODO: Fix latex in references.
-
-It is possible to give a good illustration, using cross-sections, of the topology of the space $\mathcal{S}$ of spectral curves of genus one. In our context, there is a natural parameter space of curves in which $\mathcal{S}$ lives, but it is not simply connected. We will construct coordinate charts on the universal cover of the parameter space of the form
+It is possible to give a good illustration using cross-sections of the topology of the space $\mathcal{S}$ of spectral curves of genus one. In our context, there is a natural parameter space of curves in which $\mathcal{S}$ lives, but it is not simply connected. We will construct coordinate charts on the universal cover of the parameter space of the form
 \[
 \left\{ \bra{p,q,k,\tilde{X}} \in I \times \R \times (0,1) \times \R \right\},
 \]
@@ -63,100 +38,103 @@ The group of covering transformations is generated by $\tilde{\lambda}$ which ac
 \]
 % Thus $\tilde{\lambda}$ maps $\mathcal{\tilde{A}}(p,q)$ to $\mathcal{\tilde{A}}(p,q + p-1)$. 
 % If $p$ and $q$ are rational, so too is $q + (p-1)$ and hence the group $\mathcal{G} = \Z\langle \tilde{\lambda}\rangle$ of covering transformations restricts to give a group action on the preimage of the space of spectral curves.
-
-The situation can be represented diagrammatically in Figure~\ref{fig:level set quotient}. We should fix $p\in\Q^+$ and as $k$ is fixed by the group action, let us take a cross section $(q,\tilde{X}) \in \R^2$. When we quotient the universal cover by $\langle\tilde{\lambda}\rangle$ the $(q,\tilde{X})$ becomes a cylinder foliated by helices (for $p\neq 1$). Were we to allow $k$ to vary then the cylinder should be imagined as a solid cylinder with the center axis removed and the helices extend to `helicoids'. (The quotations marks are because these are not helicoids in a strict geometric sense of being a ruled surface with constant pitch. None-the-less this term conveys the correct image of the situation.) The `helicoids' where $q$ is rational correspond to spectral curves. These are plotted in the natural coordinates of the parameter space in Figure~\ref{fig:p05 plot}.
+Both $p\in\Q^+$ and $k$ are unchanged by the group action, so let us take a cross section $(q,\tilde{X}) \in \R^2$, shown in Figure~\ref{fig:level set quotient}. When we quotient the universal cover by $\langle\tilde{\lambda}\rangle$, for $p\neq1$ the $(q,\tilde{X})-$plane becomes a cylinder foliated by helices $q=\text{const}$. If we to allow $k$ to vary, imagine the cylinder instead as a solid cylinder with the center axis removed. The helices extend to `helicoids' (not helicoids in a strict geometric sense of being a ruled surface with constant pitch, but in a looser sense.) The `helicoids' where $q$ is rational correspond to spectral curves. These are plotted in the natural coordinates of the parameter space in Figure~\ref{fig:p05 plot}.
 
 \begin{figure}
     % \includestandalone[width=\textwidth]{tikz/universal_quotient}
-    \begin{tikzpicture}
-        \clip (-3.5,-3.5) rectangle (11.5,3.5);
-        
-        % \draw[color=gray,step=1.0,dotted] (-3.3,-3.3) grid (3.3,3.3);
-        
-        \draw[->] (-3.3,-3.3)--(3.3,3.3) node[below=3pt]{$q$};
-        \draw[->] (3.3,-3.3)--(-3.3,3.3) node[below=3pt]{$\tilde{X}$};
-        \draw[->,color=blue] (0,0)--(0,2) node[right]{$\tilde{\lambda}$};
-        
-        % \draw[->] (0,0.7) arc (90:135:0.7) node[above=3pt]{$\theta$};
-        
-        \foreach \x in {1,...,12}
-            \draw[color=gray, thin] (-3.3, 3.3-0.5*\x) -- (3.3-0.5*\x, -3.3);
-        \foreach \x in {1,...,12}
-            \draw[color=gray, thin] (-3.3+0.5*\x, 3.3) -- (3.3, -3.3+0.5*\x);
-        
-        \draw (5,0) ellipse (0.5 and 1);
-        \draw[->,color=blue] (7.85,0)--(7.85,0.01) node[right]{$\tilde{\lambda}$};
-        \draw[color=blue] (7.5,1) arc (40:-40:1.56);
-        \draw (10,1) arc (60:-60:1.1547);
-        \draw (5,1) -- (10,1);
-        \draw (5,-1) -- (10,-1);
-        
-        
-        \draw[color=gray, thin] (6.9,-1) arc (15:67:2.75);
-        \draw[color=gray, thin] (6.5,-1) arc (15:55:2.75);
-        \draw[color=gray, thin] (6.1,-1) arc (15:42:2.75);
-        \draw[color=gray, thin] (5.7,-1) arc (15:29:2.75);
-        \foreach \x in {0,...,6}
-        \draw[color=gray, thin] (5.2+0.4*\x,1) arc (80:15:2.75);
-        \draw[color=gray, thin] (8,1) arc (80:17:2.75);
-        \draw[color=gray, thin] (8.4,1) arc (80:24.5:2.75);
-        \draw[color=gray, thin] (8.8,1) arc (80:35:2.75);
-        \draw[color=gray, thin] (9.2,1) arc (80:50:2.75);
-        \draw[color=gray, thin] (9.6,1) arc (80:65:2.75);
-        
-        % \fill (2.6,2.3) circle (0.05) node[left,color=blue]{$0$} node[right,color=black]{$z_0$};
-        % \fill (-2.6,2.4) circle (0.05) node[left, color=blue]{$\infty$} node[right,color=black]{$-\bar{z}_0$};
-        %
-        % \fill (0,2) circle (0.05) node[left]{$f(1)$};
-        % \fill (0,-2.4) circle (0.05) node[left]{$f(-1)$};
-        %
-        % \fill (0,0) circle (0.05) node[above=5pt, right, color=blue]{$\mu$} node[below=8.5pt, left,color=black]{$0$};
-        % \fill (1,0) circle (0.05) node[above, color=blue]{$\alpha$} node[below=1.7pt,color=black]{$1$};
-        % \fill (2.1,0) circle (0.05) node[above, color=blue]{$\beta$} node[below,color=black]{$k^{-1}$};
-        % \fill (-1,0) circle (0.05) node[above, color=blue]{$\bar{\alpha}^{-1}$} node[below=1.7pt,color=black]{$-1$};
-        % \fill (-2.1,0) circle (0.05) node[above, color=blue]{$\bar{\beta}^{-1}$} node[below,color=black]{$-k^{-1}$};
-        
-        \end{tikzpicture}
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}
+    \clip (-3.5,-3.5) rectangle (11.5,3.5);
+    
+    % \draw[color=gray,step=1.0,dotted] (-3.3,-3.3) grid (3.3,3.3);
+    
+    \draw[->] (-3.3,-3.3)--(3.3,3.3) node[below=3pt]{$q$};
+    \draw[->] (3.3,-3.3)--(-3.3,3.3) node[below=3pt]{$\tilde{X}$};
+    \draw[->,color=blue] (0,0)--(0,2) node[right]{$\tilde{\lambda}$};
+    
+    % \draw[->] (0,0.7) arc (90:135:0.7) node[above=3pt]{$\theta$};
+    
+    \foreach \x in {1,...,12}
+        \draw[color=gray, thin] (-3.3, 3.3-0.5*\x) -- (3.3-0.5*\x, -3.3);
+    \foreach \x in {1,...,12}
+        \draw[color=gray, thin] (-3.3+0.5*\x, 3.3) -- (3.3, -3.3+0.5*\x);
+    
+    \draw (5,0) ellipse (0.5 and 1);
+    \draw[->,color=blue] (7.85,0)--(7.85,0.01) node[right]{$\tilde{\lambda}$};
+    \draw[color=blue] (7.5,1) arc (40:-40:1.56);
+    \draw (10,1) arc (60:-60:1.1547);
+    \draw (5,1) -- (10,1);
+    \draw (5,-1) -- (10,-1);
+    
+    
+    \draw[color=gray, thin] (6.9,-1) arc (15:67:2.75);
+    \draw[color=gray, thin] (6.5,-1) arc (15:55:2.75);
+    \draw[color=gray, thin] (6.1,-1) arc (15:42:2.75);
+    \draw[color=gray, thin] (5.7,-1) arc (15:29:2.75);
+    \foreach \x in {0,...,6}
+    \draw[color=gray, thin] (5.2+0.4*\x,1) arc (80:15:2.75);
+    \draw[color=gray, thin] (8,1) arc (80:17:2.75);
+    \draw[color=gray, thin] (8.4,1) arc (80:24.5:2.75);
+    \draw[color=gray, thin] (8.8,1) arc (80:35:2.75);
+    \draw[color=gray, thin] (9.2,1) arc (80:50:2.75);
+    \draw[color=gray, thin] (9.6,1) arc (80:65:2.75);
+    
+    % \fill (2.6,2.3) circle (0.05) node[left,color=blue]{$0$} node[right,color=black]{$z_0$};
+    % \fill (-2.6,2.4) circle (0.05) node[left, color=blue]{$\infty$} node[right,color=black]{$-\bar{z}_0$};
+    %
+    % \fill (0,2) circle (0.05) node[left]{$f(1)$};
+    % \fill (0,-2.4) circle (0.05) node[left]{$f(-1)$};
+    %
+    % \fill (0,0) circle (0.05) node[above=5pt, right, color=blue]{$\mu$} node[below=8.5pt, left,color=black]{$0$};
+    % \fill (1,0) circle (0.05) node[above, color=blue]{$\alpha$} node[below=1.7pt,color=black]{$1$};
+    % \fill (2.1,0) circle (0.05) node[above, color=blue]{$\beta$} node[below,color=black]{$k^{-1}$};
+    % \fill (-1,0) circle (0.05) node[above, color=blue]{$\bar{\alpha}^{-1}$} node[below=1.7pt,color=black]{$-1$};
+    % \fill (-2.1,0) circle (0.05) node[above, color=blue]{$\bar{\beta}^{-1}$} node[below,color=black]{$-k^{-1}$};
+    
+\end{tikzpicture}
+}
     \caption{On the left, a cross-section of the universal cover of the parameter space where $p$ and $k$ have been fixed. The translation $\tilde{\lambda}$ is in blue. The grey lines are the lines of constant $q$.\\
     On the right, the result of taking the quotient by $\langle \tilde{\lambda}\rangle$. The plane has been rolled into a cylinder, and the level sets are now helices.\label{fig:level set quotient}}
 \end{figure}
 \begin{figure}
     % \includestandalone[width=\textwidth]{tikz/universal_quotient}
-    \begin{tikzpicture}
-        \clip (-3.5,-3.5) rectangle (11.5,3.5);
-        
-        % PLANE ON LEFT
-        \draw[->] (-3.3,0)--(3.3,0) node[below=3pt]{$q$};
-        \draw[->] (0,-3.3)--(0,3.3) node[right=3pt]{$\tilde{X}$};
-        \draw[->,color=blue] (0,0)--(0,2) node[right=3pt]{$\tilde{\lambda}$};
-        
-        \foreach \x in {0,...,12}
-            \draw[color=gray, thin] (-3+0.5*\x,-3) -- (-3+0.5*\x,3);
-        
-        % CYLINDER ON RIGHT
-        \draw (5,0) ellipse (0.5 and 1);
-        \draw (5,1) -- (10,1);
-        \draw (5,-1) -- (10,-1);
-        \draw (10,-1) arc (-90:90:0.5 and 1);
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}
+    \clip (-3.5,-3.5) rectangle (11.5,3.5);
+    
+    % PLANE ON LEFT
+    \draw[->] (-3.3,0)--(3.3,0) node[below=3pt]{$q$};
+    \draw[->] (0,-3.3)--(0,3.3) node[right=3pt]{$\tilde{X}$};
+    \draw[->,color=blue] (0,0)--(0,2) node[right=3pt]{$\tilde{\lambda}$};
+    
+    \foreach \x in {0,...,12}
+        \draw[color=gray, thin] (-3+0.5*\x,-3) -- (-3+0.5*\x,3);
+    
+    % CYLINDER ON RIGHT
+    \draw (5,0) ellipse (0.5 and 1);
+    \draw (5,1) -- (10,1);
+    \draw (5,-1) -- (10,-1);
+    \draw (10,-1) arc (-90:90:0.5 and 1);
 
-        \draw[->,color=blue] (7.5,-1) arc (-90:0:0.5 and 1) node[right]{$\tilde{\lambda}$};
-        \draw[color=blue] (8,0) arc (0:90:0.5 and 1);
-        
-        \foreach \x in {0,...,11}
-            \draw[color=gray, thin] (5.2+0.4*\x,-1) arc (-90:90:0.5 and 1);
-        \end{tikzpicture}
+    \draw[->,color=blue] (7.5,-1) arc (-90:0:0.5 and 1) node[right]{$\tilde{\lambda}$};
+    \draw[color=blue] (8,0) arc (0:90:0.5 and 1);
+    
+    \foreach \x in {0,...,11}
+        \draw[color=gray, thin] (5.2+0.4*\x,-1) arc (-90:90:0.5 and 1);
+    \end{tikzpicture}
+}
     
     \caption{When $p=1$, the translation $\tilde{\lambda}$ fixes $q$. When taking the quotient, these level sets become circles.\label{fig:level set quotient p1}}
 \end{figure}
 
-One can understand the role of $p$ as determining the angle between the translation $\tilde{\lambda}$ and the coordinate axes. The translation always increases $\tilde{X}$ by $\pi$. But it increases $q$ by $p-1$. As $p$ tends to $1$, the translation aligns more closely with the $q$-axis. And when $p=1$ we have the cross-section diagram in Figure~\ref{fig:level set quotient p1} or the full plot in~\ref{fig:p1 plot}. In this case the lines of constant $q$ are in the direction of translation and close up into circles under the group action. This exceptional case $p=1$ is the transition from left-handed to right-handed `helicoids'.
+One can understand the role of $p$ as determining the angle between the translation $\tilde{\lambda}$ and the coordinate axes. As $p$ tends to $1$, the translation aligns more closely with the $q$-axis. When $p=1$ lines of constant $q$ are in the direction of translation and close up into circles under the group action. We think of this exceptional case $p=1$ as the transition from left-handed to right-handed `helicoids'. The cross-section diagram is shown in Figure~\ref{fig:level set quotient p1} or in full in Figure~\ref{fig:p1 plot}.
 
-More properly, in Theorem~\ref{thm:topology_curves} we have that the cross-section of the parameter space with $p\neq 1$ constant is diffeomorphic to 
+A precise statement of our results is thus. In Theorem~\ref{thm:topology_curves} we have that the subset of the parameter space with $p\neq 1$ constant is diffeomorphic to 
 \[
 \left\{ \bra{[q],k,\tilde{X}} \in \R/(p-1)\Z \times (0,1) \times \R \right\}.
 \]
-The subset where $[q] \in \Q/(p-1)\Z$ are the spectral curve. This is a union of `helicoids'.
-For $p=1$, by contrast, Theorem~\ref{thm:topology_curves_p1} shows that the cross-section is 
+The points where $[q] \in \Q/(p-1)\Z$ correspond to spectral curves. This is a union of `helicoids'.
+For $p=1$, by contrast, Theorem~\ref{thm:topology_curves_p1} shows that the subset is 
 \[
 \left\{ \bra{q,k,\left[\tilde{X}\right]} \in \R \times (0,1) \times \R/\pi\Z \right\}.
 \]
@@ -167,37 +145,24 @@ This time the spectral curves are the subset where $q\in\Q$ and is a union of an
 
 
 
+Although there is a `classification' of harmonic and CMC maps given by~\cite{Hitchin1990,Pinkall1989,Bobenko1991} in terms of algebraic curves, there remains many outstanding questions. Broadly speaking, local questions ask whether it is possible to deform a map while preserving its character (i.e.~harmonic, CMC, Willmore). The idea of spectral curves arose in the study of classical PDE systems, such as KdV, and the spectrum of their operators~\cite{Flaschka1980,Krichever1995}. \emph{Linearisations} of the differential equation, also known as \emph{isospectral} deformations, are understood in the correspondence as changing the line bundle without changing the spectral curve. More recent work, for example~\cite{Kilian2010} and~\cite{Carberry2019}, use Whitham deformations, which allow for the spectral curve and differentials to vary as well. Such results often establish the existence of smooth components in the moduli space and compute the dimension.
+On the other hand, global results typically seek to show that spectral curves are dense in some parameter space, for example~\cite{Carberry2016a,Carberry2016}.
+Our results here blend this distinction, showing explicitly that the space of harmonic maps is two-dimensional but also that it densely foliates the space of hyperelliptic curves.
+Reader wishing for more details about the spectral curve correspondence may wish to consult the expository papers~\cite{McIntosh2008} and~\cite{Carberry2013a}.
 
+The results of this paper indicate at least two interesting avenues for further investigation. Most obviously, one could attempt this programme for higher genus spectral curves using theta functions and a braid space, though one would probably have to limit oneself to non-singular spectral curves. This is due to what we see in Figures~\ref{fig:p05 plot}--\ref{fig:p1 plot}, that the space of spectral curves has peculiar behaviour near a singular curve; it spirals and the different path components converge to a single point. It is unclear whether this is particular to this low genus case or typical of the space of spectral curves generally.
 
+On the other hand, in a suitable limit spectral curves accumulate a singularity (different to the type of singularity in the previous paragraph) and can be normalised to lower genus curve. This has been carried out for CMC tori in $\S^3$ with spectral genus one in~\cite{Kilian2015}, and in general for spectral data with only one differential in~\cite{Hauswirth2017arxiv}. The formulae in this paper allow one to observe the differentials during this procedure and to begin to connect together the spaces of spectral curves with different genera. The preliminaries of this process is covered in~\cite[Section~4.2]{Ogilvie2017}. 
 
-
-
-
-
-
-
-
-
-The results of this paper indicate at least two interesting avenues for further investigation. Most obviously, one could attempt this programme for higher genus spectral curves using theta functions and a more complicated covering space, though one would probably have to limit oneself to non-singular spectral curves. This is due to what we see in Figures~\ref{fig:p05 plot}--\ref{fig:p1 plot}, that the space of spectral curves has peculiar behaviour near a singular curve; it spirals and the different path components converge to a single point. It is unclear whether this is particular to this low genus case or typical of the space of spectral curves generally.
-
-On the other hand, the results of this paper also serve as an explicit model of phenomena of spectral curves `dropping' genus. In a suitable limit, spectral curves of genus one accumulate a singularity (different to the type of singularity in the previous paragraph) and can be normalised to genus zero curve. The formulae in this paper allow one to observe the differentials during this procedure and to begin to connect the strata (different genera) of the space of spectral curves together. The preliminaries of this process is covered in~\cite[Section~4.2]{Ogilvie2017}. This has been carried out for CMC tori in $\S^3$ with spectral genus zero and one in~\cite{Kilian2015a}, and in general for spectral data with only one differential in~\cite{Hauswirth2017}.
-
-We now give a section-by-section outline of the paper. Section~\ref{sec:Genus Zero} deals with harmonic maps whose spectral curve have genus zero. This case was already well-understood, but we use it as an introduction to spectral data. Starting with explicit formulae of the harmonic maps, we walk through the construction of the spectral data.  using a family of flat connections~\eqref{eqn:flat connection translation} and their holonomy.
+We now give a section-by-section outline of the paper. Section~\ref{sec:Genus Zero} deals with harmonic maps whose spectral curve have genus zero. This case was already well-understood, but we use it as an introduction to spectral data. Starting with explicit formulae of the harmonic maps, we walk through the construction of the spectral data using a family of flat connections~\eqref{eqn:flat connection translation} and their holonomy.
 We also discuss how the geometry of a harmonic map is altered as one varies its spectral data.
 
-The main section of the paper is Section~\ref{sec:Genus One}. In this section we begin with a parameter space for genus one hyperelliptic curves and then successively impose conditions that a curve must satisfy to be a spectral curve. This results in explicit forms for the spectral data in terms of inverse elliptic functions.
+The main section of the paper is Section~\ref{sec:Genus One}. In this section we begin with a parameter space for genus one hyperelliptic curves and then successively impose conditions that a curve must satisfy to be a spectral curve. This gives explicit forms for the spectral data in terms of inverse elliptic functions.
 The section culminates in Theorems~\ref{thm:topology_curves} and~\ref{thm:topology_curves_p1} which describe the topology of the space of genus one spectral curves, enumerates the the path connected components, and shows that they are dense in the space of hyperelliptic curves.
 
 The final section takes a symmetry used in Lemma~\ref{lem:T_graph} and generalises it to spectral curves of any genus. We compare how this symmetry acts for genus zero and for genus one. In the latter case, we connect this to the Gauss maps of Delaunay cylinders.
 
-
-
-TODO acknowledgements
-The authors would like to thank Prof John Rice for his thoughts as the material was developed. 
-The second author also wishes to thank Dr Prof Martin Schmidt for 
-
-
-
+% The authors would like to thank Prof John Rice for his thoughts as the material was developed. The second author also wishes to thank Dr Prof Martin Schmidt for discussions 
 
 We close the introduction with a summary of a theorem of Hitchin~\cite[Theorem~8.1]{Hitchin1990}. This provides a total characterisation of spectral data of a harmonic tori in $\S^3$. We therefore search for spectral curves within the space of hyperelliptic curves by examining whether a curve can satisfy all of these conditions.
 
@@ -211,7 +176,7 @@ A tuple $(\Sigma,\Theta^1,\Theta^2,E)$ consisting of an algebraic curve $\Sigma$
 \item\label{P:symmetry} Symmetry: The differentials satisfy $\sigma^* \Theta = - \Theta$.
 \item\label{P:reality} Reality: The differentials satisfy $\rho^* \Theta = - \bar{\Theta}$.
 \item\label{P:imaginary periods} Imaginary Periods: The differentials have purely imaginary periods.
-\item\label{P:periods} Periods: The periods of the differentials $\Theta$ and $\tilde{\Theta}$ lie in $2\pi\iu\Z$.
+\item\label{P:periods} Periods: The periods of the differentials lie in $2\pi\iu\Z$.
 \item\label{P:closing} Closing conditions: Suppose that $\gamma_+$ is a path in $\Sigma$ connecting the two points $\pi^{-1}\{1\}$, and $\gamma_-$ connects the two points $\pi^{-1}\{-1\}$. The differentials satisfy
 \[
 \int_{\gamma_+}\Theta \in 2\pi\iu\Z,\;\; 
@@ -257,17 +222,19 @@ A tuple $(\Sigma,\Theta^1,\Theta^2,E)$ consisting of an algebraic curve $\Sigma$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spectral Curves of Genus Zero}\label{sec:Genus Zero}
 
-This section gives a description of the space of harmonic tori whose spectral curve has genus zero, as a disjoint union of discs. This process serves as a guide for the description of genus one spectral curves in the subsequent section. It is an instructive case as it requires only elementary functions, and it is straightforward to give explicit formulae for all such harmonic maps $f$ and spectral data $(\Sigma,\Theta^1,\Theta^2)$. The spectral data also serves as an example of the spectral curve construction that was outlined in Section~\ref{sec:Introduction}. 
+This section gives a description of the space of harmonic tori whose spectral curve has genus zero: each spectral curve corresponds to a point in a disc. This process serves as a guide for the description of genus one spectral curves in the subsequent section. It is an instructive case as it requires only elementary functions, and it is straightforward to give explicit formulae for all such harmonic maps $g$ and spectral data $(\Sigma,\Theta^1,\Theta^2)$. 
+% The spectral data also serves as an example of the spectral curve construction that was outlined in Section~\ref{sec:Introduction}. 
 
 % The derivations within this chapter may be divided into three parts. In the first part, we start with equations~\eqref{eqn:Hit1.7} and find all translation invariant solutions. Among these solutions, we determine which correspond to harmonic maps from a torus by forcing a periodicity constraint. We then write an explicit formula for each harmonic map, and bring it into a standard form by applying rotations. In the second part, we take these harmonic maps and work through the steps of Section~\ref{sec:construction} to produce the associated spectral data. Further calculations give rise to formulae for the infinitesimal deformations in terms of derivative of the branch point, and an expression of the energy of the harmonic map.
 
 To begin, we will construct tori in $S^3 = SU(2)$. Any great circle through the identity is given by the exponential map of a line in the Lie algebra. These circles are also one-parameter subgroups. If we take one circle and translate it by another one-parameter subgroup the result is a torus in $SU(2)$. Choose two vectors $X,Y\in \su_2$. If we write $w = w_R + \iu w_I \in \C$ then the following is a map from $\C$ to $SU(2)$ whose image is a torus. The factors of $4$ have been chosen to simplify later calculations. 
 \[
-f(w) = \exp( -4 w_R X ) \exp( 4 w_I Y ).
+g(w) = \exp( -4 w_R X ) \exp( 4 w_I Y ).
 \labelthis{eqn:genus zero simple map}
 \]
-
-The correspondence between spectral data and harmonic maps does not distinguish between maps that differ by an $\SO(4)$ rotation of $\S^3$. We may use this freedom to choose $X$ and $Y$. We will make both off-diagonal to simplify a computation of eigenvectors below. Further, by rescaling $w$ we may change the lengths of the vectors $X$ and $Y$. Without loss of generality, we fix 
+The correspondence between spectral data and harmonic maps does not distinguish between maps that differ by an $\SO(4)$ rotation of $\S^3$. We may use this freedom to simplify $X$ and $Y$. 
+% We will make both off-diagonal to simplify a computation of eigenvectors below. 
+Further, by rescaling $w$ we may change the lengths of the vectors $X$ and $Y$. Without loss of generality, we fix 
 \[
 X = \begin{pmatrix}
 0 & 1 \\ -1 & 0
@@ -275,38 +242,33 @@ X = \begin{pmatrix}
 Y = x\begin{pmatrix}
 0 & e^{\iu \delta} \\ -e^{-\iu \delta} & 0
 \end{pmatrix},
-\labelthis{eqn:def delta}
+% \labelthis{eqn:def delta}
 \]
-for some $x \in \R^+$ and $\delta\in (0,\pi)$. We shall refer to the family of such maps as $f(x,\delta)(w)$.
+for some $x \in \R^+$ and $\delta\in (0,\pi)$. We shall refer to the family of such maps as $g(x,\delta)(w)$.
 
 
-Using the standard inner product on $\su_2$, we may consider $\delta$ as the angle between $X$ and $Y$, and $x$ as the ratio of their lengths. The image of $f$ is determined by the angle $\delta$. The image is not determined uniquely by $\delta$ though; the tori for $\delta$ and $\pi-\delta$ are the same. Indeed, if one reflects $X$ to $-X$, the angle between $-X$ and $Y$ is the supplement of $\delta$. However, the two tori carry the opposite orientation and so are distinguishable.
+Using the standard inner product on $\su_2$, we may consider $\delta$ as the angle between $X$ and $Y$, and $x$ as the ratio of their lengths. The image of $g$ is determined by the angle $\delta$. The image is not determined uniquely by $\delta$ though; the tori for $\delta$ and $\pi-\delta$ are the same. Indeed, if one reflects $X$ to $-X$, the angle between $-X$ and $Y$ is the supplement of $\delta$. However, the two tori carry the opposite orientation and so are distinguishable.
 
-\begin{figure}
-\includegraphics[width=\textwidth]{graphics/genus0_linked.png}
-\caption{The image of two harmonic maps of the form~\eqref{eqn:genus zero simple map} with $\delta=\pi/4$ (black) and $3\pi/4$ (blue). The two images are interlinked, congruent and share a common circle $\Set{\exp(\omega \Sigma_2)}{\omega \in \R}$, drawn in red. In fact all tori of the form~\eqref{eqn:genus zero simple map} are tangent along this circle. In the limit as $\delta \to 0$ or $\delta \to \pi$ the image collapse to this circle. \\
-~\\
-Every point of $\S^3$ except those on this circle belongs to exactly one image, so varying the parameter $\delta$ sweeps out all of $\S^3$.
-The image of a harmonic map with $\delta=\pi/2$ is the Clifford torus and it divides $\S^3$ into two congruent solid tori.\label{fig:genus0 linked}}
-\end{figure}
+% \begin{figure}
+% \includegraphics[width=\textwidth]{graphics/genus0_linked.png}
+% \caption{The image of two harmonic maps of the form~\eqref{eqn:genus zero simple map} with $\delta=\pi/4$ (black) and $3\pi/4$ (blue). The two images are interlinked, congruent and share a common circle $\Set{\exp(\omega \Sigma_2)}{\omega \in \R}$, drawn in red. In fact all tori of the form~\eqref{eqn:genus zero simple map} are tangent along this circle. In the limit as $\delta \to 0$ or $\delta \to \pi$ the image collapse to this circle. \\
+% ~\\
+% Every point of $\S^3$ except those on this circle belongs to exactly one image, so varying the parameter $\delta$ sweeps out all of $\S^3$.
+% The image of a harmonic map with $\delta=\pi/2$ is the Clifford torus and it divides $\S^3$ into two congruent solid tori.\label{fig:genus0 linked}}
+% \end{figure}
 
 
 
-Thus far, the maps $f$ are maps from $\C$ to $SU(2)$. To descend to a torus $M$ it must be periodic with respect to a lattice $\Z\langle \tau_1,\tau_2\rangle$. To calculate the period lattice, it is helpful to have some formulae about matrix exponentials in $\SU(2)$. Consider the Lie algebra $\su_2$ with the inner product
-\[
-\langle A, B \rangle_{\su_2} = -\frac{1}{2}\tr AB.
-\]
-This inner product is the same as the one that arises by considering $\SU(2)$ as $\S^3$ with the standard metric. It follows that the norm $\norm{\cdot}$ of an $\su_2$ matrix is the square root of its determinant. This allows us to succinctly write 
+Thus far, the maps $g$ are maps from $\C$ to $SU(2)$. To descend to a torus $M$ it must be periodic with respect to a lattice $\Z\langle \tau_1,\tau_2\rangle$. We recall some formulae about matrix exponentials in $\SU(2)$. Consider the Lie algebra $\su_2$ with the inner product $\langle A, B \rangle_{\su_2} := -\tfrac{1}{2}\tr AB$. This inner product is the same as $\S^3$ with the standard metric. It follows that the norm $\norm{\cdot}$ of an $\su_2$ matrix is the square root of its determinant. This allows us to succinctly write 
 \[
     \exp Z = I \cos \norm{Z} + \hat{Z} \sin \norm{Z},
     \;\;\;\;
     \text{where }\hat{Z} = \frac{1}{\norm{Z}} Z.
 \labelthis{eqn:exp formula}
 \]
-
-An element $w\in\C$ is a period of $f$ exactly when
+An element $w\in\C$ is a period of $g$ exactly when
 \begin{align*}
-I = f(w) = I \cos&(4 w_R)\cos(4 w_I x)
+I = g(w) = I \cos&(4 w_R)\cos(4 w_I x)
 - \hat{X}\sin(4 w_R)\cos(4 w_I x) \\
 &+ \hat{Y}\cos(4 w_R)\sin(4 w_I x)
 - \hat{X}\hat{Y}\sin(4w_R)\sin(4 w_I x),
@@ -314,7 +276,7 @@ I = f(w) = I \cos&(4 w_R)\cos(4 w_I x)
 using~\eqref{eqn:exp formula}. The set $\{I,X,Y,XY\}$ is linearly independent, which forces 
 % Squaring the coefficients of $\hat{Y}$ and $\hat{X}\hat{Y}$ and adding them together shows that $\sin^2(4w_Ix) = 0$. Doing likewise for the coefficients of $\hat{X}$ and $\hat{X}\hat{Y}$ shows that $\sin^2(4w_R) = 0$. Let 
 $4w_R = \pi k$ and $4 w_I x = \pi l$ for integers $k$ and $l$. However, it also forces $(-1)^{k+l} = 1$.
-Thus the lattice of the periods of $f$ is generated by
+Thus the lattice of the periods of $g$ is generated by
 \[
 \kappa_1 := \frac{\pi}{4}\bra{1 - \iu\frac{1}{x}},
 \;\;\;\text{and}\;\;\;
@@ -350,7 +312,7 @@ We have already examined the effect of varying $\delta$, namely that the image o
 {(n^1+m^1) +\iu x(n^1-m^1)}.
 \labelthis{eqn:conformal type}
 \]
-This shows that the conformal type of domain of the map $f$ depends only $x$ and four integers. One natural choice to make is $\tau_l=\kappa_l$ for $l=1,2$. That gives a conformal parameter of 
+This shows that the conformal type of domain of the map $g$ depends only $x$ and four integers. One natural choice to make is $\tau_l=\kappa_l$ for $l=1,2$. That gives a conformal parameter of 
 \[
 \tau = \frac{1-x^2 + 2\iu x}{1+x^2}.
 \]
@@ -361,39 +323,36 @@ A reason that the range of possible conformal parameters $\tau$ is so pleasing i
 
 
 
-We turn now to computing the spectral data associated to one of these harmonic maps $f(x,\delta,A): M \to \SU(2)$. Following~\cite{Hitchin1990}, we first give an $\S^1$ family of flat unitary connections. It is possible to analytically continue this representation to a $C^\times$ family of flat $\SL_2\C$ connections. From this family, we consider the holonomy representation of the fundamental group of $M$. As $M$ is a torus, the matrices of this representation commute and thus shares eigenspaces. Generically, these eigenspaces will be two lines. It can be shown that the eigenlines coincide for only a finite number of points in $\C^\times$. If we consider the family of eigenlines as a subspace of $\C^\times \times \CP^1$, then there are only finitely many ramification points under projection to the first component. Further, it is possible to complete this to an algebraic curve in $\CP^1 \times \CP^1$ that double covers the first component. This is called the eigenline curve. For eignenline curves of genus 0, 1, and 2 this is exactly the spectral curve. For higher genera, one must take into account the possibility of eigenlines coinciding to higher order.
+We turn now to computing the spectral data associated to one of these harmonic maps $g(x,\delta): M \to \SU(2)$. Following~\cite{Hitchin1990}, we first give an $\S^1$ family of flat unitary connections. It is possible to analytically continue this representation to a $C^\times$ family of flat $\SL_2\C$ connections. From this family, we consider the holonomy representation of the fundamental group of $M$. As $M$ is a torus, the matrices of this representation commute and thus shares eigenspaces. Generically, these eigenspaces will be two lines. It can be shown that the eigenlines coincide for only a finite number of points in $\C^\times$. If we consider the family of eigenlines as a subspace of $\C^\times \times \CP^1$, then there are only finitely many ramification points under projection to the first component. Further, it is possible to complete this to an algebraic curve in $\CP^1 \times \CP^1$ that double covers the first component. This is called the eigenline curve. For eigenline curves of genus 0, 1, and 2 this is exactly the spectral curve. For higher genera, one must take into account the possibility of eigenlines coinciding to higher order.
 
-Concretely, for any harmonic map $f$ from $M$ to $\SU(2)$ the $\S^1$ family $d_\zeta$ of flat unitary connections is given by the formula
+Concretely, for any harmonic map $g$ from $M$ to $\SU(2)$ the $\S^1$ family $d_\zeta$ of flat unitary connections is given by the formula
 \[
-d_\zeta := d_L + \frac{1}{2}f^{-1}df + \zeta^{-1}\Phi - \zeta\Phi^*,
+d_\zeta := d_L + \frac{1}{2}g^{-1}dg + \zeta^{-1}\Phi - \zeta\Phi^*,
 % = d + \bar{\kappa}^2 F\,d\bar{z} - \kappa^2 F^*\,dz + \zeta^{-1}F\,dz - \zeta F^*\,d\bar{z},
 \labelthis{eqn:flat connection translation}
 \]
-where $\zeta\in\S^1$ is the parameter of the family, $d_L$ is the left invariant connection on $\SU(2)$, and $2\Phi$ is the $(1,0)$ part of $f^{-1}df$. Because $f^{-1}df$ is valued in $\su(2)$ we can write $f^{-1}df = 2(\Phi - \Phi^*)$, and thus
-\[
-d_\zeta = d_L + (1+\zeta^{-1})\Phi - (1+\zeta)\Phi^*.
-\]
-It is immediately clear how this extends analytically to a $\C^\times$ family. Taking $f$ to be a particular map of the form~\eqref{eqn:genus zero simple map}, we can compute that
+where $\zeta\in\S^1$ is the parameter of the family, $d_L$ is the left invariant connection on $\SU(2)$, and $2\Phi$ is the $(1,0)$ part of $g^{-1}dg$. Because $g^{-1}dg$ is valued in $\su(2)$ we can write $g^{-1}dg = 2(\Phi - \Phi^*)$, and thus $d_\zeta = d_L + (1+\zeta^{-1})\Phi - (1+\zeta)\Phi^*$.
+It is immediately clear how this extends analytically to a $\C^\times$ family. Taking $g$ to be a particular map of the form~\eqref{eqn:genus zero simple map}, we can compute that
 \[
 \Phi = \exp(-4w_I Y)(-Xdw -iYdw)\exp(4w_I Y).
 \]
-Applying a gauge transformation $h$ has the effect of changing the connection matrix from $C$ to $h^{-1}dh + h^{-1}Ch$. In our case, we may apply the gauge transformation $h = \exp(-4 w_I Y)$, which yields
+Apply the gauge transformation $h = \exp(-4 w_I Y)$ changes the connection matrix $C$ to $h^{-1}dh + h^{-1}Ch$, which is constant in $w$.
+% In our case, we may 
+% \[
+% d_\zeta = d -\frac{\iu}{2}(dw - d\bar{w}) + (1+\zeta^{-1})(-Xdw -iYdw) - (1+\zeta)(-X^*d\bar{w} -iY^*d\bar{w}).
+% \]
+As it is constant, for each $\zeta$ one can solve the parallel transport equation $d_\zeta V = 0$ explicitly by exponentiation.
+The holonomy matrix for the loop from $0$ to $\tau_l$ is $H^l(\zeta) = \exp B^l(\zeta)$, for $B^l(\zeta)$ equal to 
 \[
-d_\zeta = d -\frac{\iu}{2}(dw - d\bar{w}) + (1+\zeta^{-1})(-Xdw -iYdw) - (1+\zeta)(-X^*d\bar{w} -iY^*d\bar{w}).
-\]
-As the connection matrix is now constant, for each $\zeta$ one can solve the parallel transport equation $d_\zeta V = 0$ explicitly by exponentiation.
-The holonomy matrix for the loop from $0$ to $\tau_l$ is
-\begin{align*}
-H^l(\zeta)
-&= \exp \Bigg\{ \zeta^{-1}(\tau_l + \bar{\tau_l}\zeta)  \\
-&\hspace{1.5cm}\times\begin{pmatrix}
+\zeta^{-1}(\tau_l + \bar{\tau_l}\zeta) 
+\begin{pmatrix}
 0 & - (1 + \iu xe^{\iu \delta}) + (-1 + \iu x e^{\iu \delta})\zeta \\
 (1+\iu xe^{-\iu \delta}) + (1-\iu xe^{-\iu \delta})\zeta & 0
-\end{pmatrix}\Bigg\}.
-\end{align*}
+\end{pmatrix}.
+\]
 We note that our selection of the form of the vectors $X$ and $Y$ has ensured that the matrices are off-diagonal. Thus their eigenvalues and eigenspaces are simple to write down.
 
-To find the spectral curve, we find the values of $\zeta$ for which the two eigenlines of $H^l(\zeta)$ coincide. If $B^l(\zeta)$ is defined by $H^l(\zeta) = \exp B^l(\zeta)$, then the eigenspaces of $H^l(\zeta)$ and $B^l(\zeta)$ are the same, so we may do our computation with the latter. The matrix $B^l(\zeta)$ is off-diagonal, so $u(\zeta) = (u_1(\zeta),\; u_2(\zeta))^T$ is an eigenvector if and only if
+To find the spectral curve, we find the values of $\zeta$ for which the two eigenlines of $H^l(\zeta)$ coincide. The eigenspaces of $H^l(\zeta)$ and $B^l(\zeta)$ are the same, so we may do our computation with the latter. We have that $u(\zeta) = (u_1(\zeta),\; u_2(\zeta))^T$ is an eigenvector if and only if
 \begin{multline*}
 -\zeta^{-1}(\tau_l + \bar{\tau_l}\zeta)(1 - \iu x e^{\iu \delta})(\zeta-\alpha) u_2(\zeta)^2 \\
 = \zeta^{-1}(\tau_l + \bar{\tau_l}\zeta)(1+\iu xe^{-\iu \delta}) (1-\bar{\alpha}\zeta) u_1(\zeta)^2.
@@ -430,32 +389,25 @@ From this we can see where and to what order the eigenlines coincide. The plus-m
 
 
 
-Let us explore how variation of the parameter $\alpha$ may alter the properties of the harmonic map $f$, and provide some non-rigorous intuition about the limit as $\alpha$ approaches the unit circle. From~\eqref{eqn:def branch point genus zero}, we can see how the two continuous parameters $\delta$ and $x$ have been incorporated into the definition of $\alpha$. If we treat $xe^{\iu \delta}$ as a point in the upper half plane then~\eqref{eqn:def branch point genus zero} is the Cayley transform, a M\"obius transformation of the upper half plane to the unit disc. One can write the inverse transformation as
+Let us explore how variation of the parameter $\alpha$ may alter the properties of the harmonic map $g$, and provide some intuition about the limit as $\alpha$ approaches the unit circle. From~\eqref{eqn:def branch point genus zero}, we can see how the two continuous parameters $\delta$ and $x$ have been incorporated into the definition of $\alpha$. If we treat $xe^{\iu \delta}$ as a point in the upper half plane then~\eqref{eqn:def branch point genus zero} is the Cayley transform, a M\"obius transformation of the upper half plane to the unit disc. This shows that every $\alpha$ in the unit disc is obtained. 
+One can write the inverse transformation as
 \[
 x e^{\iu \delta} = \iu \frac{1+\alpha}{1-\alpha}.
 \]
-This shows that every $\alpha$ is the unit disc is obtained. Taking the magnitude of both sides shows that $x$ is constant along arcs such that
-\[
-\abs{\frac{1+\alpha}{1-\alpha}}
-\]
-is fixed. 
-These are arcs of circles centred on the real axis with radii such that the circle is perpendicular to the unit circle. 
-If $x$ is constant, so too is $\tau$, and along this arc the corresponding family of harmonic maps have the same domain but images changing as in Figures~\ref{fig:genus0 linked}.
-In the limit as $\alpha$ approaches the unit circle for fixed $x$, the parameter $\delta$ tends to $0$ or $\pi$. Recall the $\delta$ is the angle between $X$ and $Y$, so that in the limit these vectors are parallel and the image of the harmonic map collapses into a circle in $\SU(2)$.
+Taking the magnitude of both sides shows that $x$ is constant along the arcs of circles centred on the real axis with radii such that the circle is perpendicular to the unit circle. 
+If $x$ is constant, so too is $\tau$, and along this arc the corresponding family of harmonic maps have the same domain varying images.
+% as in Figures~\ref{fig:genus0 linked}.
+In the limit as $\alpha$ approaches the unit circle for fixed $x$, the parameter $\delta$ tends to $0$ or $\pi$. Recall the $\delta$ is the angle between $X$ and $Y$, so that in the limit these vectors are parallel and the image of the harmonic map collapses into a great circle in $\SU(2)$.
 
-Conversely if $\delta$ is fixed, say at $\delta=\pi/2$, but $x$ is allowed to vary then $\alpha$ is given by
-\[
-\alpha = \frac{x-1}{x+1},
-\]
-and takes values along the real axis. At the two extremes, when $\alpha$ tends to $-1$ or $1$, $x$ tends to $0$ or $\infty$ respectively. Thus one period of the domain torus is dwarfing the other. Another way to put this is that the limit of the lattice of periods will be only rank one, not rank two. 
-
-However, throughout this deformation the image of the corresponding harmonic maps is fixed; it is only the domain that is changing. We could see this as one period of the domain becoming very large, but the derivative of the map in that direction becoming correspondingly small. Taken together, the result will be a map from the cylinder (as the period lattice of the domain has dropped to rank 1) to a circle (the map is constant in that direction). This limiting process is not as well behaved as the other and we are not confident that this phenomena is the same in higher spectral genus.
+Conversely if $\delta$ is fixed, say at $\delta=\pi/2$, but $x$ is allowed to vary then $\alpha = (x-1)/(x+1)$,
+and takes values along the real axis. At the two extremes, when $\alpha$ tends to $-1$ or $1$, $x$ tends to $0$ or $\infty$ respectively. 
+% Thus one period of the domain torus is dwarfing the other. 
+% Another way to put this is that the limit of the lattice of periods will be only rank one, not rank two. 
+However, throughout this deformation the image of the corresponding harmonic maps is fixed; it is only the domain that is changing. We could see this as one period of the domain becoming very large, but the derivative of the map in that direction becoming correspondingly small. Taken together, the result will be a map from the cylinder to a circle. This limiting process $\alpha \to \pm 1$ is not as well behaved as $\alpha \to \S^1\setminus\{\pm 1\}$ and we are not confident that this phenomena is replicated in higher spectral genera.
 % TODO A cylinder only has one periodicity condition, one Sym point. Does \alpha tending to a Sym point blow it away, or make it the only important one?
 
 
-Having found the spectral curve, we continue our quest to find the spectral data of the harmonic map $f$ by computing the pair of differentials. The pair of differentials $\Theta^1$ and $\Theta^2$ arise as the derivatives of the logarithms of the eigenvalues $\mu^l$ of the holonomy matrices $H^l$ for $l=1,2$. Though the matrix $H^l$ has two eigenvalues, $\mu^l$ is a well defined function on the eigenline curve. Because $H^l$ is an $\SL_2\C$ matrix, its two eigenvalues are reciprocal. 
-
-In this particular case, recall that $H^l = \exp B^l$. Hence $(\mu^l)^{\pm 1} = \exp (\pm \nu^l)$, where $\nu^l$ is an eigenvalue of $B^l$, and $\Theta^l = d\log \mu^l = d\nu^l$. To compute $\nu^l$ we note that as $B$ is a traceless matrix,
+Having found the spectral curve, we next compute the pair of differentials. The pair of differentials $\Theta^1$ and $\Theta^2$ arise as the derivatives of the logarithms of the eigenvalues $\mu^l$ of the holonomy matrices $H^l$ for $l=1,2$. Though the matrix $H^l$ has two eigenvalues, $\mu^l$ is a well defined function on the eigenline curve. Because $H^l$ is an $\SL_2\C$ matrix, its two eigenvalues are reciprocal. In this particular case, $(\mu^l)^{\pm 1} = \exp (\pm \nu^l)$, where $\nu^l$ is an eigenvalue of $B^l$, and $\Theta^l = d\log \mu^l = d\nu^l$. To compute $\nu^l$ we note that as $B$ is a traceless matrix,
 \begin{align*}
 (\nu^l)^2
 = -\det B^l
@@ -466,16 +418,16 @@ Therefore the differential $\Theta^l$ corresponding to the eigenvalues of $H^l(\
 \[
 \Theta^l = d\,\log \mu^l = d\, \Big[ \zeta^{-1}(\tau_l + \bar{\tau_l}\zeta) \iu \abs{1 - \iu xe^{\iu \delta}} \eta \Big].
 \]
-
 We may use equation~\eqref{eqn:def branch point genus zero} to rewrite the terms with $x$ and $\delta$ to depend only on $\alpha$.
 Recalling the definitions of $\kappa_1,\kappa_2$ from~\eqref{eqn:def kappa12}, we define scalars
 \begin{align*}
-r_l &:= \iu \kappa_l \abs{1-\iu x e^{\iu \delta}} = \frac{\pi}{2}\bra{ \frac{1}{\abs{1+\alpha}} + \iu \frac{1}{\abs{1-\alpha}} }, \\
-\Psi^l &:= d\, \Big\{ \zeta^{-1}(r_l + \bar{r_l}\zeta) \eta \Big\} 
+r_l &:= \iu \kappa_l \abs{1-\iu x e^{\iu \delta}} = \frac{\pi}{2}\bra{ \frac{1}{\abs{1+\alpha}} + \iu \frac{1}{\abs{1-\alpha}} },
+\quad
+\Psi^l := d\, \Big\{ \zeta^{-1}(r_l + \bar{r_l}\zeta) \eta \Big\} 
 \labelthis{eqn:genus zero differential basis}
 \end{align*}
 Using these we may succinctly write $\Theta^l = n^l \Psi^1 + m^l \Psi^2$.
-Hence the differentials lie in a lattice spanned by $\Psi^1, \Psi^2$ and we can identify it with the lattice of periods of the map $f$. This gives the interpretation that the pair of differentials in the spectral data determine the winding of the torus onto its image. This same interpretation holds for the general construction of a harmonic map from spectral data, where the domain of the map is constructed as the parallelogram spanned by the pair of differentials.
+Hence the differentials lie in a lattice spanned by $\Psi^1, \Psi^2$ and we can identify it with the lattice of periods of the map $g$. This gives the interpretation that the pair of differentials in the spectral data determine the winding of the torus onto its image. This same interpretation holds for the general construction of a harmonic map from spectral data, where the domain of the map is constructed as the parallelogram spanned by the pair of differentials.
 % ψ is choosing a basis of the torus, \Theta is choosing the basis of the domain. It counts the winding with respect to these. It's all happening in the domain, but "a minimal region of the domain that covers the image". The map factors through the map spans by the ψs. Have a look in lattice theory?
 % Its the unique smallest/biggest lattice that supports a periodic map. The lattice IS unique, the basis is not
 
@@ -483,13 +435,13 @@ Hence the differentials lie in a lattice spanned by $\Psi^1, \Psi^2$ and we can 
 
 
 
-The final piece of the spectral data, though one that we do not treat extensively in this paper, is the eigenline bundle E on $\Sigma$. As $\Sigma$ is a sphere, up to isomorphism there is only one line bundle for each degree. By condition~\ref{P:quaternionic}, the line bundle $E$ must be degree $-1$, so there is a unique choice. Thus we have computed the spectral data for all maps $f$ of the form~\eqref{eqn:genus zero simple map} and shown that these are exactly the spectral data with a genus zero spectral curve.
+The final piece of the spectral data, though one that is less important in this paper, is the eigenline bundle E on $\Sigma$. As $\Sigma$ is a sphere, up to isomorphism there is only one line bundle for each degree. By condition~\ref{P:quaternionic}, the line bundle $E$ must be degree $-1$, so there is a unique choice. Thus we have computed the spectral data for all maps $g$ of the form~\eqref{eqn:genus zero simple map} and shown that these are exactly the spectral data with a genus zero spectral curve.
 
-To finish this section, there is a formula to compute the energy of harmonic map from its spectral data, given in~\cite[Theorem 12.17]{Hitchin1990}. In the nonconformal case
-\[
-E = \frac{4i}{P_0} (b^1_2 b^2_0 - b^2_2 b^1_0),
-\]
-where the lower indices refer to the coefficients of the polynomial. For example $b^1 = b^1_0 + b^1_2 \zeta + \cdots$. In particular, when the genus of the spectral curve is zero the coefficients of the polynomials $b^1$ and $b^2$ are entirely determined by the choice of the four integers $n^1,m^1,n^2, m^2$ and a point $\alpha$ in the unit disc, as in~\eqref{eqn:genus zero differential basis}. After substitution and simplification, one arrives at
+
+
+
+To finish this section, there is a formula to compute the energy of harmonic map from its spectral data, given in~\cite[Theorem 12.17]{Hitchin1990}, in terms of the spectral curve and differentials.
+In particular, when the genus of the spectral curve is zero the differentials are entirely determined by the choice of the four integers $n^1,m^1,n^2, m^2$ and a point $\alpha$ in the unit disc, as in~\eqref{eqn:genus zero differential basis}, yielding
 \[
 E = \pi^2(1+\alpha\bar{\alpha})\frac{m^1 n^2 - n^1 m^2}{\abs{1-\alpha^2}}.
 \]
@@ -497,27 +449,40 @@ One can interpret the fraction as giving the area of the domain of the map, this
 % Get rid of interpret, say it comes from the determinant and the size of the differentials
 The factor $1+\alpha\bar{\alpha}$ may be seen as a measure of how far the map is from being conformal, forcing the energy to grow as the domain is deformed to a greater extent. 
 % Tighten this up. \alpha=0 is conformal. Flag as a hand-wavy statement
-In particular, as $\alpha$ tends to $\pm 1$, the energy grows without bound showing yet again that this limit is different to $\alpha$ tending to any other points on the unit circle.
+In particular, as $\alpha$ tends to $\pm 1$, the energy grows without bound showing yet again that this limit is different to $\alpha$ tending to any other point on the unit circle.
 
-\begin{center}
-\begin{figure}
+\begin{SCfigure}
+\resizebox{0.5\textwidth}{!}{
 \begin{tikzpicture}
 \begin{axis}[
     title={$E(\alpha)$},
-    xlabel=$x$, ylabel=$y$,
+    xlabel=$\Real\,\alpha$, ylabel=$\Imag\,\alpha$,
 ]
 \addplot3[
+% 	surf,
+% 	domain = -0.9:0.9,
+% 	domain y=-1:1,
+% ]
+% 	{9*(1 + x^2 + y^2)/(sqrt((1-x^2+y^2)^2 + 4*x^2 *y^2))};
 	surf,
-	domain=-0.9:0.9,
-	domain y=-1:1,
+    domain=0:0.9, %% radius
+    samples=20,
+    domain y=0:360, %% angle
+    samples y=90,
+    z buffer=sort,
+    variable=\r,
+    variable y=\t
 ]
-	{9*(1 + x^2 + y^2)/(sqrt((1-x^2+y^2)^2 + 4*x^2 *y^2))};
+(
+{r*cos(t)},
+{r*sin(t)},
+{9*(1 + r^2)/(sqrt(1+r^2 - 2*r*cos(2*t)))}
+);
 \end{axis}
 \end{tikzpicture}
-\caption{
-A plot of the energy as a function over $\alpha = x + i y$.}
-\end{figure}
-\end{center}
+}
+\caption{A plot of the energy as a function over $\alpha \in D$.}
+\end{SCfigure}
 
 
 
@@ -559,18 +524,13 @@ A plot of the energy as a function over $\alpha = x + i y$.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spectral Curves of Genus One}\label{sec:Genus One}
 
-The aim of this section is to describe the topology of the moduli space $\mathcal{S}$ of spectral curves of genus one, which we consider as a subspace of $(D\times D\setminus \Delta)/\mathbb{Z}_2$ where $\Delta$ is the diagonal of the product of two discs. 
+The aim of this section is to describe the topology of the moduli space $\mathcal{S}$ of spectral curves of genus one, which we consider as a subspace of $\mathcal{A}/\mathbb{Z}_2$ where $\mathcal{A} := D\times D\setminus \Delta$ and $\Delta$ is the diagonal of the product. 
 % We will construct the universal cover and recover $\mathcal{A}/\mathbb{Z}_2$ as the quotient of a certain subspace $\mathcal{\tilde{S}}$ of the by the group of covering transformations.
 We will prove that the path connected components of $\mathcal{S}$ are indexed by two rational numbers $p > 0$ and $q$. For $p\neq 1$ the components are `helicoids' $(0,1)\times \R$, whereas for $p=1$ the components are annuli.
 
-There are essentially four stages in the proof of this result. The first is a preliminary stage. The second is finding two functions on the space of genus one curves such that a curve is a spectral curve exactly when these functions are rationally valued. For brevity, let $\mathcal{A} := D\times D\setminus \Delta$. Unfortunately, one of the functions is not globally defined on $\mathcal{A}/\mathbb{Z}_2$, so we lift the functions to the universal cover and see that the connected components of the preimage of $\mathcal{S}$ are simply connected. Finally, we consider the action of the group of covering transformations on these components to determine the topology of $\mathcal{S}$.
-
-For each real genus one curve there is a plane of real differentials meeting conditions~\ref{P:poles}--\ref{P:imaginary periods}. In Part~\ref{sub:Differentials} we find explicit formulae for these differentials.
-This plane contains a line of exact differentials. 
-Further, one can find a differential with periods $0$ and $2\pi\iu$ in this plane (and thus a whole line of each). 
-Therefore on any real genus one curve we can find many pairs of differentials that meet all the conditions to be spectral data except for the closing conditions~\ref{P:closing}.
-The challenge is to determine whether it possible on a given curve to find a pair of differentials that additionally satisfies the closing conditions. This is taken up in Part~\ref{sub:Closing Conditions}.
-
+There are essentially four stages in the proof of this result. 
+For each real genus one curve there is a plane of real differentials meeting conditions~\ref{P:poles}--\ref{P:periods}. In Part~\ref{sub:Differentials} we find explicit formulae for these differentials with periods $0$ and $2\pi\iu$. 
+The challenge is to determine whether it possible on a given curve to find a pair of differentials that additionally satisfies the closing conditions~\ref{P:closing}. This is taken up in Part~\ref{sub:Closing Conditions}.
 We can choose an exact differential that satisfies the closing conditions exactly when the function $S$, defined by~\eqref{eqn:def_S}, is rationally valued.
 Similarly, there is a non-exact differential on a curve that satisfies the closing condition exactly when the function $T$ is rational, where $T$ is defined by~\eqref{eqn:def_T}. This `function' $T$ is only well-defined locally. In Lemma~\ref{lem:closing_conds}, that a curve admits spectral data exactly when these two functions are rationally valued.
 
@@ -582,7 +542,6 @@ This lemma therefore proves that the level sets $S = p$ and $\tilde{T} = q$ in $
 \[
 \tilde{\pi}^{-1}(\mathcal{S}) = \coprod_{p \in \Q^+, q\in\Q} \mathcal{\tilde{A}}(p,q).
 \]
-
 The fourth stage, in Part~\ref{sub:Topology}, pushes this decomposition in the universal cover back down into the space of curves $\mathcal{A}/\mathbb{Z}_2$.
 The group of covering transformations is proved to be $\langle \tilde{\lambda} \rangle$ and the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(p)$ is shown in Lemma~\ref{lem:T shift} to be
 \[
@@ -591,31 +550,32 @@ The group of covering transformations is proved to be $\langle \tilde{\lambda} \
 Thus $\tilde{\lambda}$ maps $\mathcal{\tilde{A}}(p,q)$ to $\mathcal{\tilde{A}}(p,q + p-1)$. 
 % If $p$ and $q$ are rational, so too is $q + (p-1)$ and hence the group $\mathcal{G} = \Z\langle \tilde{\lambda}\rangle$ of covering transformations restricts to give a group action on the preimage of the space of spectral curves.
 
-Recall that $\mathcal{A}/\mathbb{Z}_2(p)$ denotes the subspace where $p$ is fixed. These coordinates and quotient have given us a foliation of $\mathcal{A}/\mathbb{Z}_2$. Explicitly, for $p\neq 1$ in Theorem~\ref{thm:topology_curves} we have that
+
+Recall that $\mathcal{A}(p)/\mathbb{Z}_2$ denotes the subspace where $p$ is fixed. These coordinates and quotient have given us a foliation of $\mathcal{A}/\mathbb{Z}_2$. Explicitly, for $p\neq 1$ in Theorem~\ref{thm:topology_curves} we have that
 \[
 \mathcal{A}/Z_2(p)
 \diffeo \mathcal{\tilde{A}}(p)/\mathbb{Z}\langle\tilde{\lambda}\rangle
 = \left\{ \bra{[q],k,\tilde{X}} \in \R/(p-1)\Z \times (0,1) \times \R \right\}.
 \]
-The subset where $[q] \in \Q/(p-1)\Z$ is $\mathcal{S}\cap\mathcal{A}/\mathbb{Z}_2(p)$. 
+The subset where $[q] \in \Q/(p-1)\Z$ is $\mathcal{S}\cap\mathcal{A}(p)/\mathbb{Z}_2$. 
 % This is a union of helicoids (though in this adapted coordinate system, they appear as coordinate planes).
 For $p=1$, by contrast, Theorem~\ref{thm:topology_curves_p1} shows that
 \[
-\mathcal{A}/\mathbb{Z}_2(1)
+\mathcal{A}(1)/\mathbb{Z}_2
 \diffeo \mathcal{\tilde{A}}(1)/\mathbb{Z}\langle\tilde{\lambda}\rangle
 = \left\{ \bra{q,k,\left[\tilde{X}\right]} \in \R \times (0,1) \times \R/\pi\Z \right\}.
 \]
-This time $\mathcal{S}\cap\mathcal{A}/\mathbb{Z}_2(1)$ is the subset where $q\in\Q$ and is a union of annuli.
+This time $\mathcal{S}\cap\mathcal{A}(1)/\mathbb{Z}_2$ is the subset where $q\in\Q$ and is a union of annuli.
 
-We summarise the spaces that we have introduced and their relationships to one another in the diagram below. One starts out with the space $\mathcal{A}/\mathbb{Z}_2$ of real genus one curves in the top right corner. It is covered by the parameter space $\mathcal{A} := D\times D \setminus\Delta$. This is in turn covered by its universal cover $\mathcal{\tilde{A}}$. Below that we have the subspaces $\mathcal{\tilde{A}}(p)$ on which the function $S$ has the value $p\in\Q^+$. On the bottom line we have the statement that the preimage of the space of spectral curves is a union of level sets $\mathcal{\tilde{A}}(p,q)$, the subsets of $\mathcal{\tilde{A}}$ on which $S = p$ and $\tilde{T} = q$. The horizontal arrows represent covering maps, labelled with the group of covering transformations, whereas the vertical arrows represent inclusions.
+We summarise the spaces that we have introduced and their relationships to one another in the diagram below. The horizontal arrows represent covering maps, labelled with the group of covering transformations, whereas the vertical arrows represent inclusions. One starts out with the space $\mathcal{A}/\mathbb{Z}_2$ of real genus one curves in the top right corner. Inside here is the space of spectral curves $\mathcal{S}$. Along the top row we have that $\mathcal{A}/\mathbb{Z}_2$ is covered by the parameter space $\mathcal{A}$, which is in turn covered by the universal cover $\mathcal{\tilde{A}}$. Below that we have the subspaces $\mathcal{\tilde{A}}(p)$ on which the function $S$ has the value $p\in\Q^+$. On the bottom line we have the statement that the preimage of the space of spectral curves is a union of level sets $\mathcal{\tilde{A}}(p,q)$, the subsets of $\mathcal{\tilde{A}}$ on which $S = p$ and $\tilde{T} = q$. 
 
 \[
 \begin{diagram}
     \mathcal{\tilde{A}} &\rOnto^{2\pi \Z}&  \mathcal{A}:= \mathcal D\times D\setminus \Delta  &\rOnto^{\Z_2}&  \mathcal{A}/\mathbb{Z}_2 \\
-    \uTo &&  &&  \\
+    \uInto &&  &&  \\
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \coprod_{p\in\Q^+} \mathcal{\tilde{A}}(p)  &&    && \uTo \\
-    \uTo  &&  &&  \\
+    \coprod_{p\in\Q^+} \mathcal{\tilde{A}}(p)  &&    && \uInto \\
+    \uInto  &&  &&  \\
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \tilde{\pi}^{-1}(\mathcal{S}) = \coprod_{p\in\Q^+, q\in\Q} \mathcal{\tilde{A}}(p,q)  && \rOnto && \mathcal{S}
 \end{diagram}
@@ -667,9 +627,46 @@ and the map $f$ can be computed from the relation
 \[
 [\alpha,\cji{\alpha};\beta,\zeta] = [1,-1;k^{-1},f(\zeta)].
 \]
-Instead of solving this relation for $f$ immediately, we turn to understanding the geometry of the transformation so that we might produce a meaningful expression.
-
+Instead of solving this relation for $f$ immediately, we first look at the geometry of the transformation.
 The image under $f$ of unit circle in the $\zeta$-plane is the imaginary axis in the $z$-plane. The involution $\rho(\zeta)$ fixes the unit circle, and exchanges the pairs of branch points $\alpha,\cji{\alpha}$ and $\beta,\cji{\beta}$. The corresponding antiholomorphic involution $\tilde{\rho}(z) := -\bar{z}$ in the $z$-plane exchanges $1,-1$ and $k^{-1},-k^{-1}$. The four branch points of the spectral curve lie on a circle, which is mapped to the real axis by $f$. Let the two points at the intersection of this circle with the unit circle be $\mu$ and $\nu$, with $\mu$ lying between $\alpha$ and $\cji{\alpha}$ and $\nu$ lying between $\beta$ and $\cji{\beta}$ (see Figure~\ref{fig:zeta plane}). Hence $f(\mu)$ and $f(\nu)$ must lie on the intersection of the real and imaginary axes, with $f(\mu) = 0$ and $f(\nu) = \infty$.
+
+\begin{SCfigure}
+    \resizebox{0.56\textwidth}{!}{
+        \begin{tikzpicture}
+            \clip (-3.6,-3.5) rectangle (3.6,3.5);
+            
+            \draw (0,0) circle [radius=3];
+            \draw[color=red] (-6,6) circle [radius=7.7];
+            
+            \fill (0,0) circle (0.05) 
+                node[left,color=blue]{$0$}
+                node[right,color=black]{$z_0$};
+            \fill (3,0) circle (0.05) 
+                node[left,color=blue]{$1$}
+                node[right,color=black]{$\iu u$};
+            \fill (-3,0) circle (0.05) 
+                node[left,color=blue]{$-1$}
+                node[right,color=black]{$\iu v$};
+            
+            % \fill (2.7,-3) circle (0.05) node[left, color=red]{$\infty$} node[right,color=black]{$-\bar{z}_0$};
+            
+            \fill (1.02,2.82) circle (0.05)
+                node[below=5pt, left, color=blue]{$\mu$}
+                node[above=4pt, right,color=black]{$0$};
+            \fill (0.5,1.85) circle (0.05)
+                node[left, color=blue]{$\alpha$}
+                node[right,color=black]{$1$};
+            \fill (-1.5,-0.25) circle (0.05)
+                node[above=1.5pt, left, color=blue]{$\beta$}
+                node[below=1.5pt, right,color=black]{$k^{-1}$};
+            \fill (-2.82,-1.02) circle (0.05)
+                node[above=3pt,left, color=blue]{$\nu$}
+                node[below=3pt,right,color=black]{$\infty$};
+            
+            \end{tikzpicture}
+    }      
+        \caption{The $\zeta$-plane, with points marked in blue. The black labels are their images under $f$. The red line is the circle through the branch points.\label{fig:zeta plane}}
+    \end{SCfigure}
 
 A M\"obius transformation, such as $f$, is determined up to scaling by the points it sends to $0$ and $\infty$, in this case $\mu$ and $\nu$. One other point is therefore needed to determine this scaling. We write $z_0 := f(0)$. Using the reality structure $\tilde{\rho}(z)$, we have $f(\infty) = -\bar{z_0}$. These points allow us to write concise formulae for $f$ and $f^{-1}$
 \begin{align}
@@ -678,7 +675,6 @@ z = f(\zeta) &= -\bar{z}_0 \frac{\zeta - \mu}{\zeta - \nu},
 \zeta = f^{-1}(z) &= \nu \frac{z - z_0}{z + \bar{z_0}}.
 \label{eqn:f_inv}
 \end{align}
-
 Because of the holomorphic involution $\sigma: \eta\to-\eta$, equations~\eqref{eqn:f} and~\eqref{eqn:f_inv} almost but not quite specify a relation between $\eta$ and $w$: there is a free sign choice to make. 
 % On the curve $\Sigma = \{ (\zeta,\eta) | \eta^2 = P(\zeta) \}$ there are two disjoint circles in $\Sigma$ lying over the unit circle in $\CP^1$.
 % At a point $(\zeta,\eta)$ over the unit circle in $\Sigma$, we have that the value of $\eta$ is $\pm \zeta\abs{\zeta-\alpha}\abs{\zeta-\beta}$.
@@ -689,59 +685,31 @@ For the sake of being concrete, we choose the transformation between elliptic cu
 % the positive unit circle to points over the imaginary axis where $w$ is positive. 
 In a slight abuse of notation, we shall also use $f$ to denote the map between elliptic curves.
 
-\begin{figure}
-    \begin{tikzpicture}
-        \clip (-3.6,-3.5) rectangle (3.6,3.5);
-        
-        \draw (0,0) circle [radius=3];
-        \draw[color=red] (-6,6) circle [radius=7.7];
-        
-        \fill (0,0) circle (0.05) node[left,color=blue]{$0$} node[right,color=black]{$z_0$};
-        \fill (3,0) circle (0.05) node[left,color=blue]{$1$};
-        \fill (-3,0) circle (0.05) node[right,color=blue]{$-1$};
-        
-        % \fill (2.7,-3) circle (0.05) node[left, color=red]{$\infty$} node[right,color=black]{$-\bar{z}_0$};
-        
-        \fill (1.02,2.82) circle (0.05)
-            node[below=5pt, left, color=blue]{$\mu$}
-            node[above=4pt, right,color=black]{$0$};
-        \fill (0.5,1.85) circle (0.05)
-            node[left, color=blue]{$\alpha$}
-            node[right,color=black]{$1$};
-        \fill (-1.5,-0.25) circle (0.05)
-            node[above=1.5pt, left, color=blue]{$\beta$}
-            node[below=1.5pt, right,color=black]{$k^{-1}$};
-        \fill (-2.82,-1.02) circle (0.05)
-            node[above=3pt,left, color=blue]{$\nu$}
-            node[below=3pt,right,color=black]{$\infty$};
-        
-        \end{tikzpicture}        
-    \caption{The $\zeta$-plane, with points marked in blue. The black labels are their images under $f$. The red line is the circle through the branch points.\label{fig:zeta plane}}
-\end{figure}
 
-\begin{figure}
-\begin{tikzpicture}
-    \clip (-3.5,-3.5) rectangle (3.5,3.5);
+
+% \begin{SCfigure}
+% \begin{tikzpicture}
+%     \clip (-3.5,-3.5) rectangle (3.5,3.5);
     
-    % \draw[color=gray,step=1.0,dotted] (-3.3,-3.3) grid (3.3,3.3);
-    \draw[->,color=red] (-3.3,0)--(3.3,0) node[above left,color=black]{$\Real z$};
-    \draw[->] (0,-3.3)--(0,3.3) node[below right]{$\Imag z$};
+%     % \draw[color=gray,step=1.0,dotted] (-3.3,-3.3) grid (3.3,3.3);
+%     \draw[->,color=red] (-3.3,0)--(3.3,0) node[above left,color=black]{$\Real z$};
+%     \draw[->] (0,-3.3)--(0,3.3) node[below right]{$\Imag z$};
     
-    \fill (2.6,2.3) circle (0.05) node[left,color=blue]{$0$} node[right,color=black]{$z_0$};
-    \fill (-2.6,2.3) circle (0.05) node[left, color=blue]{$\infty$} node[right,color=black]{$-\bar{z}_0$};
+%     \fill (2.6,2.3) circle (0.05) node[left,color=blue]{$0$} node[right,color=black]{$z_0$};
+%     \fill (-2.6,2.3) circle (0.05) node[left, color=blue]{$\infty$} node[right,color=black]{$-\bar{z}_0$};
     
-    \fill (0,2) circle (0.05) node[left]{$f(1)$};
-    \fill (0,-2.4) circle (0.05) node[left]{$f(-1)$};
+%     \fill (0,2) circle (0.05) node[left]{$f(1)$};
+%     \fill (0,-2.4) circle (0.05) node[left]{$f(-1)$};
     
-    \fill (0,0) circle (0.05) node[above=5pt, right, color=blue]{$\mu$} node[below=8.5pt, left,color=black]{$0$};
-    \fill (1,0) circle (0.05) node[above, color=blue]{$\alpha$} node[below=1.7pt,color=black]{$1$};
-    \fill (2.1,0) circle (0.05) node[above, color=blue]{$\beta$} node[below,color=black]{$k^{-1}$};
-    \fill (-1,0) circle (0.05) node[above, color=blue]{$\bar{\alpha}^{-1}$} node[below=1.7pt,color=black]{$-1$};
-    \fill (-2.1,0) circle (0.05) node[above, color=blue]{$\bar{\beta}^{-1}$} node[below,color=black]{$-k^{-1}$};
+%     \fill (0,0) circle (0.05) node[above=5pt, right, color=blue]{$\mu$} node[below=8.5pt, left,color=black]{$0$};
+%     \fill (1,0) circle (0.05) node[above, color=blue]{$\alpha$} node[below=1.7pt,color=black]{$1$};
+%     \fill (2.1,0) circle (0.05) node[above, color=blue]{$\beta$} node[below,color=black]{$k^{-1}$};
+%     \fill (-1,0) circle (0.05) node[above, color=blue]{$\bar{\alpha}^{-1}$} node[below=1.7pt,color=black]{$-1$};
+%     \fill (-2.1,0) circle (0.05) node[above, color=blue]{$\bar{\beta}^{-1}$} node[below,color=black]{$-k^{-1}$};
     
-    \end{tikzpicture}
-    \caption{The $z$-plane, with points marked in black. The blue labels are their images under $f^{-1}$.}
-\end{figure}
+%     \end{tikzpicture}
+%     \caption{The $z$-plane, with points marked in black. The blue labels are their images under $f^{-1}$.}
+% \end{SCfigure}
 
 % \begin{lem}
 % \label{lem:coeff_f_smooth}
@@ -781,19 +749,13 @@ There is one differential that obviously meets these requirements, namely
 \[
 \Theta^E := \iu\; d\left( \frac{\eta}{\zeta} \right).
 % = \iu\left[ -\alpha\beta + \frac{1}{2}\left(\alpha(1+\abs{\beta}^2) + \beta(1+\abs{\alpha}^2)\right)\zeta - \frac{1}{2}\left(\bar{\alpha}(1+\abs{\beta}^2) + \beta(1+\abs{\alpha}^2)\right)\zeta^3 + \bar{\alpha}\bar{\beta}\zeta^4 \right]\frac{d\zeta}{\zeta^2\eta}.
+\labelthis{eqn:thetaE}
 \]
 The superscript $E$ is a mnemonic for exact. We therefore seek non-exact differentials that also meet these requirements.
 % It is standard to refer to differentials with double poles and no residues as differentials of the second kind. Condition~\ref{P:poles} may therefore be rephrased as the differential must be of the second kind and have poles at the points of $\Sigma$ over $\zeta=0$ and $\infty$. 
-
-The standard Jacobi differential of the first kind is simply the holomorphic differential
-\[
-\omega := \frac{dz}{w}.
-\]
+The standard Jacobi differential of the first kind is simply the holomorphic differential $\omega := \tfrac{dz}{w}$.
 The standard Jacobi differential of the second kind is defined to be
-\[
-e := (1-k^2 z^2) \frac{dz}{w}.
-\labelthis{eqn:def_e}
-\]
+$e := (1-k^2 z^2) \tfrac{dz}{w}$.
 Every differential of the second kind may be written as the linear combination of $e$, the holomorphic differential $\omega$, and an exact differential~\cite[Art. 167]{Hancock1910}.
 The differential $e$ is real with respect to $\tilde{\rho}(z) = -\bar{z}$, but it has a pole at $z=\infty$ (i.e. $\zeta=\nu$), which not allowed under condition~\ref{P:poles}. This pole can be moved to $\zeta=\infty$ by adding an exact differential. Hence we define 
 \[
@@ -805,77 +767,18 @@ There is essentially a `freedom' to add any real multiple of $\Theta^E$ to this 
 
 We now compute the periods of the differentials $\omega$ and $\varepsilon$. 
 The standard choice of branch cuts in the $z$-plane is $[1,k^{-1}]$ and $[-k^{-1},-1]$. The standard basis of homology is a clockwise loop around $-1$ and $1$, the $A$ period, and an anticlockwise loop around $1$ and $k^{-1}$, the $B$ period. This $B$ period is homologous to a the imaginary axis traversed top to bottom. 
-% Under $f^{-1}$ these loops are shown in Figure~\ref{fig:zeta periods}.
-
-% \begin{figure}
-% \begin{tikzpicture}
-% \clip (-3.2,-3.2) rectangle (4.5,4.5);
-
-% % unit circle
-% \draw (0,0) circle [radius=3];
-% % blue B period just inside unit circle
-% \draw[color=blue,<-] (2.8,0) arc (0:360:2.8) node[left, color=blue]{$B$};
-
-% % branch point circle
-% \draw[color=black] (-6,6) circle [radius=7.7];
-% % red A period, in two halves
-% \draw[color=red,dashed,->] (0.80,2.12) arc (330:346:7.9) arc (0:180:0.15);
-% \draw[color=red,->] (1.3,4.15)  arc (346:330:7.5) arc (180:350:0.15) node[right, color=red]{$A$};
-
-% % points
-% \fill (1.02,2.82) circle (0.05) node[above left, color=black]{$\mu$};
-% \fill (0.78,2.32) circle (0.05) node[left=5pt, color=black]{$\alpha$};
-% \fill (1.43,4) circle (0.05) node[left=5pt, color=black]{$\overline{\alpha}^{-1}$};
-% \fill (-1.5,-0.25) circle (0.05) node[left, color=black]{$\beta$};
-% \fill (-2.82,-1.02) circle (0.05) node[left, color=black]{$\nu$};
-% \end{tikzpicture}
-% \caption{The anticlockwise, real period $A$ in red and the clockwise, imaginary period $B$ in blue. These come from the standard choice of periods in the $z$-plane.
-% \label{fig:zeta periods}}
-% \end{figure}
-    
-
-
-
-% The loop $A$ is a real period, which means that the integral of a real differential over $A$ is real. To prove this, recall that a differential $\Theta$ is real with respect to $\rho$ when $\rho^* \Theta = - \bar{\Theta}$. By construction, $\rho_* A = -A$. Together,
-% \[
-% \bar{\int_A \Theta}
-% = \int_A \bar{\Theta}
-% = -\int_A \rho^* \Theta
-% = -\int_{\rho_* A} \Theta
-% = -\int_{-A} \Theta
-% = \int_{A} \Theta,
-% \]
-% which shows the $A$-period of $\Theta$ to be real. Likewise, the integral of a real differential over $B$ is always an imaginary number.
-
-% We wish to be able to describe the differentials of $W$ that have both imaginary and integral periods.
-% \begin{lem}
-% On a genus one marked curve $\Sigma$, suppose there is a differential $\Theta^P$ satisfying Conditions~\ref{P:poles}--\ref{P:periods} such that
-% \[
-% \int_B \Theta^P = 2\pi \iu.
-% \]
-% Then for any other differential $\Theta$ satisfying Conditions~\ref{P:poles}--\ref{P:periods}, $\Theta$ lies in $\R \Theta^E + \Z \Theta^P \subset W$.
-% \begin{proof}
-% It is always the case that the real periods of a holomorphic differential on a compact Riemann surface are non-zero~\cite[Cor~VIII.4.3]{Miranda1995}. Therefore $\{ \omega, \Theta^E, \Theta^P \}$ is a linearly independent set of differentials in $W$, and thus a basis. By satisfying~\ref{P:poles}--\ref{P:reality}, $\Theta$ is forced to lie in $W$ and so is a combination of this basis.
-
-% If $\Theta$ were exact, which is to say that its integrals over $A$ and $B$ were zero, it follows immediately that $\Theta$ would have to be a real multiple of $\Theta^E$. If $\Theta$ were non-exact, then by~\ref{P:periods} it would have an imaginary period of $2\pi\iu l$, for some $l \in \Z$. By subtracting $l\Theta^P$ the result would be an exact differential, and therefore would have to be a real multiple of $\Theta^E$.
-% \end{proof}
-% \end{lem}
-
-% Thus we have reduced the problem of describing differentials on $\Sigma$ meeting Conditions~\ref{P:poles}--\ref{P:periods} to that of finding a differential $\Theta^P \in W$ with vanishing $A$-period and a $B$-period of $2\pi\iu$. The superscript $P$ is a mnemonic for period. Clearly, we may add a real multiple of $\Theta^E$ to $\Theta^P$ without altering affecting this requirement. Therefore, for some real constants $a$ and $b$, let $\Theta^P = a\omega + b\varepsilon$ be a combination of the other two basis vectors of $W = \R\langle \omega,\Theta^E,\varepsilon\rangle$.
-
 The $A$ periods of the standard elliptic differentials define functions of the elliptic modulus called the complete elliptic integrals of the first and second kind, denoted $K$ and $E$ respectively.
 \begin{align*}
-    \int_{A} \omega &= 4K(k), &
-    \int_{A} e &= 4E(k).
+    \int_{A} \omega &=: 4K(k), &
+    \int_{A} e &=: 4E(k).
 \end{align*}
-By Jacobi's imaginary transformation,
-% TODO reference
-the $B$ periods are
+Generally we omit the elliptic modulus $k$.
+The expression $\sqrt{1-k^2}$ is known as the complementary modulus and by convention we write $K' = K(\sqrt{1-k^2})$ and $E' = E(\sqrt{1-k^2})$, where the prime represents complement not derivative. 
+Its relevance is due to Jacobi's imaginary transformation, which shows the $B$ periods are
 \begin{align*}
-\int_{B} \omega &= 2\iu K(k'), &
-\int_{B} e &= 2\iu(K(k')-E(k')).
+\int_{B} \omega &= 2\iu K', &
+\int_{B} e &= 2\iu(K'-E').
 \end{align*}
-The parameter $k'$ is called the elliptic complement and is defined by $k' = \sqrt{1-k^2}$. By convention we write $K'(k) = K(k')$ and $E'(k) = E(k')$, where the prime represents complement not derivative. 
 
 Note that $\varepsilon$ is the sum of $e$ and an exact differential and so has the same periods as $e$. We define $\Theta^P = 2E\omega - 2K\varepsilon$, or if we unwind the definition~\eqref{eqn:def_varepsilon} of $\varepsilon$,
 \[
@@ -894,11 +797,11 @@ The differential $\Theta^P$ is the unique real differential on the curve $\Sigma
 \pp \Theta^P \in \iu \R \pp \Theta^E.
 \]
 \begin{proof}
-All differentials on a genus one curve $\Sigma$ that have (at worst) a double pole over $\zeta=0$ and $\zeta=\infty$ may be written the form
-\[
-\Theta = b(\zeta)\frac{d\zeta}{\zeta^2\eta},
-\]
-for a polynomial $b(\zeta)$ of degree $4$. If we write $b(\zeta) = b_0 + \cdots + b_4 \zeta^4$, Condition~\ref{P:reality} forces $b_i = b_{4-i}$. Lastly, if we write out the equation of $\Sigma$ as $\eta^2 = P(\zeta) = P_0 \zeta + \cdots + P_4 \zeta^4$, $\Theta$ has no residues exactly when $P_1b_0 - 2P_0b_1 = 0$. 
+% All differentials on a genus one curve $\Sigma$ that have (at worst) a double pole over $\zeta=0$ and $\zeta=\infty$ may be written the form
+% \[
+% \Theta = b(\zeta)\frac{d\zeta}{\zeta^2\eta},
+% \]
+% for a polynomial $b(\zeta)$ of degree $4$. If we write $b(\zeta) = b_0 + \cdots + b_4 \zeta^4$, Condition~\ref{P:reality} forces $b_i = b_{4-i}$. Lastly, if we write out the equation of $\Sigma$ as $\eta^2 = P(\zeta) = P_0 \zeta + \cdots + P_4 \zeta^4$, $\Theta$ has no residues exactly when $P_1b_0 - 2P_0b_1 = 0$. 
 
 % We first verify that $\Theta^P$ has such properties, then verify uniqueness. The only property not yet demonstrated is the third one, concerning the principal part. We note that $\zeta=0$ corresponds to $z=z_0$, so for some real scalar $r$
 % \[
@@ -914,15 +817,12 @@ for a polynomial $b(\zeta)$ of degree $4$. If we write $b(\zeta) = b_0 + \cdots 
 % &= + 2K \frac{(z_0-\iu\,\Imag z_0)w(z_0)}{z_0 + \bar{z}_0} \frac{dz}{(z-z_0)^2} \\
 % &= 2K (\Real z_0) \frac{w(z_0)}{z_0 + \bar{z}_0} \frac{dz}{(z-z_0)^2}.
 % \end{align*}
-Suppose that $\Theta$ is a differential with the properties granted in the lemma. Then $\Theta-\Theta^P$ is exact, real, and has double poles with no residues over $\zeta = 0,\infty$. Choose $s\in\R$ such that $\Theta-\Theta^P - s\Theta^E$ has no pole over $\zeta = 0$. By reality it is holomorphic. The only exact holomorphic differential is zero, and hence
-\[
-\Theta = \Theta^P + s \Theta^E.
-\]
+Suppose that $\Theta$ is a differential with the properties granted in the lemma. Then $\Theta-\Theta^P$ is exact, real, and has double poles with no residues over $\zeta = 0,\infty$. Choose $s\in\R$ such that $\Theta-\Theta^P - s\Theta^E$ has no pole over $\zeta = 0$. By reality it is holomorphic. The only exact holomorphic differential is zero, and hence $\Theta = \Theta^P + s \Theta^E$.
 As taking principal part is a linear operation, the final condition forces $s=0$.
 \end{proof}
 \end{lem}
 
-In conclusion, any differential satisfying~\ref{P:poles}--\ref{P:periods} may be written in the form $a \Theta^E + n \Theta^P$ for some $a\in\R$ and $n\in\Z$, using essentially the same proof as the above lemma. 
+Using the same proof as the above lemma, any differential satisfying~\ref{P:poles}--\ref{P:periods} may be written in the form $a \Theta^E + n \Theta^P$ for some $a\in\R$ and $n\in\Z$, 
 
 
 % We may think of the differentials satisfying~\ref{P:poles}--\ref{P:imaginary periods} as forming a rank 2 real vector bundle over $\mathcal{A}$ spanned by $\Theta^E$ and $\Theta^P$. This pair of differentials varies smoothly with respect to $(\alpha,\beta)$ and are always linearly independent so they trivialises that bundle.
@@ -943,13 +843,15 @@ In conclusion, any differential satisfying~\ref{P:poles}--\ref{P:periods} may be
 
 
 \subsection{The Closing Conditions}\label{sub:Closing Conditions}
-The closing conditions on the spectral data ensure that it corresponds to a harmonic map of the torus, rather than a harmonic map of the plane (of finite type). Suppose that $\Theta$ satisfies~\ref{P:poles}--\ref{P:periods}, then $\Theta$ satisfies the closing condition at $\zeta=1$ if
+We have seen that every curve $\Sigma\in\mathcal{A}/\mathbb{Z}_2$ admits differentials that meet Conditions~\ref{P:poles}--\ref{P:periods}, but it is not possible to find differentials on every curve that further satisfy the closing conditions~\ref{P:closing}. We will define functions on $\mathcal{A}$ such that the conditions are satisfiable for a curve exactly when the value of the functions are both rational.
+
+The closing conditions on the spectral data ensure that it corresponds to a harmonic map of the torus, rather than a harmonic map of the plane (of finite type).
+% TODO check this is actually true. Maybe McIntosh?
+Let us recall~\ref{P:closing}, supposing that $\Theta$ satisfies~\ref{P:poles}--\ref{P:periods}. The closing condition at $\zeta=1$ if
 \[
 \int_{\gamma_{+}} \Theta \in 2\pi\iu \Z,
 \]
-where $\gamma_+$ is a path that begins at $(1,-\eta^+(1))$ and ends at $(1,\eta^+(1))$. Although the value of the integral is dependent on the path, due to~\ref{P:periods} the condition is well-defined. Likewise, the closing condition at $\zeta=-1$ is defined by integrating over a path $\gamma_-$ from $(-1,-\eta^+(-1))$ to $(-1,\eta^+(-1))$. We refer to these conditions as~\ref{P:closing}.
-
-We have seen that every curve $\Sigma\in\mathcal{A}/\mathbb{Z}_2$ admits differentials that meet Conditions~\ref{P:poles}--\ref{P:periods}, but it is not possible to find differentials on every curve that further satisfy the closing conditions. We will define functions on $\mathcal{A}$ such that the conditions are satisfiable for a curve exactly when the value of the functions are both rational.
+where $\gamma_+$ is a path that begins at $(1,-\eta^+(1))$ and ends at $(1,\eta^+(1))$. Although the value of the integral is dependent on the path, due to~\ref{P:periods} the condition is well-defined. Likewise, the closing condition at $\zeta=-1$ is defined by integrating over a path $\gamma_-$ from $(-1,-\eta^+(-1))$ to $(-1,\eta^+(-1))$. 
 
 First we can reduce to a special case. Suppose that we have a triple of spectral data $(\Sigma,\Theta^1,\Theta^2)$ such that the differentials $\Theta^1$ and $\Theta^2$ have imaginary periods $2\pi\iu l_1$ and $2\pi\iu l_2$ respectively. Let $l>0$ be the greatest common denominator of $l_1$ and $l_2$, and by B\'ezout's identity let $x$ and $y$ be integers that satisfy $xl_1 + yl_2 = l$. Then consider the differentials $\Psi^E$ and $\Psi^P$ defined by
 \[
@@ -962,14 +864,18 @@ x                       &   y
 \]
 The imaginary periods of this new pair of differentials are $0$ and $2\pi\iu l$ respectively, and they also meet the closing conditions. Further, the two differentials are linearly dependent exactly when $\Psi^E$ is zero, compare to~\ref{P:linear independence}. Hence, a curve admits spectral data if and only if it admits spectral data where the differentials have imaginary periods $0$ and $2\pi\iu l$,.
 
-For an exact differential, necessarily $a\Theta^E$ for some $a\in\R$, the particular path of integration is irrelevant and closing conditions are
+For an exact differential, necessarily $a\Theta^E$ for some $a\in\R$, the particular path of integration is irrelevant and, using~\eqref{eqn:thetaE}, the closing conditions are
 \[
-\int_{\gamma_{+}} a\Theta^E = a\iu \left. d\bra{\frac{\eta}{\zeta}} \right|_{(1, -\eta^+(1))}^{(1, \eta^+(1))} = 2\iu \eta^+(1)a = 2i \abs{1-\alpha}\abs{1-\beta}a \in 2\pi\iu \Z,
+\int_{\gamma_{+}} a\Theta^E 
+= a\iu \left. d\bra{\frac{\eta}{\zeta}} \right|_{(1, -\eta^+(1))}^{(1, \eta^+(1))} 
+= 2\iu \eta^+(1)a 
+% = 2i \abs{1-\alpha}\abs{1-\beta}a 
+\in 2\pi\iu \Z,
 \]
-and 
-\[
-\int_{\gamma_{-}} a\Theta^E = -2\iu \eta^+(-1)a = 2\iu \abs{1+\alpha}\abs{1+\beta}a \in 2\pi\iu \Z.
-\]
+and $-2\iu \eta^+(-1)a \in 2\pi\iu\Z$.
+% \[
+% \int_{\gamma_{-}} a\Theta^E = -2\iu \eta^+(-1)a = 2\iu \abs{1+\alpha}\abs{1+\beta}a \in 2\pi\iu \Z.
+% \]
 There is a common solution for $a$ if and only if
 \[
 S(\alpha,\beta) := \frac{2\iu \eta^+(1)}{-2\iu \eta^+(-1)} = \frac{\abs{1-\alpha}\abs{1-\beta}}{\abs{1+\alpha}\abs{1+\beta}} \in \Q^+.
@@ -992,12 +898,11 @@ Elimination of $b$ yields the condition for a common solution to exist. This con
 \[
 2\pi\iu T(\alpha,\beta) := S(\alpha,\beta) \int_{\gamma_-} \Theta^P - \int_{\gamma_+} \Theta^P
 % = 2\pi \iu \frac{S(\alpha,\beta) \Gamma_- - \Gamma_+}{l}
-\in 2\pi\iu \Q,
+\in 2\pi\iu \Q.
 \labelthis{eqn:def_T}
 \]
-using the definition of $S(\alpha,\beta)$ to substitute for $-\eta^+(1)/\eta^+(-1)$. 
+% using the definition of $S(\alpha,\beta)$ to substitute for $-\eta^+(1)/\eta^+(-1)$. 
 % As was shown at the beginning of this section, whether the integral of a differential over $\gamma_+$ or $\gamma_-$ lies in $2\pi\iu \Z$ is independent on the particular path chosen between the marked points. In the same manner, 
-
 This time, the value of the function is dependent on the particular paths chosen; 
 $T(\alpha,\beta)$ is a multi-valued function on $\mathcal{A}$ defined up the addition of an element from $\Z\langle 1,S(\alpha,\beta)\rangle$.
 However, if $S(\alpha,\beta)$ is rational then the condition $T(\alpha,\beta)\in\Q$ is independent of the choice of paths.
@@ -1008,8 +913,7 @@ Hence, the space of genus one spectral curves is the projection of $\{(\alpha,\b
 
 \begin{proof}
 From the above discussion, the rationality of $S$ and $T$ are a necessary conditions.
-
-For the converse, we will explicitly construct a pair of differentials in the spectral data. From the previous section, we can always find a pair of non-zero differentials with properties~\ref{P:poles}--\ref{P:periods}, namely $\Theta^E$ and $\Theta^P$, but these do not necessarily satisfy~\ref{P:closing}. We will find $a,b \in \R$ and $l\in \N$ such that $\Psi^E = a\Theta^E$ and $\Psi^P = a\Theta^E + l\Theta^P$ that satisfy~\ref{P:poles}--\ref{P:closing}, which are all the conditions necessary to be spectral data.
+For the converse, we will explicitly construct a pair of differentials. From the previous section, we can always find a pair of non-zero differentials with properties~\ref{P:poles}--\ref{P:periods}, namely $\Theta^E$ and $\Theta^P$, but these do not necessarily satisfy~\ref{P:closing}. We will find $a,b \in \R$ and $l\in \N$ such that $\Psi^E = a\Theta^E$ and $\Psi^P = a\Theta^E + l\Theta^P$ that further satisfy~\ref{P:closing} and~\ref{P:linear independence}, which are all the conditions necessary to be spectral data.
 
 Fix $\gamma_+$ and $\gamma_-$ so that $T$ is well-defined and let $S = n/m$ and $T = n'/m'$ for coprime integers.
 First we will produce the exact differential $\Psi^E$. 
@@ -1020,15 +924,17 @@ a := \frac{2\pi\iu n}{2\iu \eta^+(1)} = \frac{2\pi\iu n}{-2\iu \eta^+(-1)}\frac{
 \]
 and observe that for $\Psi^E := a\Theta^E$,
 \begin{align*}
-\int_{\gamma_{+}} \Psi^E &= a \int_{\gamma_+} \Theta^E = 2\iu \eta^+(1)a = 2\pi \iu n \\
-\int_{\gamma_{-}} \Psi^E &= a \int_{\gamma_-} \Theta^E = -2i \eta^+(-1)a = 2\pi \iu m.
+\int_{\gamma_{+}} \Psi^E &= 2\iu \eta^+(1)a = 2\pi \iu n, 
+&
+\int_{\gamma_{-}} \Psi^E &= -2i \eta^+(-1)a = 2\pi \iu m.
 \end{align*}
-This demonstrates the existence of an exact differential $\Psi^E$ that satisfies the closing conditions~\ref{P:closing}. By assumption $n$ is not zero, so neither is $\Psi^E$.
+This demonstrates the existence of an exact differential $\Psi^E$ that satisfies the closing conditions~\ref{P:closing}. 
+% By assumption $n$ is not zero, so neither is $\Psi^E$.
 
 To find a non-exact differential $\Psi^P$ that also satisfies the closing conditions, we must solve~\eqref{eqn:period closing cond} for $b$ and $l$ such that $\Gamma_+$ and $\Gamma_-$ are integral. Eliminating $b$ from~\eqref{eqn:period closing cond} gives
 \begin{align*}
-\frac{1}{2\iu \eta^+(1)} \bra{2\pi\iu \Gamma_+ - l\int_{\gamma_+} \Theta^P}
-&= \frac{1}{-2\iu \eta^+(-1)} \bra{2\pi\iu \Gamma_- - l\int_{\gamma_-} \Theta^P} \\
+% \frac{1}{2\iu \eta^+(1)} \bra{2\pi\iu \Gamma_+ - l\int_{\gamma_+} \Theta^P}
+% &= \frac{1}{-2\iu \eta^+(-1)} \bra{2\pi\iu \Gamma_- - l\int_{\gamma_-} \Theta^P} \\
 % 2\pi\iu \Gamma_+ - l\int_{\gamma_+} \Theta^P
 % &= \frac{2\iu \eta^+(1)}{-2\iu \eta^+(-1)} \bra{2\pi\iu \Gamma_- - l\int_{\gamma_-} \Theta^P} \\
 2\pi\iu \bra{ S \Gamma_- - \Gamma_+ }
@@ -1039,20 +945,18 @@ m'(n \Gamma_- - m \Gamma_+)
 &= lmn'.
 \labelthis{eqn:period diff existence}
 \end{align*}
-
-We can now choose $l$ to be $m'$. By B\'ezout's identity, since $m$ and $n$ are coprime there exists an integral solution for $\Gamma^+$ and $\Gamma^-$. We may now define $b$ from either equation of~\eqref{eqn:period closing cond} and set $\Psi^P = b\Theta^E + l\Theta^P$.
-
-In summary, we have found real constants $a$ and $b$ and an integer $l$ such that $\Psi^E = a\Theta^E$ and $\Psi^P = b\Theta^E + l\Theta^P$ satisfy~\ref{P:poles}--\ref{P:periods} and the closing conditions~\ref{P:closing}. As $\Psi^E$ is non-zero and exact, and $l\geq 1$ implies that $\Psi^P$ is non-zero and non-exact, they are real linearly independent (Condition~\ref{P:linear independence}).
+We can now choose $l$ to be $m'$. By B\'ezout's identity, since $m$ and $n$ are coprime there exists an integral solution for $\Gamma^+$ and $\Gamma^-$. We may now define $b$ from either equation of~\eqref{eqn:period closing cond} and set $\Psi^P = b\Theta^E + l\Theta^P$. Finally, as $\Psi^E$ is exact and $\Psi^P$ is non-exact, the two differentials are real linearly independent (Condition~\ref{P:linear independence}).
 \end{proof}
 \end{lem}
 
 % For higher genus spectral curves, not considered in this paper, the closing conditions are difficult to work with, harder than even the period conditions. In the genus one case the integrals of $\Theta^E$ lead to an algebraic expression, as we have just seen in~\eqref{eqn:def_S}, but the integrals of $\Theta^P$ will lead to a transcendental conditions involving incomplete elliptic integrals.
 
 Immediately before this lemma we observed that $T(\alpha,\beta)$ is a multi-valued function on $\mathcal{A}$. 
-On each curve we make the choice of paths $\boldsymbol{\gamma}_+$ and $\boldsymbol{\gamma}_-$ (in bold) as per Figure~\ref{fig:gamma paths}. This effectively chooses a principal branch $T_0$ of $T$ on $\mathcal{A}$. Note that these paths depend on the order of the branch points $(\alpha,\beta) \in \mathcal{A}$, since $\nu$ is defined to be the point on the unit circle that lies between $\beta$ and $\cji{\beta}$.
+On each curve of $\mathcal{A}\setminus\{\nu = \pm 1\}$ we make the choice of paths $\boldsymbol{\gamma}_+$ and $\boldsymbol{\gamma}_-$ (note the bold symbols) as per Figure~\ref{fig:gamma paths}. This effectively chooses a principal branch $T_0$ of $T$. Note that these paths depend on the order of the branch points $(\alpha,\beta) \in \mathcal{A}$, since $\nu$ is defined to be the point on the unit circle that lies between $\beta$ and $\cji{\beta}$. We now develop a calculational formula for $T_0$.
 
 % \labelpara{para:principal paths}
-\begin{figure}
+\begin{SCfigure}
+\resizebox{0.6\textwidth}{!}{
     \begin{tikzpicture}
 
 \clip (-3.5,-3.5) rectangle (3.5,3.5);
@@ -1090,18 +994,19 @@ On each curve we make the choice of paths $\boldsymbol{\gamma}_+$ and $\boldsymb
     --(0.1,-0.2)
     --(0.1,-2.1);
 \end{tikzpicture}
+}
 \caption{For a curve $\Sigma$ corresponding to $(\alpha,\beta)\in\mathcal{A}\setminus\{\nu = \pm 1\}$, consider the coordinate change given by $f$. Recall $f(\alpha)=1$. The principal path $\boldsymbol{\gamma}_+$, in red, starts at $f(1)$ on the lower sheet, traverses around $1$ (crossing the branch cut) and then returns to $f(1)$ on the upper sheet, without crossing $\iu\infty = f(\nu)$. Likewise, the principal path $\boldsymbol{\gamma}_-$ is marked in blue.\label{fig:gamma paths}}
-\end{figure}
+\end{SCfigure}
 
-In terms of Legendre elliptic integrals, recalling the definition of $\Theta^P$ from Equation~\eqref{eqn:thetaP}, we have
+The incomplete Legendre elliptic integrals $F(z;k)$ and $E(z;k)$ are defined respectively to be the integrals of $\omega$ and $e$ from $0$ to $z$ on the $w^+$ sheet. Recalling the definition of $\Theta^P$ from Equation~\eqref{eqn:thetaP}, we have
 \begin{align*}
 \int_{\boldsymbol{\gamma}_+} \Theta^P
-&= 4 E(k) F(f(1);k) - 4 K(k) E(f(1);k) - 4K \frac{(f(1)-\iu\,\Imag z_0)\,w(f(1))}{(f(1)-z_0)(f(1) + \bar{z}_0)}, \\
+&= 4 E F(f(1);k) - 4 K E(f(1);k) - 4K \frac{(f(1)-\iu\Imag z_0)w(f(1))}{(f(1)-z_0)(f(1) + \bar{z}_0)}, \\
 \int_{\boldsymbol{\gamma}_-} \Theta^P
-&= 4 E(k) F(f(-1);k) - 4 K(k) E(f(-1);k) 
+&= 4 E F(f(-1);k) - 4 K E(f(-1);k) 
 % \\
 % &\qquad\qquad\qquad\qquad 
-- 4K \frac{(f(-1)-\iu\,\Imag z_0)\,w(f(-1))}{(f(-1)-z_0)(f(-1) + \bar{z}_0)}.\labelthis{eqn:thetaPformulae}   
+- 4K \frac{(f(-1)-\iu\Imag z_0)w(f(-1))}{(f(-1)-z_0)(f(-1) + \bar{z}_0)}.\labelthis{eqn:thetaPformulae}   
 \end{align*}
 % These two formulae may be substituted into~\eqref{eqn:def_T_0} to compute $T_0$. In the next section however, we will make a change of coordinates that simplifies these formulae.
 
@@ -1131,8 +1036,7 @@ A technicality is that these coordinates $(p,k,u,v)$ only cover part of $\mathca
 \[
 \mathcal{A} = \left\{ (p,k,u,v) \in \R^+ \times (0,1) \times \RP^1\times \RP^1 \mid u\neq v\right\}.
 \]
-
-The transition functions between the $(\alpha, \beta)$ and $(p,k,u,v)$ coordinates have in part already been described; $p = S(\alpha,\beta)$ is given by Equation~\eqref{eqn:def_S} and $k$ by Equation~\eqref{eqn:def_k}. The map $f$ is also determined by $(\alpha,\beta)$ and as above $u = -\iu f(1)$ and $v = -\iu f(-1)$. In the reverse direction, we can also determine the map $f$ from $(p,k,u,v)$ and then $\alpha = f^{-1}(1)$ and $\beta = f^{-1}(k^{-1})$. As a M\"obius transformation is described, up to a scalar, by the points sent to $0$ and $\infty$ we shall find an expression for $z_0 = f(0)$ in terms of the new coordinates. Note the following identity using cross ratios:
+The transition functions between the $(\alpha, \beta)$ and $(p,k,u,v)$ coordinates have in part already been described; $p = S(\alpha,\beta)$ is given by Equation~\eqref{eqn:def_S} and $k$ by Equation~\eqref{eqn:def_k}. The map $f$ is also determined by $(\alpha,\beta)$ and as above $u = -\iu f(1)$ and $v = -\iu f(-1)$. In the reverse direction, if we can describe the map $f$ in terms of  $(p,k,u,v)$ and then $\alpha = f^{-1}(1)$ and $\beta = f^{-1}(k^{-1})$. As a M\"obius transformation is determined up to a scalar by the points sent to $0$ and $\infty$ we shall find an expression for $z_0 = f(0)$ in terms of the new coordinates. Note the following identity using cross ratios:
 \[
 \abs{\frac{\alpha-1}{\alpha+1}}
 % = \abs{\frac{\alpha-1}{\alpha+1}} \abs{\frac{0+1}{0-1}}
@@ -1157,15 +1061,13 @@ f^{-1}(z)
 =  \frac{\iu u + \bar{z_0}}{\iu u - z_0} \frac{z-z_0}{z + \bar{z_0}}
 % =  -\frac{\iu v + \bar{z_0}}{\iu v - z_0} \frac{z-z_0}{z + \bar{z_0}}.
 \]
-Since the formulae for $z_0$ and $f^{-1}$, and hence for $\alpha$ and $\beta$, are smooth in $(p,k,u,v)$ we have established this is a valid coordinate change on $\mathcal{A}$.
-
-From equations~\ref{eqn:def_T} and~\ref{eqn:thetaPformulae}, we now can write $T_0$ in terms of $(p,k,u,v)$, omitting the elliptic modulus $k$ in the complete elliptic integrals so that $K=K(k)$ and $E= E(k)$, as
+Since the formulae for $z_0$ and $f^{-1}$, and hence for $\alpha$ and $\beta$, are smooth in $(p,k,u,v)$ we have established this is a valid coordinate change on $\mathcal{A}$. From equations~\eqref{eqn:def_T} and~\eqref{eqn:thetaPformulae}, we now can write $T_0$ in terms of $(p,k,u,v)$ as
 \begin{align*}
-&2\pi\iu T_0(p,k,u,v) \\
-&= p\left[ 4E F(\iu v;k) - 4K E(\iu v;k) - 4\iu K \frac{w(\iu v)}{u-v} \right]
-- \left[ 4E F(\iu u;k) - 4K E(\iu u;k) + 4\iu K \frac{w(\iu u)}{u-v} \right] \\
-&= 4p \left[ E F(\iu v;k) - K E(\iu v;k) \right] - 4\left[ E F(\iu u;k) - K E(\iu u;k) \right]
-- 4\iu K \frac{p w(\iu v) + w(\iu u)}{u-v}.
+2\pi\iu T_0(p,k,u,v)
+% &= p\left[ 4E F(\iu v;k) - 4K E(\iu v;k) - 4\iu K \frac{w(\iu v)}{u-v} \right]
+% - \left[ 4E F(\iu u;k) - 4K E(\iu u;k) + 4\iu K \frac{w(\iu u)}{u-v} \right] \\
+&= 4p \left[ E F(\iu v;k) - K E(\iu v;k) \right] - 4\left[ E F(\iu u;k) - K E(\iu u;k) \right] \\
+&\qquad\qquad - 4\iu K \frac{p w(\iu v) + w(\iu u)}{u-v}.
 \labelthis{eqn:Teqn}
 \end{align*}
 
@@ -1201,32 +1103,18 @@ The universal cover of $\mathcal{A}$ is
 \]
 with the projection map $\tilde{\pi} : \mathcal{\tilde{A}} \to \mathcal{A}$ given by
 \begin{align*}
-    p &= p, \\
-    k &= k, \\
-    u = \tan \frac{\tilde{u}}{2},       &\quad
-        u^{-1} = \cot \frac{\tilde{u}}{2},  \\
-    v = \tan \frac{\tilde{v}}{2},       &\quad
-        v^{-1} = \cot \frac{\tilde{v}}{2}.
+p = p,\quad 
+k = k,\quad
+u = \tan \frac{\tilde{u}}{2},\;
+u^{-1} = \cot \frac{\tilde{u}}{2},\quad
+v = \tan \frac{\tilde{v}}{2},\;
+v^{-1} = \cot \frac{\tilde{v}}{2}.
 \end{align*}
 
 \begin{proof}
-The coordinates $(p,k,u,v)$ embed $\mathcal{A}$ into $\R^+\times(0,1)\times(\R \cup\infty)\times(\R \cup\infty)$.
-The latter two factors are circles, which is to say they make a torus. $\mathcal{A}$ is the subset of the coordinates where $u\neq v$. The line $u=v$ can be represented on the torus as the line where the toroidal and poloidal angles are equal; removing this line leaves an annulus.
-% The justification of this definition of $\mathcal{\tilde{A}}$ precedes in two steps. First, we have already observed that $\mathcal{A}$ embeds into $\R^+ \times (0,1) \times \mathbb{T}^2$. 
-
-The universal cover of $\R^+\times(0,1)\times(\R \cup\infty)\times(\R \cup\infty)$ is $\R^+\times(0,1)\times\R^2$, with the covering map given above using the $2\pi$-periodic half-$\tan$ mapping of $\R$ to $\RP^1$. Next recall that $\mathcal{A}$ is the complement of the hyperplane $u-v = 0$. When the hyperplane $u-v=0$ is pulled back to the universal cover it becomes a collection of hyperplanes $\tilde{u}-\tilde{v} \in 2\pi\Z$. Thus we may take a simply connected region of the complement $\tilde{u}-\tilde{v} \not\in 2\pi\Z$ to cover $\mathcal{A}$ and this is $\mathcal{\tilde{A}}$ above.
-
-%  Moreover, consider the subsets $\mathcal{A}(p)$ of the parameter space $\mathcal{A}$ for which the coordinate $p$ is fixed. This shows that topologically it is the product of an interval and an annulus, a feature not as easily seen from the $(\alpha,\beta)$ description.
-
-% A more instructive way of visualising $\mathcal{A}(p)$ is to think of it as a solid cylinder with a line along the central axis removed. One should think of the `radius' of point being given by $1-k$, so that the central axis is identified with the value $k=1$. To motivate this, consider formula~\eqref{eqn:def_k} for $k$.
-% \[
-% k = \frac{\abs{1-\bar{\alpha}\beta}-\abs{\alpha-\beta}}{\abs{1-\bar{\alpha}\beta}+\abs{\alpha-\beta}}.
-% \]
-% In the limit as $\alpha \to \beta$, this formula says that $k \to 1$. From the equation of $S$, the subspace of $D\times D$ where $\alpha=\beta$ and $S(\alpha,\beta) = p$ is an arc. In this visualisation we are imagining this arc as the central axis of the cylinder. In Section~\ref{sec:Interior}, the interesting structure of the moduli space in this limit will be investigated.
-
-% The fact that the parameter space is not simply connected is fundamentally tied to the fact that $T$ is not a single valued function. We have defined a principal branch cut $T_0$ of $T$ and given a formula, but the more natural way to correct this deficiency is to move to the universal cover. By constructing a lift $\tilde{T}$ of $T$ which is single valued, we will be able to treat the level sets $T\in\Q$ globally and thereby acquire complete description of the topology of the space $\mathcal{S}$, significantly more than Theorem~\ref{thm:moduli manifold} which is a local result showing it to be a surface.
-
-
+The coordinates $(p,k,u,v)$ embed $\mathcal{A}$ into $\R^+\times(0,1)\times \RP^1 \times \RP^1$. Its universal cover is $\R^+\times(0,1)\times\R^2$, with the covering map given above using the $2\pi$-periodic half-$\tan$ mapping of $\R$ to $\RP^1$. Next recall that $\mathcal{A}$ is the complement of the hyperplane $u-v = 0$.
+Considering the $\RP^1\times\RP^1$ as a torus, the line $u=v$ is where the toroidal and poloidal angles are equal; removing this line leaves an annulus.
+When the hyperplane $u-v=0$ is pulled back to the universal cover it becomes a collection of hyperplanes $\tilde{u}-\tilde{v} \in 2\pi\Z$. Thus we may take a simply connected region of the complement $\tilde{u}-\tilde{v} \not\in 2\pi\Z$ to cover $\mathcal{A}$ and this is $\mathcal{\tilde{A}}$ above.
 \end{proof}
 \end{lem}
 
@@ -1240,23 +1128,29 @@ and
 E(\iu x; k) - k\iu x
 = \iu \int_0^x \frac{1-k^2}{\sqrt{1+t^2}\left( \sqrt{1+k^2t^2} + k\sqrt{1+t^2} \right)} \;dt.
 \]
-The imaginary parts are odd and increasing functions of $x\in\R$. Because they are odd there is no way to extend them to single valued functions on $\RP^1$. Following the universal cover defined above, let $\tilde{x}\in\R$ and $x = \tan\frac{\tilde{x}}{2}$. We now explicitly construct $\tilde{F}(\tilde{x};k)$ and $\tilde{E}(\tilde{x};k)$ to be the analytic continuations of these integrals. Take $\tilde{x}$ in the range $(-\pi,\pi)$ and pull back through the covering map to define
+The imaginary parts are odd and increasing functions of $x\in\R$, so there is no way to extend them to single valued functions on $\RP^1$. Following the universal cover defined above, let $\tilde{x}\in\R$ and $x = \tan\frac{\tilde{x}}{2}$. We now explicitly construct $\tilde{F}(\tilde{x};k)$ and $\tilde{E}(\tilde{x};k)$ to be the analytic continuations of these integrals. Take $\tilde{x}$ in the range $(-\pi,\pi)$ and pull back through the covering map to define
 \begin{align*}
 \tilde{F}(\tilde{x};k)
 &:= \int_0^{2 \atan \tilde{x}} \frac{dt}{\sqrt{(1+t^2)(1+k^2t^2)}}
 % &= \int_0^{\tilde{x}} \frac{1}{\sqrt{(1+(\tan s/2)^2)(1+k^2(\tan s/2)^2)}} \times \frac{1}{2}\sec^2\frac{s}{2}\;ds \\
-= \frac{1}{2} \int_0^{\tilde{x}} \frac{1}{\sqrt{\cos^2 s/2 + k^2 \sin^2 s/2}} \;ds, \\
+= \frac{1}{2} \int_0^{\tilde{x}} \frac{ds}{\sqrt{\cos^2 s/2 + k^2 \sin^2 s/2}} \;, \\
 \tilde{E}(\tilde{x}; k)
 % &= \int_0^{2\atan \tilde{x}} \frac{\sqrt{1+k^2t^2} - k\sqrt{1+t^2}}{\sqrt{1+t^2}}\;dt \\
 % &= \frac{1}{2} \int_0^{\tilde{x}} \frac{\sqrt{\cos^2 s/2 + k^2\sin^2 s/2} - k}{ \cos^2 s/2 } \;ds \\
 % &= \frac{1}{2} \int_0^{\tilde{x}} \frac{\bra{\cos^2 s/2 + k^2\sin^2 s/2} - k^2}{ \cos^2 s/2 } \frac{1}{\sqrt{\cos^2 s/2 + k^2\sin^2 s/2} + k}\;ds \\
-&:= \frac{1}{2} (1-k^2) \int_0^{\tilde{x}} \frac{1}{\sqrt{\cos^2 s/2 + k^2\sin^2 s/2} + k}\;ds.
+&:= \frac{1}{2} (1-k^2) \int_0^{\tilde{x}} \frac{ds}{\sqrt{\cos^2 s/2 + k^2\sin^2 s/2} + k}\;.
 \end{align*}
 % Manipulating the integrand into a form that is plainly analytic demonstrates that $\tilde{E}$ is as well. 
 
 
-\makefigure{Plot of $\Imag F(\iu x;0.5)$ (black), $\Imag F(\iu x;1) = \atan(x)$ (blue), and $\Imag F(\iu x;0)=\asinh(x)$ (red). For each value of $k$ the function $\Imag F(\iu x;k)$ is bounded, but as $k\to 0$ it tends to the unbounded $\asinh x$.}{graphics/elliptic_bounds_F0.png}
-\makefigure{Plot of $\Imag E(\iu x; 0.5) - 0.5x$ (black), $\Imag E(\iu x; 1) - x = 0$ (blue) and $\Imag E(\iu x; 0)=\asinh(x)$ (red). Like $F$, it is bounded for each value of $k$ but unbounded in the limit $k \to 0$.}{graphics/elliptic_bounds_E0.png}
+\begin{SCfigure}
+\includegraphics[width=0.5\textwidth]{graphics/elliptic_bounds_F0.png}
+\caption{Plot of $\Imag F(\iu x;0.5)$ (black), $\Imag F(\iu x;1) = \atan(x)$ (blue), and $\Imag F(\iu x;0)=\asinh(x)$ (red). For each value of $k$ the function $\Imag F(\iu x;k)$ is bounded, but as $k\to 0$ it tends to the unbounded $\asinh x$.}
+\end{SCfigure}
+\begin{SCfigure}
+\includegraphics[width=0.5\textwidth]{graphics/elliptic_bounds_E0.png}
+\caption{Plot of $\Imag E(\iu x; 0.5) - 0.5x$ (black), $\Imag E(\iu x; 1) - x = 0$ (blue) and $\Imag E(\iu x; 0)=\asinh(x)$ (red). Like $F$, it is bounded for each value of $k$ but unbounded in the limit $k \to 0$.}
+\end{SCfigure}
 
 
 If we rewrite $T_0$ in the following way,
@@ -1268,73 +1162,48 @@ If we rewrite $T_0$ in the following way,
 \labelthis{eqn:T0 rewrite}
 \end{align*}
 then the first two brackets can be lifted to the universal cover by substitution of $\tilde{F}$ and $\tilde{E}$. The third bracket of~\eqref{eqn:T0 rewrite} is analytic on $\mathcal{A}$ and so lifts to the universal cover directly via pulling back. 
-Therefore we define
-\begin{align*}
-2\pi \tilde{T}(p,k,\tilde{u},\tilde{v})
-:= 4p& \left[ E \tilde{F}(\tilde{v};k) - K \tilde{E}(\tilde{v};k) \right]
-- 4 \left[ E \tilde{F}(\tilde{u};k) - K \tilde{E}(\tilde{u};k) \right] \\
-&- 4 K \left[p\left(\frac{w(\iu v)}{u-v} + kv \right)
-+ \left(\frac{w(\iu u)}{u-v} - ku \right) \right] .
-\end{align*}
-% \begin{lem}
-% The function
-% \[
-% \frac{w(\iu u)}{u-v} - ku
-% \]
-% defined on $\mathcal{A} \setminus \{\nu = \pm 1\}$ extends to an analytic function on $\mathcal{A}$.
-
-% \begin{proof}
-% As $u-v \neq 0$ on $\mathcal{A} \setminus \{\nu = \pm 1\}$, this is an analytic function of the coordinates $(p,k,u,v)$. It remains to show that it is similarly analytic in the other coordinates required to cover $\mathcal{A}$. Firstly, examining this function when using the coordinate $v'$ gives
-% \[
-% \frac{w(\iu u)}{u-v} - ku = \frac{w(\iu u)v'}{uv'-1} - ku,
-% \]
-% which is analytic. Next, when using the coordinate $u'$ we have
-% \begin{align}
-% \frac{w(\iu u)}{u-v} - k u
-% &= \frac{w(\iu u) - ku^2}{u-v} + \frac{kuv}{u-v} \\
-% &= \frac{1 + (1+k^2)u^2}{(u-v) (w(\iu u) + ku^2)} + \frac{kv}{1-u'v} \\
-% &= \frac{u'((u')^2 + (1+k^2))} {(1-u'v) (w'(\iu u') + k)} + \frac{kv}{1-u'v},
-% \end{align}
-% where we have again used the auxiliary function $w'(\iu t)^2 = (1+t^2)(k^2 + t^2)$. This is a sum of analytic functions of $u'$. As these three coordinate patches cover all of $\mathcal{A}$ we are done.
-% \end{proof}
-% \end{lem}
-
-
-
-
-
-
-
-
-To actually compute the value of the function $\tilde{T}$, note that the integrands of $\tilde{F}$ and $\tilde{E}$ are $2\pi$ periodic, and the periods of the integrals are $2K'$ and $2(E'-K')$ respectively, from the $B$-periods of the standard elliptic integrals. Define the winding number $\Wind : \R \to \Z$ of a number $\tilde{x}$ to be the integer $\Wind(\tilde{x})$ such that $-\pi < x - 2\pi\Wind(x) < \pi$  and write $\tilde{x} = 2\pi \Wind(\tilde{x}) + y$ and $x = \tan \tilde{x}/2 = \tan y/2$. Then
+To actually compute the value of the function $\tilde{T}$ note that the integrands of $\tilde{F}$ and $\tilde{E}$ are $2\pi$ periodic and the periods of the integrals are $2K'$ and $2(E'-K')$ respectively, from the $B$-periods of the standard elliptic integrals. By Legendre's relation
 \[
-\tilde{F}(\tilde{x};k)
-% = \frac{1}{2} \bra{ \int_0^{2\pi \Wind(\tilde{x})} + \int_{2\pi \Wind(\tilde{x})}^{2\pi \Wind(\tilde{x}) +y}} \frac{1}{\sqrt{\cos^2 s/2 + k^2 \sin^2 s/2}} \;ds
-% &= \frac{1}{2} \bra{ n\int_0^{2\pi} + \int_{0}^{y}} \frac{1}{\sqrt{\cos^2 s/2 + k^2 \sin^2 s/2}} \;ds \\
-% &= \bra{ n\oint_{\RInf} + \int_{0}^{x}} \frac{dt}{\sqrt{(1+t^2)(1+k^2t^2)}} \\
-= 2\Wind(\tilde{x})K' + F_0(x;k),
-\qquad
-\tilde{E}(\tilde{x}; k) = 2n(K'-E') + E_0(x;k),
-\labelthis{eqn:tildeF_periodic}
+E \tilde F(\tilde{x} + 2\pi; k) - K \tilde E(\tilde{x}+2\pi; k)
+= E \tilde F(\tilde{x}; k) - K \tilde E(\tilde{x}; k) + \pi.
 \]
-and
+Define the winding number $\Wind : \R \to \Z$ of a number $\tilde{x}$ to be the integer $\Wind(\tilde{x})$ such that $-\pi < \tilde{x} - 2\pi\Wind(\tilde{x}) < \pi$  and write $\tilde{x} = 2\pi \Wind(\tilde{x}) + x$ for $x = \tan \tilde{x}/2$. Then
+% \[
+% \tilde{F}(\tilde{x};k)
+% % = \frac{1}{2} \bra{ \int_0^{2\pi \Wind(\tilde{x})} + \int_{2\pi \Wind(\tilde{x})}^{2\pi \Wind(\tilde{x}) +y}} \frac{1}{\sqrt{\cos^2 s/2 + k^2 \sin^2 s/2}} \;ds
+% % &= \frac{1}{2} \bra{ n\int_0^{2\pi} + \int_{0}^{y}} \frac{1}{\sqrt{\cos^2 s/2 + k^2 \sin^2 s/2}} \;ds \\
+% % &= \bra{ n\oint_{\RInf} + \int_{0}^{x}} \frac{dt}{\sqrt{(1+t^2)(1+k^2t^2)}} \\
+% = 2\Wind(\tilde{x})K' + F_0(x;k),
+% \qquad
+% \tilde{E}(\tilde{x}; k) = 2n(K'-E') + E_0(x;k),
+% \labelthis{eqn:tildeF_periodic}
+% \]
+% and
+% \begin{align*}
+% 2\pi \tilde{T}(p,k,\tilde{u},\tilde{v})
+% %%%%%%%%%%%%%%%%%%%%%%%%
+% % &= 4p \left[ E (2K'W(\tilde{v})+F_0(v)) - K (2(K'-E')W(\tilde{v})+E_0(v)) \right] \\
+% % &\quad - 4 \left[ E (2K'W(\tilde{u})+F_0(u)) - K (2(K'-E')W(\tilde{u})+E_0(u)) \right]
+% % - 4 K \left[p\left\{\frac{w(\iu v)}{u-v} + kv \right\}
+% % + \left\{\frac{w(\iu u)}{u-v} - ku \right\} \right] \\
+% %%%%%%%%%%%%%%%%%%%%%%%%
+% % &= 2\pi T_0(p,k,u,v) + 4p \left[ 2EK' - 2K(K'-E') \right]\Wind(\tilde{v}) \\
+% % &\qquad - 4 \left[ 2EK' - 2K(K'-E') \right]\Wind(\tilde{u}) \\
+% %%%%%%%%%%%%%%%%%%%%%%%%
+% \tilde{T}(p,k,\tilde{u},\tilde{v})
+% &= T_0(p,k,u,v) + 2\left[ p\Wind(\tilde{v}) - \Wind(\tilde{u}) \right],
+% \labelthis{eqn:tilde T computable}
+% \end{align*}
 \begin{align*}
-2\pi \tilde{T}(p,k,\tilde{u},\tilde{v})
-%%%%%%%%%%%%%%%%%%%%%%%%
-% &= 4p \left[ E (2K'W(\tilde{v})+F_0(v)) - K (2(K'-E')W(\tilde{v})+E_0(v)) \right] \\
-% &\quad - 4 \left[ E (2K'W(\tilde{u})+F_0(u)) - K (2(K'-E')W(\tilde{u})+E_0(u)) \right]
-% - 4 K \left[p\left\{\frac{w(\iu v)}{u-v} + kv \right\}
-% + \left\{\frac{w(\iu u)}{u-v} - ku \right\} \right] \\
-%%%%%%%%%%%%%%%%%%%%%%%%
-&= 2\pi T_0(p,k,u,v) + 4p \left[ 2EK' - 2K(K'-E') \right]\Wind(\tilde{v}) \\
-&\qquad - 4 \left[ 2EK' - 2K(K'-E') \right]\Wind(\tilde{u}) \\
-%%%%%%%%%%%%%%%%%%%%%%%%
+2\pi \tilde{T}(p,k,\tilde{u},\tilde{v}) 
+&:= 4p \left[ E \tilde{F}(\iu v; k) - K \tilde{E}(\iu v; k)\right]
+-4 \left[ E \tilde{F}(\iu u; k) - K \tilde{E}(\iu u; k)\right] \\
+&\qquad- 4 K \left[p\left(\frac{w(\iu v)}{u-v} + kv \right) + \left(\frac{w(\iu u)}{u-v} - ku \right) \right],\\
 \tilde{T}(p,k,\tilde{u},\tilde{v})
-&= T_0(p,k,u,v) + 2\bra{ p\Wind(\tilde{v}) - \Wind(\tilde{u}) },
+&= T_0(p,k,u,v) + 2\left[ p\Wind(\tilde{v}) - \Wind(\tilde{u}) \right],
 \labelthis{eqn:tilde T computable}
 \end{align*}
-using Legendre's relation.
-Thus to do computations with the function $\tilde{T}$, for the most part one can continue to work with the function $T_0$ downstairs on $\mathcal{A}$ and keep track of the winding numbers. 
+Thus to do computations with the function $\tilde{T}$, for the most part one can continue to work with the function $T_0$ downstairs on $\mathcal{A}$ using~\eqref{eqn:Teqn} and keep track of the winding numbers. 
 
 We use this strategy to prove three facts about $\tilde{T}$. First if $p$ is rational, $T\circ\tilde{\pi} \in \Q$ if and only if $\tilde{T} \in \Q$. This is immediate from the above formula. The second fact is Lemma~\ref{lem:range_T} concerning the range of $\tilde{T}$. The third is that it has non-zero derivatives under certain hypotheses, Lemma~\ref{lem:dTdu_nonzero}.
 
@@ -1342,7 +1211,7 @@ We use this strategy to prove three facts about $\tilde{T}$. First if $p$ is rat
 The range of \,$\tilde{T}$ on $\mathcal{\tilde{A}}$ is $\R$.
 
 \begin{proof}
-Note that the lemma is obvious then $p\neq 1$ by increasing $\tilde{u}$ and $\tilde{v}$ in increments of $2\pi$ in equation~\ref{eqn:tilde T computable}. However we shall prove below that the range of $T_0$ on $\mathcal{\tilde{A}} \setminus \{\nu = \pm 1\}$ is $\R$. It will follow then that the range of $\tilde{T}$ is also $\R$ for all $p$. Fix $p$ and $k$. Because $\Imag F(\iu x;k)$ is an increasing function of $x$ and using equation~\ref{eqn:tildeF_periodic} for $\tilde{x}=\pm\pi/2$ the magnitude $\abs{F(\iu x;k)}$ is bounded by $K'$. Likewise $\abs{E(x;k) - kx}$ is bounded by $K'-E'$. Thus there is some constant, dependent on both $p$ and $k$ but independent of $u$ and $v$ that bounds the first two terms of $T_0$ in~\eqref{eqn:T0 rewrite}.
+Note that the lemma is obvious then $p\neq 1$ by increasing $\tilde{u}$ and $\tilde{v}$ in increments of $2\pi$ in Equation~\eqref{eqn:tilde T computable}. However we shall prove below that the range of $T_0$ on $\mathcal{\tilde{A}} \setminus \{\nu = \pm 1\}$ is $\R$. It will follow then that the range of $\tilde{T}$ is also $\R$ for any $p$. Fix $p$ and $k$. From the imaginary periods, $\abs{F(\iu x;k)}$ is bounded by $K'$ and $\abs{E(x;k) - kx}$ is bounded by $K'-E'$. Thus there is some constant, dependent on both $p$ and $k$ but independent of $u$ and $v$ that bounds the first two terms of $T_0$ in~\eqref{eqn:T0 rewrite}.
 % \begin{gather*}
 % - 4 K \left[\frac{pw(\iu v) + w(\iu u)}{u-v} + k(pv-u) \right] - C \\
 % \leq
@@ -1350,16 +1219,16 @@ Note that the lemma is obvious then $p\neq 1$ by increasing $\tilde{u}$ and $\ti
 % \leq \\
 % - 4 K \left[\frac{pw(\iu v) + w(\iu u)}{u-v} + k(pv-u) \right] + C,
 % \end{gather*}
-Therefore it is sufficient to show that for any fixed $p$ and $k$ the final terms have range equal to the real line. But this is easy to show. Consider the limit as $u \to v^+$,
+Therefore it is sufficient to show that for any fixed $p$ and $k$ the final terms have range equal to the real line. But this is easy to show. Consider the limit as $u \to v^\pm$,
 \[
-\lim_{u \to v^+} \frac{pw(\iu v) + w(\iu u)}{u-v} + k(pv-u)
-= k(p-1)v + (p+1) w(\iu v)\lim_{u \to v^+} \frac{1}{u-v} = +\infty.
+\lim_{u \to v^\pm} \frac{pw(\iu v) + w(\iu u)}{u-v} + k(pv-u)
+= k(p-1)v + (p+1) w(\iu v)\lim_{u \to v^\pm} \frac{1}{u-v} = \pm\infty.
 \]
-From the other side,
-\[
-\lim_{u \to v^-} \frac{pw(\iu v) + w(\iu u)}{u-v} + k(pv-u)
-= k(p-1)v + (p+1) w(\iu v)\lim_{u \to v^-} \frac{1}{u-v} = -\infty.
-\]
+% From the other side,
+% \[
+% \lim_{u \to v^-} \frac{pw(\iu v) + w(\iu u)}{u-v} + k(pv-u)
+% = k(p-1)v + (p+1) w(\iu v)\lim_{u \to v^-} \frac{1}{u-v} = -\infty.
+% \]
 By continuity $T_0$ obtains every value.
 \end{proof}
 \end{lem}
@@ -1373,12 +1242,12 @@ We now compute the derivatives of $\tilde{T}$ and provide conditions under which
 \] 
 This is because (fixing $p$) the difference between the multivalued function $T$ and $T_0$ is locally constant, which is removed by differentiation.
 From the explicit formula in~\eqref{eqn:Teqn} and recalling $w(\iu u) = \sqrt{(1+u^2)(1+k^2 u^2)}$, the $u$-derivative of $T_0$ is
-\[
-\frac{\pi}{2}w(\iu u)(u-v)^2\Partial{T_0}{u}
+\begin{align*}
+\frac{\pi}{2}&w(\iu u)(u-v)^2\Partial{T_0}{u} \\
 % &= -\frac{E}{w(\iu u)} + \frac{pK w(\iu v)}{(u-v)^2} + \frac{K}{w(\iu u)(u-v)^2}\left[1 + u^2 - uv + v^2 + k^2 uv + k^2 u^2v^2 \right]\\
-= -(u-v)^2 E + pKw(\iu u)w(\iu v) + K\left[ 1 + u^2 - uv + k^2 uv + v^2 + k^2 u^2 v^2 \right]
+&= -(u-v)^2 E + pKw(\iu u)w(\iu v) + K\left[ 1 + u^2 - uv + k^2 uv + v^2 + k^2 u^2 v^2 \right]
 \labelthis{eqn:dTdu}
-\]
+\end{align*}
 We would like to say that the derivative never vanishes but that is not true. However it is true that it never vanishes when $p \geq 1$. We will address the $p < 1$ case in~\eqref{eqn:T_0 symmetry} in a different way.
 
 \begin{lem}\label{lem:dTdu_nonzero}
@@ -1386,7 +1255,7 @@ If $p \geq 1$ then the $\tilde{u}$-derivative of $\tilde{T}$ is never zero.
 
 \begin{proof}
 We first show that the derivative of $T_0$ is non-zero where it is defined. Apply the crude estimate that $K>E>1$,
-REFERENCE,
+which follows form $K(0)=E(0)=\pi/2$ and that they are increasing and decreasing functions respectively, to obtain
 \begin{align*}
 \frac{\pi}{2}&w(\iu u)(u-v)^2\Partial{T_0}{u}\\
 % &= -(u-v)^2 E + pKw(\iu u)w(\iu v) + K\left[ 1 + u^2 - uv + k^2 uv + v^2 + k^2 u^2 v^2 \right] \\
@@ -1442,7 +1311,7 @@ The proof of the positivity of the above is immediate using $K>E>1$.
 In this final part of Section~\ref{sec:Genus One} we describe the space of genus one spectral curves $\mathcal{S}$. 
 More precisely,
 in Lemma~\ref{lem:T_graph} we demonstrate that for any values $p \in \R^+$, $q\in\R$ the level set defined by $p = S$ and $q = \tilde{T}$ is a graph over two coordinates. 
-% This follows by an application of the implicit function theorem applied to $\tilde{T}$. Applying the implicit function theorem requires the derivatives of $\tilde{T}$ (given by Equation~\ref{eqn:Teqn}) and showing that they are non-vanishing (Lemma~\ref{lem:deriv no zeroes}).
+% This follows by an application of the implicit function theorem applied to $\tilde{T}$. Applying the implicit function theorem requires the derivatives of $\tilde{T}$ (given by Equation~\eqref{eqn:Teqn}) and showing that they are non-vanishing (Lemma~\ref{lem:deriv no zeroes}).
 Hence each level set is diffeomorphic to $(0,1)\times\R$.
 % Moreover, that lemma shows that for fixed $p$ these strips $\mathcal{\tilde{A}}(p,q)$ foliate $\mathcal{\tilde{A}}(p)$, the subspace of $\mathcal{\tilde{A}}$ on which $p$ is a fixed constant.
 It follows from the observation that $\tilde{T}$ is rational exactly when $T$ is that the preimage of $\mathcal{S}$ in the universal cover $\mathcal{\tilde{A}}$ may be written as the disjoint union of the level sets.
@@ -1469,13 +1338,12 @@ such that again fixing a value $q$ gives the level set $\mathcal{\tilde{A}}(p,q)
 In either case, the level sets are graphs over $(0,1)\times \R$.
 
 \begin{proof}
-Fix a value of $p$ and consider the function $G(q, k,\tilde{u},\tilde{v}) = \tilde{T}(p,k,\tilde{u},\tilde{v}) - q$ on $\mathcal{\tilde{A}}(p)\times\R$. The preimage $G^{-1}(0)$ is a graph over $\mathcal{\tilde{A}}(p)$ given by $q=\tilde{T}$, so they are diffeomorphic. We will apply the implicit function theorem to show that $G^{-1}(0)$ can also be written as a graph over either $(q,k,\tilde{u})$ or $(q,k,\tilde{v})$, depending on the magnitude of $p$.
-
+Fix a value of $p$ and consider the function $G(q, k,\tilde{u},\tilde{v}) = \tilde{T}(p,k,\tilde{u},\tilde{v}) - q$ on $\mathcal{\tilde{A}}(p)\times\R$. The preimage $G^{-1}(0)$ is a graph over $\mathcal{\tilde{A}}(p)$ given by $q=\tilde{T}$, so they are diffeomorphic. 
 Suppose first that the fixed value of $p\geq 1$. In Lemma~\ref{lem:dTdu_nonzero} we showed that the $\tilde{u}$ derivative of $\tilde{T}$ was non-vanishing and therefore neither is the $\tilde{u}$ derivative of $\tilde{G}$. The implicit function theorem states that there is a function $h$ such that $G^{-1}(0)$ is a graph of the form
 \[
 \{ (q, k, \tilde{u}, h(q,k,\tilde{u})) \mid q \in \text{Range } \tilde{T}, k \in (0,1), \tilde{u}\in\R \}. 
 \]
-By Lemma~\ref{lem:range_T}, the range of $\tilde{T}$ is $\R$. Finally, if we hold $q$ fixed, then the level set $\mathcal{\tilde{A}}(p,q)$ is parametrised by the remaining two coordinates $(k,\tilde{u})$.
+By Lemma~\ref{lem:range_T}, the range of $\tilde{T}$ is $\R$. This shows that $(q,k,\tilde{u})$ parametrises $\mathcal{A}(p)$ as claimed. If we hold $q$ fixed, then the level set $\mathcal{\tilde{A}}(p,q)$ is parametrised by the remaining two coordinates $(k,\tilde{u})$.
 
 Note the following symmetry:
 \begin{align*}
@@ -1493,55 +1361,27 @@ With this lemma in hand, we are within striking distance of results about the sp
 \coprod_{p\in \Q^+,\; q\in \Q} \mathcal{\tilde{A}}(p,q).
 % \labelthis{eqn:def tilde S}
 \]
-% There are several topological implications of the previous lemma. First, each level set $\mathcal{\tilde{A}}(p,q)$ is path connected. More precisely each of these is diffeomorphic to a product of $(0,1)$ and $\R$. Therefore the above disjoint union is the decomposition of the preimage into its path connected components. 
-% By varying the value of $q$, we see that the $\mathcal{\tilde{A}}(p,q)$ foliate $\mathcal{\tilde{A}}(p)$, so $\mathcal{\tilde{S}}$ is arranged densely in $\mathcal{\tilde{A}}(p)$, analogously to how $\Q$ is arranged densely in $\R$.
-
-
-To understand the topology of $\mathcal{S}$, we must understand the action of the covering transformations of $\mathcal{\tilde{A}} \to \mathcal{A} \to \mathcal{A}/\mathbb{Z}_2$ as restricted to preimage, and so we must first describe the group of covering transformations. The covering transformations of $\mathcal{A}$ over $\mathcal{A}/\mathbb{Z}_2$ are easy to understand; besides the identity there is only
-\[
-% ZUUL
-\lambda : (\alpha,\beta) \mapsto (\beta,\alpha),
-\]
-which swaps the labelling of the branch points inside the unit disc. We will use $\lambda$ as a stepping stone to the full group of covering transformations.
-
-% There are two types of transformations to understand, the transformations of $\mathcal{\tilde{A}}$ over $\mathcal{A}$ and the transformations of the two fold covering of $\mathcal{A}$ over $\mathcal{A}/\mathbb{Z}_2$. The first sort are easy to understand; they are generated by the translation
-% \[
-% (p, k,\tilde{u},\tilde{v}) \mapsto (p, k, \tilde{u} + 2\pi, \tilde{v} + 2\pi).
-% \]
-% The second sort require a little more effort. On one hand, the deck transformations of $\mathcal{A}$ over $\mathcal{A}/\mathbb{Z}_2$ is simply the involution that swaps $\alpha$ and $\beta$.
-
-% \labelpara{para:def f_s}
-
-Let us describe $\lambda$ in terms of the $(p,k,u,v)$ coordinates.
-By inspection of the definitions of $p = S(\alpha,\beta)$ and $k = k(\alpha,\beta)$, equations~\eqref{eqn:def_S} and~\eqref{eqn:def_k}, they are unchanged if the labelling of the branch points is exchanged. We therefore must say what happens to $u$ and $v$. Recall that $\iu u = f(1)$ and $\iu v = f(-1)$. Our construction relied on a definition of $f$ that sends $\alpha$ to $1$ and $\beta$ to $k^{-1}$. Let $f_s$ be the M\"obius transformation which instead standardises the branch points in the other way, taking $\beta$ to $1$ and $\alpha$ to $k^{-1}$. Consider the composition of $f_s \circ f^{-1}$. It is a M\"obius transformation that exchanges $1$ and $k^{-1}$ and also $-1$ and $-k^{-1}$. It therefore must be the map $z \mapsto (kz)^{-1}$ and hence
+We must understand the action of the covering transformations of $\mathcal{\tilde{A}} \to \mathcal{A} \to \mathcal{A}/\mathbb{Z}_2$ as restricted to preimage. The covering transformations of $\mathcal{A}$ over $\mathcal{A}/\mathbb{Z}_2$ are easy to understand; besides the identity there is only $\lambda : (\alpha,\beta) \mapsto (\beta,\alpha)$, which swaps the labelling of the branch points inside the unit disc. 
+In terms of the $(p,k,u,v)$ coordinates, $\lambda$ fixes $p = S(\alpha,\beta)$ and $k = k(\alpha,\beta)$, from inspection of equations~\eqref{eqn:def_S} and~\eqref{eqn:def_k}. Recall that $\iu u = f(1)$ and $\iu v = f(-1)$. Our construction relied on a definition of $f$ that sends $\alpha$ to $1$ and $\beta$ to $k^{-1}$. Let $f_s$ be the M\"obius transformation which instead takes $\beta$ to $1$ and $\alpha$ to $k^{-1}$ and consider the composition of $f_s \circ f^{-1}$. It is a M\"obius transformation that exchanges $1$ and $k^{-1}$ and also $-1$ and $-k^{-1}$. It therefore must be the map $z \mapsto (kz)^{-1}$ and hence
 % Under this map the point $\iu u$ is taken to $-\iu (ku)^{-1}$ and $\iu v$ is taken to $-\iu (kv)^{-1}$. Thus, under the label-swapping involution $\lambda$,
 \[
 \lambda: (p,k,u,v) \mapsto \bra{ p,k, -(ku)^{-1}, -(kv)^{-1} }.
-\labelthis{eqn:def_lambda}
 \]
-To gain a geometric understanding of $\lambda$, we may rescale $u$ in the following manner. Let $U=\sqrt{k} u$. Then
-\[
-U
-\mapsto \sqrt{k} \lambda\bra{\frac{U}{\sqrt{k}} }
-% = -\sqrt{k} \frac{1}{k}\frac{1}{\frac{U}{\sqrt{k}}}
-% = - \frac{1}{U} 
-= -U^{-1},
-\]
-which is half-rotation of the circle.
-%  (as shown in Figure~\ref{fig:circle rotation}).
+To gain a geometric understanding of $\lambda$, we may rescale $u$ in the following manner. Let $U=\sqrt{k} u$ so that $\lambda: U \mapsto -U^{-1}$,
+which is a half-rotation of the circle $\RP^1$.
 
 % \maketikzfigure{The circle on the left is $\RP^1$ with four points marked. The map $U \mapsto -U^{-1}$ is applied to produce the circle on the right, with corresponding points coloured the same. We can see that the circle on the right is rotated by half. \label{fig:circle rotation}}{tikz/circle_rotation}
 
 We shall use this rescaled coordinate $U$, and likewise $V = \sqrt{k} v$, to construct coordinates on $\mathcal{\tilde{A}}$ such that the covering transformations are translations. 
 % This is motivated by the fact that translating the line $\R$ rotates the quotient $\R/\Z$.
-In analogy to Lemma~\ref{lem:mathcal tilde C}, we define coordinates $\tilde{U}$ and $\tilde{V}$ on $\mathcal{\tilde{A}}$ to be
-\begin{align*}
-U = \tan \frac{\tilde{U}}{2},       &\quad
-    % U^{-1} = \cot \frac{\tilde{U}}{2},  \\
-V = \tan \frac{\tilde{V}}{2}.       
-% &\quad
-    % V^{-1} = \cot \frac{\tilde{V}}{2}.
-\end{align*}
+In analogy to Lemma~\ref{lem:mathcal tilde C}, we define coordinates $\tilde{U}$ and $\tilde{V}$ on $\mathcal{\tilde{A}}$ to be $U = \tan \tilde{U}/2$ and $V = \tan \tilde{V}/2$.
+% \begin{align*}
+% U = \tan \frac{\tilde{U}}{2},       &\quad
+%     % U^{-1} = \cot \frac{\tilde{U}}{2},  \\
+% V = \tan \frac{\tilde{V}}{2}.       
+% % &\quad
+%     % V^{-1} = \cot \frac{\tilde{V}}{2}.
+% \end{align*}
 % Using $U = \sqrt{k}u$, t
 The change of coordinates from $\tilde{u}$ to $\tilde{U}$ and from $\tilde{v}$ to $\tilde{V}$ is
 \[
@@ -1570,14 +1410,12 @@ Since $\tan$ and $\atan$ are increasing functions, it follows that the transform
 We can now use the coordinates $(p,k,\tilde{U},\tilde{V})$ on $\mathcal{\tilde{A}}$ to find the group of covering transformations $\mathcal{\tilde{A}} \to \mathcal{A}/\mathbb{Z}_2$.
 % We can divide the covering transformations into two types: those that push forward to $\mathcal{A}$ to give the identity and those that push forward to give $\lambda$. 
 Recall that the projection of the universal cover $\mathcal{\tilde{A}}$ to $\mathcal{A}$ in part reads $U = \tan \tilde{U}/2$. This is the standard covering of the circle by $\R$, so the subgroup of covering transformations that push forward to the identity are generated by
-$\iota: (p,k,\tilde{U},\tilde{V}) \mapsto (p,k,\tilde{U} + 2\pi ,\tilde{V} +2\pi)$.
-
-Any two covering transformations that push forward to $\lambda$ must differ by a transformation that pushes forward to the identity. If $\tilde{\lambda}$ is any lift of $\lambda$ then the group of covering transformations is generated by $\tilde{\lambda}$ and $\iota$. Take
+$\tilde{\iota}: (p,k,\tilde{U},\tilde{V}) \mapsto (p,k,\tilde{U} + 2\pi ,\tilde{V} +2\pi)$. Any two covering transformations that push forward to $\lambda$ must differ by a transformation that pushes forward to the identity. If $\tilde{\lambda}$ is any lift of $\lambda$ then the group of covering transformations is generated by $\tilde{\lambda}$ and $\tilde{\iota}$. Take
 \[
 \tilde{\lambda} : (p,k,\tilde{U},\tilde{V}) \mapsto (p,k, \tilde{U} + \pi, \tilde{V} + \pi).
-\labelthis{eqn:tilde lambda action}
+% \labelthis{eqn:tilde lambda action}
 \]
-If we apply this transformation twice, we see that $\tilde{\lambda}^2 = \iota$ and so in fact the group of covering transformations $\mathcal{\tilde{A}} \to \mathcal{A}/\mathbb{Z}_2$ is generated by $\tilde{\lambda}$ alone.
+If we apply this transformation twice, we see that $\tilde{\lambda}^2 = \tilde{\iota}$ and so in fact the group of covering transformations $\mathcal{\tilde{A}} \to \mathcal{A}/\mathbb{Z}_2$ is generated by $\tilde{\lambda}$ alone.
 
 
 
@@ -1591,8 +1429,8 @@ The effect of precomposing $\tilde{T}$ with $\tilde{\lambda}$ is to increase its
 = S-1.
 \]
 \begin{proof}
-We first consider the effect of $\lambda$ on $T_0$ in the $\zeta$-plane. Suppose that $\mu$ and $\nu$ are chosen such that $\mu,1,-1$and $\nu$ are arranged clockwise, as shown in Figure~\ref{fig:deck_T_1}. The principal choice of path $\boldsymbol{\gamma}_+$, shown in red, traverses around $\alpha$ whereas the principal choice after swapping the labels of the roots, shown in blue. Let it be denoted $\gamma'_+$.
-The difference between these two paths is homologous to a loop anticlockwise around the upper unit circle. 
+We first consider the effect of $\lambda$ on $T_0$ in the $\zeta$-plane. Suppose that $\mu$ and $\nu$ are chosen such that $\mu,1,-1$and $\nu$ are arranged clockwise, as shown in Figure~\ref{fig:deck_T_1}. The principal choice of path $\boldsymbol{\gamma}_+$, shown in red, traverses around $\alpha$ whereas $\gamma'_+$ is the principal choice after swapping the labels of the roots, shown in blue.
+The difference between these two paths is homologous to $-B$. 
 % So by the construction of $\Theta^P$,
 % \[
 % \int_{\gamma'_+} \Theta^P - \int_{\boldsymbol{\gamma}_+} \Theta^P = \int_{\S^1} \Theta^P = -2\pi\iu.
@@ -1611,7 +1449,6 @@ Putting these together we conclude that the value of $T_0$ changes by $1-S$ unde
 &= S(-2\pi\iu) - (-2\pi\iu) \\
 &= 2\pi\iu (1-S).
 \end{align*}
-
 To infer the effect of the transformation on $\tilde{T}$ however we must take into account how the coordinates $\tilde{u}$ and $\tilde{v}$ may have changed their winding numbers. 
 As one traverses the unit circle clockwise in the $\zeta$-plane, one traverses the imaginary axis in the $z$-plane upwards. 
 Hence $0 = f(\mu) < u < v < \infty = f(\nu)$.
@@ -1621,8 +1458,11 @@ Hence $0 = f(\mu) < u < v < \infty = f(\nu)$.
 % \]
 
 As $u$ and $v$ are both positive, it must be that $\tilde{u},\tilde{v} \in (2\pi n, 2\pi n + \pi)$. Hence $\tilde{U}$ and $\tilde{V}$ also lie in that interval. Under applying the transformation $\tilde{\lambda}$, the coordinates $\tilde{U}$ and $\tilde{V}$ will be translated by $\pi$, increasing their winding numbers by $1$. Combining the effect of $\lambda$ on $T_0$ with the change of winding number in~\eqref{eqn:tilde T computable} shows the relation on this particular subset of $\mathcal{\tilde{A}}$. But a relation between analytic functions on an open set applies everywhere.
+\end{proof}
+\end{lem}
 
-\begin{figure}
+\begin{SCfigure}
+\resizebox{0.5\textwidth}{!}{
 \begin{tikzpicture}
     \clip (-3.5,-3.5) rectangle (3.5,3.5);
     % \draw[step=0.1,gray,very thin] (-6,-6) grid (6,6);
@@ -1668,12 +1508,12 @@ As $u$ and $v$ are both positive, it must be that $\tilde{u},\tilde{v} \in (2\pi
     \fill (2.82,1.04) circle (0.05) node[above=5pt, color=black]{$\mu$};
     \fill (-2.82,1.04) circle (0.05) node[above=5pt, color=black]{$\nu$};
     \fill (1,0.38) circle (0.05) node[below=3pt, color=black]{$\alpha$};
-    \fill (-1,0.38) circle (0.05) node[below=3pt, color=black]{$\beta$};    
+    \fill (-1,0.38) circle (0.05) node[below=3pt, color=black]{$\beta$};
 \end{tikzpicture}
+}
 \caption{The principal path $\boldsymbol{\gamma}_+$ in red and path $\gamma'_+$ in blue.\label{fig:deck_T_1}}
-\end{figure}
-\end{proof}
-\end{lem}
+\end{SCfigure}
+
 
 Thus we can describe the effect of the covering transformation $\tilde{\lambda}$ on points in the level set $\mathcal{\tilde{A}}(p,q)$, where $\tilde{T} = q$. Take a point $(q,k,\tilde{X}) \in \mathcal{\tilde{A}}(p)$, where if $p\leq 1$ let $\tilde{X}$ be $\tilde{U}$ and otherwise take it to be $\tilde{V}$ (cf. Lemma~\ref{lem:T_graph}). Under the covering transformation $\tilde{\lambda}$,
 \[
@@ -1683,17 +1523,16 @@ Thus we can describe the effect of the covering transformation $\tilde{\lambda}$
 Viewing the cosets of the group of covering transformations as an equivalence relation, for $p\neq 1$ they provide an identification between the level set $\mathcal{\tilde{A}}(p,q)$ and the level set $\mathcal{\tilde{A}}(p,q + l(p-1))$ for any integer $l$.
 
 \begin{thm}\label{thm:topology_curves}
-For $p\neq 1$, the subspace $\mathcal{A}/\mathbb{Z}_2(p)$ of $\mathcal{A}/\mathbb{Z}_2$ where $S=p$ is diffeomorphic to
+For $p\neq 1$, the subspace $\mathcal{A}(p)/\mathbb{Z}_2$ of $\mathcal{A}/\mathbb{Z}_2$, where $S=p$, is diffeomorphic to
 \[
 \left\{ \bra{[q],k,\tilde{X}} \in \bra{\R/ (p-1)\Z} \times (0,1) \times \R \right\}.
 \]
 If $p\in\Q$ then the subspace of spectral curves is obtained by restricting $q$ to be rational;
 \[
-\mathcal{S} \cap \mathcal{A}/\mathbb{Z}_2(p)  = \{ \bra{[q],k,\tilde{X}} \mid [q] \in \Q/ (p-1)\Z \}.
+\mathcal{S} \cap \mathcal{A}(p)/\mathbb{Z}_2  = \left\{ \bra{[q],k,\tilde{X}} \mid [q] \in \Q/ (p-1)\Z \right\}.
 \]
 \begin{proof}
-Fix $p\neq 1$ and consider $\mathcal{A}/\mathbb{Z}_2(p)$. It is the quotient of $\mathcal{\tilde{A}}(p)$ by the group of covering transformations $\Z\langle\tilde{\lambda}\rangle$. By Lemma~\ref{lem:T_graph}, $\mathcal{\tilde{A}}(p)$ is foliated by $\mathcal{\tilde{A}}(p,q)$ and we have just shown in~\eqref{eqn:group action} how different $\mathcal{\tilde{A}}(p,q)$ can be identified if their values of $q$ differ by a multiple of $p-1$. Hence it is sufficient to take one representative from each element of $\R/(p-1)\Z$ to cover the image.
-
+Fix $p\neq 1$ and consider $\mathcal{A}(p)/\mathbb{Z}_2$. It is the quotient of $\mathcal{\tilde{A}}(p)$ by the group of covering transformations $\Z\langle\tilde{\lambda}\rangle$. By Lemma~\ref{lem:T_graph}, $\mathcal{\tilde{A}}(p)$ is foliated by $\mathcal{\tilde{A}}(p,q)$ and we have just shown in~\eqref{eqn:group action} how different $\mathcal{\tilde{A}}(p,q)$ can be identified if their values of $q$ differ by a multiple of $p-1$. Hence it is sufficient to take one representative from each element of $\R/(p-1)\Z$ to cover the image.
 Further, from Lemma~\ref{lem:closing_conds} we know that a point of $\mathcal{A}/\mathbb{Z}_2$ corresponds to a spectral curve exactly when $S=p$ and $T=q$ are rationally valued.
 \end{proof}
 \end{thm}
@@ -1702,10 +1541,9 @@ This leaves just one special case, where $p=1$. We see that the action of $\tild
 \[
 \bra{1,q,k,\tilde{X}} \mapsto \bra{1, q, k, \tilde{X} + \pi}.
 \]
-and so in particular only the fourth coordinates is changed.
 
 \begin{thm}\label{thm:topology_curves_p1}
-The space of marked curves $\mathcal{A}/\mathbb{Z}_2(1)$ is diffeomorphic to
+The space of marked curves $\mathcal{A}(1)/\mathbb{Z}_2$ is diffeomorphic to
 \[
 \left\{ \bra{q,k,\left[\tilde{X}\right]} \in \R \times (0,1) \times \R/\pi\Z \right\},
 \]
@@ -1720,24 +1558,21 @@ so the quotient sends $\tilde{X} \in \R$ to $\left[\tilde{X}\right] \in \R/\pi\Z
 \end{proof}
 \end{thm}
 
-These two theorems complete our quest to gain an understanding of the subspace of spectral curves $\mathcal{S}$ within $\mathcal{A}/\mathbb{Z}_2$. First we characterised when a curve is a spectral curve by way of a necessary and sufficient condition: that the two real valued functions $S(\alpha,\beta)$ and $T(\alpha,\beta)$ take rational values.
-Then we moved to the universal cover $\mathcal{\tilde{A}}$, so that we could construct a well defined pullback $\tilde{T}$ of the multi-valued function $T$. The function $\tilde{T}$ is rational exactly when $T$ is, so the preimage of $\mathcal{S}$ in its universal cover is the union of the level sets $\mathcal{\tilde{A}}(p,q)$ of $p = S$ and $q = \tilde{T}$ where $p$ and $q$ are rational. Hence we were motivated to show, in in Lemma~\ref{lem:T_graph}, that the subspaces of $\mathcal{\tilde{A}}(p)$ where $\tilde{T}$ is constant are graphs over $(0,1)\times\R$.
+These two theorems deliver an understanding of the subspace of spectral curves $\mathcal{S}$ within $\mathcal{A}/\mathbb{Z}_2$. 
+For $p$ not equal to one, the components of $\mathcal{S}(p)$ are simply connected and dense within $\mathcal{A}(p)/\mathbb{Z}_2$. As can be seen in Figure~\ref{fig:p05 plot} below, they should be thought of as being intertwined around a central axis $\Delta\cap\{S=p\}$, similar to a family of helicoids. But for $p$ equal to one, instead we have a dense collection of annuli $\mathcal{S}(1)$, as in Figure~\ref{fig:p1 plot}.
 
-The final step was to push these level sets back down to $\mathcal{A}/\mathbb{Z}_2$. To do this, one must quotient out by the action of the group of covering transformations. This group was shown to be $\langle\tilde{\lambda}\rangle$ and its action, described by~\eqref{eqn:group action}, was that of translations. This allowed us to describe the quotients in the two Theorems~\ref{thm:topology_curves} and~\ref{thm:topology_curves_p1}. For $p$ not equal to one, $\mathcal{S}(p)$ is a dense collection within $\mathcal{A}/\mathbb{Z}_2$. As can be seen in Figure~\ref{fig:p05 plot} below, they should be thought of as being intertwined around a central axis, similar to a family of helicoids. But for $p$ equal to one, instead we have a dense collection of annuli $\mathcal{S}(1)$, as in Figure~\ref{fig:p1 plot}.
-
-Unlike true helicoids however, cross-sections perpendicular to the central axis to not meet the axis. Instead they spiral infinitely closer. In this respect, they behave like the cone of a spiral. This aspect is especially prominent in Figure~\ref{fig:p1 plot}, which one could think of as a family of cones with a common vertex (though the plotting software has difficulty for $k\approx 1$, so the `cones' appear to be heading towards the white hole in the middle of the figure but are truncated. The centre of this white hole is the vertex). Some aspects of this vertex structure is known to the authors and will be addressed in a future paper. 
-
+Unlike true helicoids however, cross-sections perpendicular to the central axis do not meet the axis. Instead they spiral infinitely closer. In this respect, they behave like the cone of a spiral. This aspect is especially prominent in Figure~\ref{fig:p1 plot}, which one could think of as a family of cones with a common vertex (though the plotting software has difficulty for $k\approx 1$, so the `cones' appear to be heading towards the white hole in the middle of the figure but are truncated. The centre of this white hole is the vertex). Some aspects of this vertex structure is known to the authors and will be addressed in a future paper.
 We saw in the introduction to this chapter that the parameter $p$ can be thought of as controlling the slope of the level sets as they wind around the central axis. From this point of view, $p=1$ is the intermediate case between right and left handed spirals where the slope is `flat' and the level sets `close up'.
 
 \begin{figure}[p]
     \centering
-    \includegraphics[height=0.5\textheight]{graphics/moduli_plot_p05.png}
+    \includegraphics[height=0.4\textheight]{graphics/moduli_plot_p05.png}
     \caption{One component of the moduli space $\mathcal{S}(0.5)$. Notice that the `helicoid' is wrapped in a left handed direction around a central axis.\label{fig:p05 plot}}
 
     \vspace*{\floatsep}
 
-    \includegraphics[height=0.4\textheight]{graphics/moduli_plot_p1.png}
-    \caption{Select components of the moduli space $\mathcal{S}(1)$, namely those components on which $T$ is $-3$, $-1$, $0$, $1$, or $3$. The component on which $T$ is $0$ is the disc in the middle.\label{fig:p1 plot}}
+    \includegraphics[height=0.37\textheight]{graphics/moduli_plot_p1.png}
+    \caption{Select components of the moduli space $\mathcal{S}(1)$, namely those components on which $T$ is $-3$, $-1$, $0$, $1$, or $3$. The component on which $T$ is $0$ is the disc in the middle. If one is viewing this article digitally, you may like to zoom these images.\label{fig:p1 plot}}
 \end{figure}
 
 % \begin{figure}
@@ -1761,22 +1596,22 @@ How should one interpret it geometrically? Looking at the transformation
 p = \frac{\abs{1-\alpha}\abs{1-\beta}}{\abs{1+\alpha}\abs{1+\beta}}
 \mapsto \frac{1}{p} = \frac{\abs{1+\alpha}\abs{1+\beta}}{\abs{1-\alpha}\abs{1-\beta}},
 \]
-the natural hypothesis is that it is induced by
-\begin{align*}
-\chi: \mathcal{A} &\to \mathcal{A} \\
-(\alpha,\beta) &\mapsto (-\alpha,-\beta).
-\labelthis{eqn:def chi}
-\end{align*}
-Indeed this can be seen to be the case, as $k$ is invariant under such a transformation and the associated map between the spectral curves
-\begin{align*}
-\chi_{(\alpha,\beta)}: \Sigma(\alpha,\beta) &\to \Sigma(-\alpha,-\beta) \\
-(\zeta, \eta) &\mapsto (-\zeta,-\eta)
-\end{align*}
-interchanges $1$ and $-1$, in effect swapping the roles of $u = -\iu f(1)$ and $v = -\iu f(-1)$. The pullback of the differentials under the map $\chi_{(\alpha,\beta)}$ preserves the integrality of the periods and the integrals over $\gamma_+$ and $\gamma_-$ and so spectral data on $\Sigma(\alpha,\beta)$ is transformed into spectral data on $\Sigma(-\alpha,-\beta)$.
-The exact same reasoning applies in general to marked curves of any genus.
+the natural hypothesis is that it is induced by $\chi:(\alpha,\beta)\mapsto (-\alpha,-\beta)$.
+% \begin{align*}
+% \chi: \mathcal{A} &\to \mathcal{A} \\
+% (\alpha,\beta) &\mapsto (-\alpha,-\beta).
+% % \labelthis{eqn:def chi}
+% \end{align*}
+Indeed this can be seen to be the case, as $k$ is invariant under such a transformation and the associated map between the hyperelliptic curves
+\[
+\chi_{(\alpha,\beta)}: \Sigma(\alpha,\beta) \to \Sigma(-\alpha,-\beta),
+\quad (\zeta, \eta) \mapsto (-\zeta,-\eta)
+\]
+interchanges $1$ and $-1$, in effect swapping the roles of $u = -\iu f(1)$ and $v = -\iu f(-1)$. The pullback of the differentials under the map $\chi_{(\alpha,\beta)}$ preserves the integrality of the periods and the closing conditions. Because it commutes with $\rho$ and $\sigma$, the symmetry properties of the differentials and line bundle are also preserved. Hence spectral data on $\Sigma(\alpha,\beta)$ is transformed into spectral data on $\Sigma(-\alpha,-\beta)$.
+The same reasoning applies in general to spectral curves of any genus.
 The harmonic map $g(z) : \mathbb{T}^2 \to \S^3$ arises from the spectral data as the gauge transformation between the connections corresponding to $\zeta=1$ and $\zeta=-1$ in~\eqref{eqn:flat connection translation}, so exchanging these points with $\chi_{(\alpha_1,\alpha_2,\dots,\alpha_g)}$ gives the inverted map $g(z)^{-1}$, which is also harmonic~\cite[Prop~8.2]{Uhlenbeck1989}.
 
-This can be seen directly in the genus zero case, which was treated in Section~\ref{sec:Genus Zero}. Recall that the equation of any harmonic map corresponding to spectral data with a genus zero spectral curve may, as in~\eqref{eqn:genus zero simple map}, be written
+This can be seen explicitly in the genus zero case, which was treated in Section~\ref{sec:Genus Zero}. Recall that the equation of any harmonic map corresponding to spectral data with a genus zero spectral curve may, as in~\eqref{eqn:genus zero simple map}, be written
 \[
 g(w_R + \iu w_I) = \exp (-4w_R X) \exp (4w_I Y),
 \]
@@ -1796,14 +1631,17 @@ The norms, $\norm{X}$ and $\norm{Y}$, come from the identification of $\su_2$ wi
 g(w)^{-1} = \exp (-4w_I Y) \exp (4w_R X).
 \]
 To bring this back into the form of~\eqref{eqn:genus zero simple map}, we must perform two operations. First, we must change coordinates on the domain so that the real part is in the first factor. 
-Second we must rotate the image so that the matrices $-Y$ and $X$ take the required forms. After this restoration, we find that the angle parameter has become $\pi-\delta$. As an aside, as seen in Figure~\ref{fig:genus0 linked} this angle parameter determines the image of the harmonic map up to an $SO(4)$ rotation of $\S^3$. In particular, these maps $g$ and $g^{-1}$ have congruent images.
+Second we must rotate the image so that the matrices $-Y$ and $X$ take the required forms. After this restoration, we find that the angle parameter has become $\pi-\delta$. As an aside, 
+% as seen in Figure~\ref{fig:genus0 linked} 
+this angle parameter determines the image of the harmonic map up to an $SO(4)$ rotation of $\S^3$. In particular, these maps $g$ and $g^{-1}$ have congruent images.
 
 Recall that the parameter $x$ of $g$ was defined by~\eqref{eqn:conformal type} to be $\norm{Y}/\norm{X}$. The value of this ratio is inverted for $g^{-1}$. Now using~\eqref{eqn:def branch point genus zero} to determine the branch point of the spectral curve associated to $g^{-1}$ we have
 \[
 \frac{\frac{1}{x} e^{\iu (\pi-\delta)} - \iu}{\frac{1}{x} e^{\iu (\pi-\delta)} + \iu}
-= \frac{-e^{-\iu \delta} - \iu x}{-e^{-\iu \delta} + \iu x}
-= \frac{-1 - \iu x e^{\iu \delta}}{-1 + \iu x e^{\iu \delta}}
-= -\frac{x e^{\iu \delta}-\iu}{x e^{\iu \delta} + \iu} = -\alpha,
+% = \frac{-e^{-\iu \delta} - \iu x}{-e^{-\iu \delta} + \iu x}
+% = \frac{-1 - \iu x e^{\iu \delta}}{-1 + \iu x e^{\iu \delta}}
+= -\frac{x e^{\iu \delta}-\iu}{x e^{\iu \delta} + \iu} 
+= -\alpha,
 \]
 which is to say the branch point of the spectral curve associated to $g^{-1}$ is the negative of the branch point of the spectral curve associated to $g$, as asserted above.
 
@@ -1836,9 +1674,9 @@ which is to say the branch point of the spectral curve associated to $g^{-1}$ is
 % \]
 % Recall the interpretation of span of the principal parts as the universal cover of the domain, with the lattice generated by these differentials corresponding to the lattice of periods. The previous equation then shows a rotation by $\iu$, corresponding to how we had to define $\tilde{w} = \iu w$.
 
-Returning to genus one spectral curves, of special interest are the spectral curves that are a fixed point of this transformation $\chi: \Sigma(\alpha,\beta) \mapsto \Sigma(-\alpha,-\beta)$. For these spectral curves $\chi_{(\alpha,\beta)}$ is an extra involution and $\beta=-\alpha$. If we can show that they admit spectral data these would be exactly the genus one curves that would meet the conditions for the associated harmonic map to have a totally geodesic two-sphere as its image~\cite[Theorem~8.20]{Hitchin1990}. Hitchin~\cite[p693]{Hitchin1990} identifies a particular one parameter family of these maps as the Gauss maps of Delaunay surfaces. Burstall and Kilian~\cite{Burstall2006a} also examine these Delaunay surfaces and their associated families from a loop-group perspective. We shall show that all such marked curves in fact admit spectral data and further identify in which component of $\mathcal{S}$ they reside.
+Returning to genus one spectral curves, of special interest are the spectral curves that are a fixed point of this transformation $\chi: \Sigma(\alpha,\beta) \mapsto \Sigma(-\alpha,-\beta)$. For these spectral curves $\chi_{(\alpha,\beta)}$ is an extra involution and $\beta=-\alpha$. If we can show that they admit spectral data these would be exactly the genus one curves that would meet the conditions for the associated harmonic map to have a totally geodesic two-sphere as its image~\cite[Theorem~8.20]{Hitchin1990}. Hitchin~\cite[p693]{Hitchin1990} identifies a particular one parameter family of these maps as the Gauss maps of Delaunay surfaces. Burstall and Kilian~\cite{Burstall2006} also examine these Delaunay surfaces and their associated families from a loop-group perspective. We shall show that all such marked curves in fact admit spectral data and further identify in which component of $\mathcal{S}$ they reside.
 
-Suppose that $\Sigma(\alpha,-\alpha)$ is a curve that is fixed by $\chi$. As $\chi$ sends $p \mapsto p^{-1}$, it follows that $p$ is one. To show that $\Sigma(\alpha,-\alpha)$ admits spectral data it remains to shows that $T$ is rationally valued at this point $(\alpha,-\alpha) \in \mathcal{A}$. But note that $\chi$ and $\lambda$ act in the same way on $\{(\alpha,-\alpha) \in \mathcal{A}$, as one would expect because they are both swapping $\alpha$ and $-\alpha$, the two branch points inside the unit disc. Precomposing $T_0$ with $\lambda$ shifts its value by $1-p$, which in this case fixes $T_0$. On the other hand precomposing $T_0$ with $\chi$ negates the function. Together this shows that $T_0$ is zero for these curves. Conversely, the disjoint annuli that constitute $\mathcal{S}(1)$ are determined uniquely by the value $T_0$ takes on them.
+Suppose that $\Sigma(\alpha,-\alpha)$ is a curve that is fixed by $\chi$. As $\chi$ sends $p \mapsto p^{-1}$, it follows that $p$ is $1$. To show that $\Sigma(\alpha,-\alpha)$ admits spectral data it remains to shows that $T$ is rationally valued at this point $(\alpha,-\alpha) \in \mathcal{A}$. But note that $\chi$ and $\lambda$ act in the same way on $\{(\alpha,-\alpha) \in \mathcal{A}$, as one would expect because they are both swapping $\alpha$ and $-\alpha$, the two branch points inside the unit disc. Precomposing $T_0$ with $\lambda$ shifts its value by $1-p$, which in this case fixes $T_0$. On the other hand precomposing $T_0$ with $\chi$ negates the function. Together this shows that $T_0$ is zero for these curves. Conversely, the disjoint annuli that constitute $\mathcal{S}(1)$ are determined uniquely by the value $T_0$ takes on them.
 Therefore we have shown that $\{\Sigma(\alpha,-\alpha) \in \mathcal{A}/\mathbb{Z}_2\}$ is the only annulus of $\mathcal{S}(1)$ where $T_0$ is zero, and these are exactly the harmonic maps to the sphere with a genus one spectral curve.
 
 
@@ -1852,4 +1690,13 @@ Therefore we have shown that $\{\Sigma(\alpha,-\alpha) \in \mathcal{A}/\mathbb{Z
 
 \bibliographystyle{ross_bibsty}
 \bibliography{zotero}
+
+
+Emma Carberry\\
+\textsc{School of Mathematics and Statistics, University of Sydney}\\
+\texttt{emma.carberry@sydney.edu.au}\\~\\
+Ross Ogilvie \\
+\textsc{Lehrstuhl f\"ur Mathematik III, University of Mannheim}\\
+\texttt{r.ogilvie@uni-mannheim.de}
+
 \end{document}
