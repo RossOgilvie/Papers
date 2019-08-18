@@ -18,12 +18,14 @@ Homogeneous harmonic tori (spectral genus zero) and the Gauss maps of Delaunay c
 
 \section{Introduction}\label{sec:Introduction}
 
-In this paper we give explicit descriptions of the moduli space of non-conformal harmonic maps from $\mathbb{T}^2$ to $\S^3$ with spectral curves of genus zero or one. Spectral curves arise from the correspondence between a harmonic map and a hyperelliptic curve with certain properties, as described in~\cite{Hitchin1990}. The properties of these spectral curves include marked points, differentials of the second kind, and a line bundle. The genus of the spectral curve is a natural invariant of the harmonic map.
+In this paper we give explicit descriptions of the moduli space of non-conformal harmonic maps from $\mathbb{T}^2$ to $\S^3$ with spectral curves of genus zero or one. Spectral curves arise from the correspondence between a harmonic map and a hyperelliptic curve with additional data, as described in~\cite{Hitchin1990}. The additional data of these spectral curves include marked points, differentials of the second kind, and a line bundle. The genus of the spectral curve is a natural invariant of the harmonic map.
 It was already known that the space of spectral curves of genus zero is an open disc.
 For spectral curves of genus one, we are able to enumerate the path connected components and show that they are two-dimensional surfaces, either simply connected or annuli. In particular we construct adapted coordinates on a natural parameter space and show that the space of spectral curves resemble families of helicoids or punctured discs (in the two cases respectively) dense in the parameter space.
 
-Our investigation was motivated by~\cite{Kilian2015}, which examines tori with constant mean curvature (CMC) in $\S^3$. Harmonic surfaces are closely related to CMC surfaces; both have similar spectral correspondences. In that paper, it is established that CMC tori with spectral curves of genus zero or one come in one-dimensional families.
-In contrast, for harmonic tori it is known that generically the moduli space is two-dimensional~\cite{Carberry2019} (and in particular the spaces of spectral curves with genus zero, one, and two are smooth surfaces) and so there is a broader range of possibilities for the topology of the space and how it is embedded within the space of hyperelliptic curves.
+Our investigation was motivated by~\cite{Kilian2015}, which examines tori constant mean curvature (CMC) in $\S^3$. 
+Due to Ruh-Vilms~\cite{Ruh1970}, the Gauss maps of conformally parametrised CMC surfaces in $\R^3$ are non-conformal harmonic maps to a great-sphere in $\S^3$, which explains the similarities of the two theories.
+Kilian, Schmidt, and Schmitt establish that generically the spectral curves of CMC tori come in one-dimensional families.
+In contrast, for harmonic tori it is known that, for any genus, the moduli space of spectral curves is generically two-dimensional~\cite{Carberry2019} (and in particular the spaces of spectral curves with genus zero, one, and two are smooth surfaces) and so there is a broader range of possibilities for the topology of the space and how it is embedded within the space of hyperelliptic curves.
 
 It is possible to give a good illustration using cross-sections of the topology of the space $\mathcal{S}$ of spectral curves of genus one. In our context, there is a natural parameter space of curves in which $\mathcal{S}$ lives, but it is not simply connected. We will construct coordinate charts on the universal cover of the parameter space of the form
 \[
@@ -145,7 +147,8 @@ This time the spectral curves are the subset where $q\in\Q$ and is a union of an
 
 
 
-Although there is a `classification' of harmonic and CMC maps given by~\cite{Hitchin1990,Pinkall1989,Bobenko1991} in terms of algebraic curves, there remains many outstanding questions. Broadly speaking, local questions ask whether it is possible to deform a map while preserving its character (i.e.~harmonic, CMC, Willmore). The idea of spectral curves arose in the study of classical PDE systems, such as KdV, and the spectrum of their operators~\cite{Flaschka1980,Krichever1995}. \emph{Linearisations} of the differential equation, also known as \emph{isospectral} deformations, are understood in the correspondence as changing the line bundle without changing the spectral curve. More recent work, for example~\cite{Kilian2010} and~\cite{Carberry2019}, use Whitham deformations, which allow for the spectral curve and differentials to vary as well. Such results often establish the existence of smooth components in the moduli space and compute the dimension.
+Although there is a `classification' of harmonic and CMC maps given by~\cite{Hitchin1990,Pinkall1989,Bobenko1991} in terms of algebraic curves, there remains many outstanding questions. 
+Broadly speaking, local questions ask whether it is possible to deform a map while preserving its character (i.e.~harmonic or CMC). The idea of spectral curves arose in the study of classical PDE systems, such as KdV, and the spectrum of their operators~\cite{Flaschka1980,Krichever1995}. \emph{Linearisations} of the differential equation, also known as \emph{isospectral} deformations, are understood in the correspondence as changing the line bundle without changing the spectral curve. More recent work, for example~\cite{Kilian2010} and~\cite{Carberry2019}, use Whitham deformations, which allow for the spectral curve and differentials to vary as well. Such results often establish the existence of smooth components in the moduli space and compute the dimension.
 On the other hand, global results typically seek to show that spectral curves are dense in some parameter space, for example~\cite{Carberry2016a,Carberry2016}.
 Our results here blend this distinction, showing explicitly that the space of harmonic maps is two-dimensional but also that it densely foliates the space of hyperelliptic curves.
 Reader wishing for more details about the spectral curve correspondence may wish to consult the expository papers~\cite{McIntosh2008} and~\cite{Carberry2013a}.
@@ -164,16 +167,16 @@ The final section takes a symmetry used in Lemma~\ref{lem:T_graph} and generalis
 
 % The authors would like to thank Prof John Rice for his thoughts as the material was developed. The second author also wishes to thank Dr Prof Martin Schmidt for discussions 
 
-We close the introduction with a summary of a theorem of Hitchin~\cite[Theorem~8.1]{Hitchin1990}. This provides a total characterisation of spectral data of a harmonic tori in $\S^3$. We therefore search for spectral curves within the space of hyperelliptic curves by examining whether a curve can satisfy all of these conditions.
+We close the introduction by recalling a theorem of Hitchin~\cite[Theorem~8.1]{Hitchin1990}. This provides a total characterisation of spectral data of a harmonic tori in $\S^3$. We therefore search for spectral curves within the space of hyperelliptic curves by examining whether a curve can satisfy all of these conditions.
 
 \begin{thm}[Hitchin]\label{thm:Hitchin}
 A tuple $(\Sigma,\Theta^1,\Theta^2,E)$ consisting of an algebraic curve $\Sigma$ with equation $\eta^2 = P(\zeta)$, a pair of differentials $\Theta^1, \Theta^2$, and a line bundle $E$ is the \emph{spectral data} of a harmonic map from the 2-torus to $\S^3$ if and only if the following conditions hold.
 \begin{enumerate}[label=(P.\arabic*)]
-\item\label{P:real curve} Real spectral curve: $P(\zeta)$ is a real section of $\mathcal{O}(2g+2)$ with respect to the real structure induced by $\rho$.
+\item\label{P:real curve} Real spectral curve: $P(\zeta)$ is a real section of $\mathcal{O}(2g+2)$ with respect to the real structure induced by $\rho : \zeta \mapsto \bar{\zeta}^{-1}$.
 \item\label{P:no real zeroes} No real zeroes: $P(\zeta)$ has no zeroes on the unit circle $\S^1\subset\CP^1$.
-\item\label{P:simple zeroes} Simple zeroes: $P(\zeta)$ has only simple zeroes.
+% \item\label{P:simple zeroes} Simple zeroes: $P(\zeta)$ has only simple zeroes.
 \item\label{P:poles} Poles: The differentials have double poles with no residues at $\pi^{-1}\{0,\infty\}$, where $\pi$ is the projection $\pi: \Sigma \to \CP^1$, but are otherwise holomorphic.
-\item\label{P:symmetry} Symmetry: The differentials satisfy $\sigma^* \Theta = - \Theta$.
+\item\label{P:symmetry} Symmetry: The differentials satisfy $\sigma^* \Theta = - \Theta$, for $\sigma$ the hyperelliptic involution of $\pi$.
 \item\label{P:reality} Reality: The differentials satisfy $\rho^* \Theta = - \bar{\Theta}$.
 \item\label{P:imaginary periods} Imaginary Periods: The differentials have purely imaginary periods.
 \item\label{P:periods} Periods: The periods of the differentials lie in $2\pi\iu\Z$.
@@ -304,7 +307,6 @@ n^2 & m^2
 These four integers may be interpreted as winding numbers of the map. The parallelogram spanned by $\kappa_1$ and $\kappa_2$ covers the image exactly once. Thus in~\eqref{eqn:def tau12} the integers $n^1$ and $m^1$ may be interpreted as how many times the loop $[0,\tau_1] \subset \C/\langle \tau_1,\tau_2 \rangle$ is wrapped around the image, and likewise for $n^2$ and $m^2$.
 To have an image that is not a circle, the columns of the above matrix of integers should be linear independent. 
 
-% TODO fix \delta, be clearer
 We have already examined the effect of varying $\delta$, namely that the image of the maps change. The effect of varying $x$ is to change the domain torus. If we define $\tau = \tau_2/\tau_1$ to be the conformal type of the domain torus $M$, we arrive at the formula
 \[
 \tau
@@ -363,7 +365,6 @@ where $\alpha$ is a point that is always inside the unit circle, given by
 = \frac{x e^{\iu \delta} - \iu}{x e^{\iu \delta} +\iu}.
 \labelthis{eqn:def branch point genus zero}
 \]
-% TODO fix following
 The points of the eigenline curve in $\CP^1 \times\CP^1$ are hence of the form
 % \begin{multline*}
 % \Bigg( \zeta, \Bigg[\pm \sqrt{-\zeta^{-1}(\tau_l + \bar{\tau_l}\zeta)(1 - \iu x e^{\iu \delta})(\zeta-\alpha)} \\
@@ -774,7 +775,7 @@ The $A$ periods of the standard elliptic differentials define functions of the e
 \end{align*}
 Generally we omit the elliptic modulus $k$.
 The expression $\sqrt{1-k^2}$ is known as the complementary modulus and by convention we write $K' = K(\sqrt{1-k^2})$ and $E' = E(\sqrt{1-k^2})$, where the prime represents complement not derivative. 
-Its relevance is due to Jacobi's imaginary transformation, which shows the $B$ periods are
+Its relevance is due to Jacobi's imaginary transformation~\cite[p. 34]{Jacobi1829}, which shows the $B$ periods are
 \begin{align*}
 \int_{B} \omega &= 2\iu K', &
 \int_{B} e &= 2\iu(K'-E').
@@ -786,8 +787,8 @@ Note that $\varepsilon$ is the sum of $e$ and an exact differential and so has t
 \labelthis{eqn:thetaP}
 \]
 The superscript $P$ is a mnemonic for period, because this differential has an $A$ period of $0$ and a $B$ period of $2\pi\iu$. This follows from the above standard periods and from Legendre's relation $K'E + KE' - KK' = \frac{\pi}{2}$,
-% TODO reference
-which is essentially a reciprocity law.
+% TODO reference    
+which is essentially a reciprocity law~\cite{Griffiths1994}.
 % TODO reference
 The above equation for $\Theta^P$ shows a nice division, with the first two terms providing the desired periods and the last term giving the required poles. Though this definition may seem arbitrary, we can characterise the differential $\Theta^P$ in the following natural way.
 
@@ -845,8 +846,7 @@ Using the same proof as the above lemma, any differential satisfying~\ref{P:pole
 \subsection{The Closing Conditions}\label{sub:Closing Conditions}
 We have seen that every curve $\Sigma\in\mathcal{A}/\mathbb{Z}_2$ admits differentials that meet Conditions~\ref{P:poles}--\ref{P:periods}, but it is not possible to find differentials on every curve that further satisfy the closing conditions~\ref{P:closing}. We will define functions on $\mathcal{A}$ such that the conditions are satisfiable for a curve exactly when the value of the functions are both rational.
 
-The closing conditions on the spectral data ensure that it corresponds to a harmonic map of the torus, rather than a harmonic map of the plane (of finite type).
-% TODO check this is actually true. Maybe McIntosh?
+The closing conditions on the spectral data ensure that it corresponds to a harmonic map of the torus, rather than a merely a harmonic section of some bundle on the torus.
 Let us recall~\ref{P:closing}, supposing that $\Theta$ satisfies~\ref{P:poles}--\ref{P:periods}. The closing condition at $\zeta=1$ if
 \[
 \int_{\gamma_{+}} \Theta \in 2\pi\iu \Z,
@@ -1537,10 +1537,7 @@ Further, from Lemma~\ref{lem:closing_conds} we know that a point of $\mathcal{A}
 \end{proof}
 \end{thm}
 
-This leaves just one special case, where $p=1$. We see that the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(1)$ fixes the value of $\tilde{T}$ and so does not identify different level sets $q=\tilde{T}$. Instead, the group action creates an equivalence relation on each level set. Specifically, the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(1,q)$ given by~\eqref{eqn:group action} reads
-\[
-\bra{1,q,k,\tilde{X}} \mapsto \bra{1, q, k, \tilde{X} + \pi}.
-\]
+This leaves just one special case, where $p=1$. We see that the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(1)$ fixes the value of $\tilde{T}$ and so does not identify different level sets $q=\tilde{T}$. Instead, the group action creates an equivalence relation on each level set. Specifically, the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(1,q)$ given by~\eqref{eqn:group action} reads $\bra{1,q,k,\tilde{X}} \mapsto \bra{1, q, k, \tilde{X} + \pi}$.
 
 \begin{thm}\label{thm:topology_curves_p1}
 The space of marked curves $\mathcal{A}(1)/\mathbb{Z}_2$ is diffeomorphic to
@@ -1550,10 +1547,7 @@ The space of marked curves $\mathcal{A}(1)/\mathbb{Z}_2$ is diffeomorphic to
 the product of $\R$ and an annulus, such that the subspace of spectral curves is the restriction of the first component of the product to $\Q$.
 
 \begin{proof}
-The orbit of a point $(1,q,k,\tilde{X})$ of $\mathcal{\tilde{A}}(1)$ is
-\[
-\bra{1,q,k,\tilde{X}+\pi\Z},
-\]
+The orbit of a point $(1,q,k,\tilde{X})$ of $\mathcal{\tilde{A}}(1)$ is $\bra{1,q,k,\tilde{X}+\pi\Z}$,
 so the quotient sends $\tilde{X} \in \R$ to $\left[\tilde{X}\right] \in \R/\pi\Z$. The conclusion about the spectral curves again follows immediately from Lemma~\ref{lem:closing_conds}.
 \end{proof}
 \end{thm}
