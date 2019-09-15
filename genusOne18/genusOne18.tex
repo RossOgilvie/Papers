@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{latex_style}
+\usepackage{soul}
 
 \begin{document}
 \title{Harmonic Tori in $\S^3$ with Low Genus Spectral Curves}
@@ -8,26 +9,27 @@
 \maketitle
 
 \begin{abstract}
-In this paper we give explicit descriptions of the moduli space of harmonic tori in $\S^3$ with spectral curves of genus zero or one. 
-The former is simply a disc. We enumerate the path connected components of the latter and show that they are either `helicoids' or annuli, and that they densely foliate the parameter space.
+In this paper we give explicit descriptions of the moduli spaces of harmonic tori in $\S^3$ with spectral curves of genus zero or one. 
+The former is simply a disc. We index the path connected components of the latter and show that they are either `helicoids' or annuli, and that they densely foliate the parameter space.
 By using elliptic integrals to construct the spectral data we are able to give explicit formulae at every stage.
-This work fits within the integrable systems and Whitham deformation approaches to non-conformal harmonic (and constant mean curvature) maps. 
+This work untilises integrable systems methods common to harmonic and constant mean curvature maps. 
 % It aims to provide a concrete model to investigate hypotheses for higher spectral genus cases.
-Homogeneous harmonic tori (spectral genus zero) and the Gauss maps of Delaunay cylinders are used as illustrative examples.
+Homogeneous harmonic tori, which is exactly the spectral genus zero case, and the Gauss maps of Delaunay cylinders are used as illustrative examples.
 \end{abstract}
 
 \section{Introduction}\label{sec:Introduction}
 
-In this paper we give explicit descriptions of the moduli space of non-conformal harmonic maps from $\mathbb{T}^2$ to $\S^3$ with spectral curves of genus zero or one. Spectral curves arise from the correspondence between a harmonic map and a hyperelliptic curve with additional data, as described in~\cite{Hitchin1990}. The additional data of these spectral curves include marked points, differentials of the second kind, and a line bundle. The genus of the spectral curve is a natural invariant of the harmonic map.
-It was already known that the space of spectral curves of genus zero is an open disc.
-For spectral curves of genus one, we are able to enumerate the path connected components and show that they are two-dimensional surfaces, either simply connected or annuli. In particular we construct adapted coordinates on a natural parameter space and show that the space of spectral curves resemble families of helicoids or punctured discs (in the two cases respectively) dense in the parameter space.
+In this paper we consider conformal and non-conformal harmonic maps from $\mathbb{T}^2$ to $\S^3$,
+and give explicit descriptions of the moduli space of such maps whose spectral curves are genus zero or one. 
+Spectral curves arise from the correspondence between a harmonic map and a hyperelliptic curve with additional data, as described in~\cite{Hitchin1990}. The additional data of these spectral curves include marked points, differentials of the second kind, and a line bundle. The genus of the spectral curve is a natural invariant of the harmonic map.
+It was already known that the space of spectral curves of genus zero is an open disc~\cite[Section 9]{Hitchin1990}.
+For spectral curves of genus one, we are able to enumerate the path connected components and show that they are two-dimensional surfaces, either simply connected or annuli. Moreover, by constructing an adapted coordinate system we foliate the parameter space of hyperelliptic curves and exhibit the moduli space as a dense collection of leaves.
 
-Our investigation was motivated by~\cite{Kilian2015}, which examines tori constant mean curvature (CMC) in $\S^3$. 
-Due to Ruh-Vilms~\cite{Ruh1970}, the Gauss maps of conformally parametrised CMC surfaces in $\R^3$ are non-conformal harmonic maps to a great-sphere in $\S^3$, which explains the similarities of the two theories.
+Our investigation was motivated by~\cite{Kilian2015}, which examines constant mean curvature (CMC) tori in $\S^3$. Due to Ruh-Vilms~\cite{Ruh1970}, the Gauss maps of conformally parametrised CMC surfaces in $\R^3$ are non-conformal harmonic maps to a great-sphere in $\S^3$; \hl{thus our work can be seen as a different generalisation of the classical situation.}
 Kilian, Schmidt, and Schmitt establish that generically the spectral curves of CMC tori come in one-dimensional families.
 In contrast, for harmonic tori it is known that, for any genus, the moduli space of spectral curves is generically two-dimensional~\cite{Carberry2019} (and in particular the spaces of spectral curves with genus zero, one, and two are smooth surfaces) and so there is a broader range of possibilities for the topology of the space and how it is embedded within the space of hyperelliptic curves.
 
-It is possible to give a good illustration using cross-sections of the topology of the space $\mathcal{S}$ of spectral curves of genus one. In our context, there is a natural parameter space of curves in which $\mathcal{S}$ lives, but it is not simply connected. We will construct coordinate charts on the universal cover of the parameter space of the form
+A good illustration of the space $\mathcal{S}$ of spectral curves of genus one is given by its cross sections. In our context, there is a natural parameter space of curves in which $\mathcal{S}$ lives, but it is not simply connected. We will construct coordinate charts on the universal cover of the parameter space of the form
 \[
 \left\{ \bra{p,q,k,\tilde{X}} \in I \times \R \times (0,1) \times \R \right\},
 \]
@@ -131,7 +133,7 @@ Both $p\in\Q^+$ and $k$ are unchanged by the group action, so let us take a cros
 
 One can understand the role of $p$ as determining the angle between the translation $\tilde{\lambda}$ and the coordinate axes. As $p$ tends to $1$, the translation aligns more closely with the $q$-axis. When $p=1$ lines of constant $q$ are in the direction of translation and close up into circles under the group action. We think of this exceptional case $p=1$ as the transition from left-handed to right-handed `helicoids'. The cross-section diagram is shown in Figure~\ref{fig:level set quotient p1} or in full in Figure~\ref{fig:p1 plot}.
 
-A precise statement of our results is thus. In Theorem~\ref{thm:topology_curves} we have that the subset of the parameter space with $p\neq 1$ constant is diffeomorphic to 
+A precise statement of our results is the following. In Theorem~\ref{thm:topology_curves} we prove that the subset of the parameter space with $p\neq 1$ constant is diffeomorphic to 
 \[
 \left\{ \bra{[q],k,\tilde{X}} \in \R/(p-1)\Z \times (0,1) \times \R \right\}.
 \]
@@ -147,27 +149,27 @@ This time the spectral curves are the subset where $q\in\Q$ and is a union of an
 
 
 
-Although there is a `classification' of harmonic and CMC maps given by~\cite{Hitchin1990,Pinkall1989,Bobenko1991} in terms of algebraic curves, there remains many outstanding questions. 
-Broadly speaking, local questions ask whether it is possible to deform a map while preserving its character (i.e.~harmonic or CMC). The idea of spectral curves arose in the study of classical PDE systems, such as KdV, and the spectrum of their operators~\cite{Flaschka1980,Krichever1995}. \emph{Linearisations} of the differential equation, also known as \emph{isospectral} deformations, are understood in the correspondence as changing the line bundle without changing the spectral curve. More recent work, for example~\cite{Kilian2010} and~\cite{Carberry2019}, use Whitham deformations, which allow for the spectral curve and differentials to vary as well. Such results often establish the existence of smooth components in the moduli space and compute the dimension.
-On the other hand, global results typically seek to show that spectral curves are dense in some parameter space, for example~\cite{Carberry2016a,Carberry2016}.
+Although there is a classification of harmonic and CMC maps given by~\cite{Hitchin1990,Pinkall1989,Bobenko1991} in terms of algebraic curves, many questions remain. 
+`Local' questions study deformations a map that preserve its character (i.e.~harmonic or CMC). The idea of spectral curves arose in the study of classical PDE systems, such as KdV, and the spectrum of their operators~\cite{Flaschka1980,Krichever1995}. Linearisations of the differential equation are understood in the correspondence as changing the line bundle without changing the spectral curve, and thus they are also known as isospectral deformations. More recent work, for example~\cite{Kilian2010} and~\cite{Carberry2019}, use Whitham deformations, which allow for the spectral curve and differentials to vary as well. Such results often establish the existence of smooth components in the moduli space and compute their dimensions.
+On the other hand, 'global' results typically seek to show that spectral curves are dense in some parameter space, for example~\cite{Carberry2016a,Carberry2016}.
 Our results here blend this distinction, showing explicitly that the space of harmonic maps is two-dimensional but also that it densely foliates the space of hyperelliptic curves.
-Reader wishing for more details about the spectral curve correspondence may wish to consult the expository papers~\cite{McIntosh2008} and~\cite{Carberry2013a}.
+More details about the spectral curve correspondence may be found in the expository papers~\cite{McIntosh2008} and~\cite{Carberry2013a}.
 
 The results of this paper indicate at least two interesting avenues for further investigation. Most obviously, one could attempt this programme for higher genus spectral curves using theta functions and a braid space, though one would probably have to limit oneself to non-singular spectral curves. This is due to what we see in Figures~\ref{fig:p05 plot}--\ref{fig:p1 plot}, that the space of spectral curves has peculiar behaviour near a singular curve; it spirals and the different path components converge to a single point. It is unclear whether this is particular to this low genus case or typical of the space of spectral curves generally.
 
 On the other hand, in a suitable limit spectral curves accumulate a singularity (different to the type of singularity in the previous paragraph) and can be normalised to lower genus curve. This has been carried out for CMC tori in $\S^3$ with spectral genus one in~\cite{Kilian2015}, and in general for spectral data with only one differential in~\cite{Hauswirth2017arxiv}. The formulae in this paper allow one to observe the differentials during this procedure and to begin to connect together the spaces of spectral curves with different genera. The preliminaries of this process is covered in~\cite[Section~4.2]{Ogilvie2017}. 
 
-We now give a section-by-section outline of the paper. Section~\ref{sec:Genus Zero} deals with harmonic maps whose spectral curve have genus zero. This case was already well-understood, but we use it as an introduction to spectral data. Starting with explicit formulae of the harmonic maps, we walk through the construction of the spectral data using a family of flat connections~\eqref{eqn:flat connection translation} and their holonomy.
+We now give a section-by-section outline of the paper. Section~\ref{sec:Genus Zero} deals with harmonic maps whose spectral curve have genus zero. This case was already well-understood, but we use it as an introduction to spectral data. Starting with explicit formulae of the harmonic maps, we construct their spectral data using a family of flat connections~\eqref{eqn:flat connection translation} and their holonomy.
 We also discuss how the geometry of a harmonic map is altered as one varies its spectral data.
 
-The main section of the paper is Section~\ref{sec:Genus One}. In this section we begin with a parameter space for genus one hyperelliptic curves and then successively impose conditions that a curve must satisfy to be a spectral curve. This gives explicit forms for the spectral data in terms of inverse elliptic functions.
+The main results of the paper are contained in Section~\ref{sec:Genus One}. In this section we begin with a parameter space for genus one hyperelliptic curves and then successively impose conditions that a curve must satisfy to be a spectral curve. This gives explicit forms for the spectral data in terms of inverse elliptic functions.
 The section culminates in Theorems~\ref{thm:topology_curves} and~\ref{thm:topology_curves_p1} which describe the topology of the space of genus one spectral curves, enumerates the the path connected components, and shows that they are dense in the space of hyperelliptic curves.
 
 The final section takes a symmetry used in Lemma~\ref{lem:T_graph} and generalises it to spectral curves of any genus. We compare how this symmetry acts for genus zero and for genus one. In the latter case, we connect this to the Gauss maps of Delaunay cylinders.
 
-% The authors would like to thank Prof John Rice for his thoughts as the material was developed. The second author also wishes to thank Dr Prof Martin Schmidt for discussions 
+The authors would like to thank Prof John Rice for his feedback as the material was developed. The second author also wishes to thank Dr Prof Martin Schmidt for discussions about spectral genus one CMC tori.
 
-We close the introduction by recalling a theorem of Hitchin~\cite[Theorem~8.1]{Hitchin1990}. This provides a total characterisation of spectral data of a harmonic tori in $\S^3$. We therefore search for spectral curves within the space of hyperelliptic curves by examining whether a curve can satisfy all of these conditions.
+We close the introduction by recalling a theorem of Hitchin~\cite[Theorem~8.1]{Hitchin1990}. This provides a total characterisation of spectral data of a harmonic torus in $\S^3$. We therefore search for spectral curves within the space of hyperelliptic curves by examining whether a curve can satisfy all of these conditions.
 
 \begin{thm}[Hitchin]\label{thm:Hitchin}
 A tuple $(\Sigma,\Theta^1,\Theta^2,E)$ consisting of an algebraic curve $\Sigma$ with equation $\eta^2 = P(\zeta)$, a pair of differentials $\Theta^1, \Theta^2$, and a line bundle $E$ is the \emph{spectral data} of a harmonic map from the 2-torus to $\S^3$ if and only if the following conditions hold.
@@ -237,20 +239,20 @@ g(w) = \exp( -4 w_R X ) \exp( 4 w_I Y ).
 \]
 The correspondence between spectral data and harmonic maps does not distinguish between maps that differ by an $\SO(4)$ rotation of $\S^3$. We may use this freedom to simplify $X$ and $Y$. 
 % We will make both off-diagonal to simplify a computation of eigenvectors below. 
-Further, by rescaling $w$ we may change the lengths of the vectors $X$ and $Y$. Without loss of generality, we fix 
+Further, by rescaling $w$ we may change the lengths of the vectors $X$ and $Y$. Without loss of generality, for some $x \in \R^+$ and $\delta\in (0,\pi)$, we may take 
 \[
 X = \begin{pmatrix}
 0 & 1 \\ -1 & 0
 \end{pmatrix}, \qquad
 Y = x\begin{pmatrix}
 0 & e^{\iu \delta} \\ -e^{-\iu \delta} & 0
-\end{pmatrix},
+\end{pmatrix}.
 % \labelthis{eqn:def delta}
 \]
-for some $x \in \R^+$ and $\delta\in (0,\pi)$. We shall refer to the family of such maps as $g(x,\delta)(w)$.
 
+Using the standard inner product on $\su_2$, we may consider $\delta$ as the angle between $X$ and $Y$, and $x$ as the ratio of their lengths. The image of $g$ is determined solely by the angle $\delta$. The image is not determined uniquely by $\delta$ though; the tori for $\delta$ and $\pi-\delta$ are the same. Indeed, if one reflects $X$ to $-X$, the angle between $-X$ and $Y$ is the supplement of $\delta$. However, the two tori carry the opposite orientation and so are distinguishable.
 
-Using the standard inner product on $\su_2$, we may consider $\delta$ as the angle between $X$ and $Y$, and $x$ as the ratio of their lengths. The image of $g$ is determined by the angle $\delta$. The image is not determined uniquely by $\delta$ though; the tori for $\delta$ and $\pi-\delta$ are the same. Indeed, if one reflects $X$ to $-X$, the angle between $-X$ and $Y$ is the supplement of $\delta$. However, the two tori carry the opposite orientation and so are distinguishable.
+\hl{Another way to understand these images is to consider the Hopf map} $h : \S^3 \to \S^2$ given by $h(z,w) = (2\Real (z\bar{w}), \abs{z}^2 - \abs{w}^2)$. The preimage of any closed curve in $\S^2$ is called a Hopf torus~\cite{Pinkall1985}. In particular, the preimage of the circle with constant lattitude $\delta-\pi/2$, i.e. $\abs{z}^2 - \abs{w}^2 = \sin(\delta - \pi/2)$, is a torus congruent to the image of $g$. For $\delta = \pi/2$, it is the preimage of the equator and thus the Clifford torus. As $\delta$ tends to $0$ or $\pi$, the circles of constant lattitude tend to the north and south poles and their corresponding Hopf tori tend to the two great circles in $\S^3$ that respectively lie over those poles.
 
 % \begin{figure}
 % \includegraphics[width=\textwidth]{graphics/genus0_linked.png}
@@ -307,7 +309,7 @@ n^2 & m^2
 These four integers may be interpreted as winding numbers of the map. The parallelogram spanned by $\kappa_1$ and $\kappa_2$ covers the image exactly once. Thus in~\eqref{eqn:def tau12} the integers $n^1$ and $m^1$ may be interpreted as how many times the loop $[0,\tau_1] \subset \C/\langle \tau_1,\tau_2 \rangle$ is wrapped around the image, and likewise for $n^2$ and $m^2$.
 To have an image that is not a circle, the columns of the above matrix of integers should be linear independent. 
 
-We have already examined the effect of varying $\delta$, namely that the image of the maps change. The effect of varying $x$ is to change the domain torus. If we define $\tau = \tau_2/\tau_1$ to be the conformal type of the domain torus $M$, we arrive at the formula
+Varying $\delta$ changes the image of the map, however varying $x$ changes the domain torus. If we define $\tau = \tau_2/\tau_1$ to be the conformal type of the domain torus $M$, we arrive at the formula
 \[
 \tau
 = \frac{(n^2 + m^2) + \iu x(n^2 - m^2)}
@@ -325,7 +327,7 @@ A reason that the range of possible conformal parameters $\tau$ is so pleasing i
 
 
 
-We turn now to computing the spectral data associated to one of these harmonic maps $g(x,\delta): M \to \SU(2)$. Following~\cite{Hitchin1990}, we first give an $\S^1$ family of flat unitary connections. It is possible to analytically continue this representation to a $C^\times$ family of flat $\SL_2\C$ connections. From this family, we consider the holonomy representation of the fundamental group of $M$. As $M$ is a torus, the matrices of this representation commute and thus shares eigenspaces. Generically, these eigenspaces will be two lines. It can be shown that the eigenlines coincide for only a finite number of points in $\C^\times$. If we consider the family of eigenlines as a subspace of $\C^\times \times \CP^1$, then there are only finitely many ramification points under projection to the first component. Further, it is possible to complete this to an algebraic curve in $\CP^1 \times \CP^1$ that double covers the first component. This is called the eigenline curve. For eigenline curves of genus 0, 1, and 2 this is exactly the spectral curve. For higher genera, one must take into account the possibility of eigenlines coinciding to higher order.
+We turn now to computing the spectral data associated to one of these harmonic maps $g: M \to \SU(2)$. Following~\cite{Hitchin1990}, we first give an $\S^1$ family of flat unitary connections. It is possible to analytically continue this representation to a $C^\times$ family of flat $\SL_2\C$ connections. From this family, we consider the holonomy representation of the fundamental group of $M$. As $M$ is a torus, the matrices of this representation commute and thus shares eigenspaces. Generically, these eigenspaces will be two lines. It can be shown that the eigenlines coincide for only a finite number of points in $\C^\times$. If we consider the family of eigenlines as a subspace of $\C^\times \times \CP^1$, then there are only finitely many ramification points under projection to the first component. Further, it is possible to complete this to an algebraic curve in $\CP^1 \times \CP^1$ that double covers the first component. This is called the eigenline curve. For eigenline curves of genus 0, 1, and 2 this is exactly the spectral curve. For higher genera, one must take into account the possibility of eigenlines coinciding to higher order.
 
 Concretely, for any harmonic map $g$ from $M$ to $\SU(2)$ the $\S^1$ family $d_\zeta$ of flat unitary connections is given by the formula
 \[
@@ -396,7 +398,7 @@ One can write the inverse transformation as
 x e^{\iu \delta} = \iu \frac{1+\alpha}{1-\alpha}.
 \]
 Taking the magnitude of both sides shows that $x$ is constant along the arcs of circles centred on the real axis with radii such that the circle is perpendicular to the unit circle. 
-If $x$ is constant, so too is $\tau$, and along this arc the corresponding family of harmonic maps have the same domain varying images.
+If $x$ is constant, so too is $\tau$, and along this arc the corresponding family of harmonic maps have the same domain but varying images.
 % as in Figures~\ref{fig:genus0 linked}.
 In the limit as $\alpha$ approaches the unit circle for fixed $x$, the parameter $\delta$ tends to $0$ or $\pi$. Recall the $\delta$ is the angle between $X$ and $Y$, so that in the limit these vectors are parallel and the image of the harmonic map collapses into a great circle in $\SU(2)$.
 
@@ -533,9 +535,9 @@ There are essentially four stages in the proof of this result.
 For each real genus one curve there is a plane of real differentials meeting conditions~\ref{P:poles}--\ref{P:periods}. In Part~\ref{sub:Differentials} we find explicit formulae for these differentials with periods $0$ and $2\pi\iu$. 
 The challenge is to determine whether it possible on a given curve to find a pair of differentials that additionally satisfies the closing conditions~\ref{P:closing}. This is taken up in Part~\ref{sub:Closing Conditions}.
 We can choose an exact differential that satisfies the closing conditions exactly when the function $S$, defined by~\eqref{eqn:def_S}, is rationally valued.
-Similarly, there is a non-exact differential on a curve that satisfies the closing condition exactly when the function $T$ is rational, where $T$ is defined by~\eqref{eqn:def_T}. This `function' $T$ is only well-defined locally. In Lemma~\ref{lem:closing_conds}, that a curve admits spectral data exactly when these two functions are rationally valued.
+Similarly, there is a non-exact differential on a curve that satisfies the closing condition exactly when the function $T$ is rational, where $T$ is defined by~\eqref{eqn:def_T}. This `function' $T$ is only well-defined locally. In Lemma~\ref{lem:closing_conds} we prove that a curve admits spectral data exactly when these two functions are rationally valued.
 
-The third stage addresses this deficiency in $T$. In Part~\ref{sub:Universal Cover} we lift $T$ to a well-defined function $\tilde{T}$ on $\mathcal{\tilde{A}}$, the universal cover of $\mathcal{A}$. Let $\mathcal{\tilde{A}}(p)$ be the subspace where $p=S$ is fixed (we apply this notation generally). In Lemma~\ref{lem:T_graph} we show that for each $p$ there is a coordinate chart where $q=\tilde{T}$ is a coordinate. One has to consider $p \geq 1$ and $p \leq 1$ separately, but in both cases the coordinate charts have the form 
+The third stage addresses this deficiency in $T$. In Part~\ref{sub:Universal Cover} we lift $T$ to a well-defined function $\tilde{T}$ on $\mathcal{\tilde{A}}$, the universal cover of $\mathcal{A}$. Let $\mathcal{\tilde{A}}(p)$ be the subspace where $S=p$ is fixed (we apply this notation generally). In Lemma~\ref{lem:T_graph} we show that for each $p$ there is a coordinate chart where $q=\tilde{T}$ is a coordinate. One has to consider $p \geq 1$ and $p \leq 1$ separately, but in both cases the coordinate charts have the form 
 \[
 \mathcal{\tilde{A}}(p) \diffeo \left\{ \bra{q,k,\tilde{X}} \in \R \times (0,1) \times \R \right\}.
 \]
@@ -552,14 +554,14 @@ Thus $\tilde{\lambda}$ maps $\mathcal{\tilde{A}}(p,q)$ to $\mathcal{\tilde{A}}(p
 % If $p$ and $q$ are rational, so too is $q + (p-1)$ and hence the group $\mathcal{G} = \Z\langle \tilde{\lambda}\rangle$ of covering transformations restricts to give a group action on the preimage of the space of spectral curves.
 
 
-Recall that $\mathcal{A}(p)/\mathbb{Z}_2$ denotes the subspace where $p$ is fixed. These coordinates and quotient have given us a foliation of $\mathcal{A}/\mathbb{Z}_2$. Explicitly, for $p\neq 1$ in Theorem~\ref{thm:topology_curves} we have that
+Recall that $\mathcal{A}(p)/\mathbb{Z}_2$ denotes the subspace where $p$ is fixed. These coordinates now foliate of $\mathcal{A}/\mathbb{Z}_2$. Explicitly, for $p\neq 1$ in Theorem~\ref{thm:topology_curves} we have that
 \[
 \mathcal{A}/Z_2(p)
 \diffeo \mathcal{\tilde{A}}(p)/\mathbb{Z}\langle\tilde{\lambda}\rangle
 = \left\{ \bra{[q],k,\tilde{X}} \in \R/(p-1)\Z \times (0,1) \times \R \right\}.
 \]
-The subset where $[q] \in \Q/(p-1)\Z$ is $\mathcal{S}\cap\mathcal{A}(p)/\mathbb{Z}_2$. 
-% This is a union of helicoids (though in this adapted coordinate system, they appear as coordinate planes).
+The subset where $[q] \in \Q/(p-1)\Z$ is $\mathcal{S}\cap\mathcal{A}(p)/\mathbb{Z}_2$.
+This is a union of `helicoids'.
 For $p=1$, by contrast, Theorem~\ref{thm:topology_curves_p1} shows that
 \[
 \mathcal{A}(1)/\mathbb{Z}_2
@@ -1157,7 +1159,7 @@ If we rewrite $T_0$ in the following way,
 \begin{align*}
 2\pi T_0(p,k,u,v) 
 = 4p& \left[ E \Imag F(\iu v; k) - K \Imag \left(E(\iu v; k) - k\iu v\right) \right] \\
- -4& \left[ E \Imag F(\iu u; k) - K \Imag \left(E(\iu u; k) - k\iu v\right) \right] \\
+ -4& \left[ E \Imag F(\iu u; k) - K \Imag \left(E(\iu u; k) - k\iu u\right) \right] \\
  - 4& K \left[p\left(\frac{w(\iu v)}{u-v} + kv \right) + \left(\frac{w(\iu u)}{u-v} - ku \right) \right],
 \labelthis{eqn:T0 rewrite}
 \end{align*}
@@ -1566,7 +1568,7 @@ We saw in the introduction to this chapter that the parameter $p$ can be thought
     \vspace*{\floatsep}
 
     \includegraphics[height=0.37\textheight]{graphics/moduli_plot_p1.png}
-    \caption{Select components of the moduli space $\mathcal{S}(1)$, namely those components on which $T$ is $-3$, $-1$, $0$, $1$, or $3$. The component on which $T$ is $0$ is the disc in the middle. If one is viewing this article digitally, you may like to zoom these images.\label{fig:p1 plot}}
+    \caption{Select components of the moduli space $\mathcal{S}(1)$, namely those components on which $T$ is $-3$, $-1$, $0$, $1$, or $3$. The component on which $T$ is $0$ is the disc in the middle. If one is viewing this article digitally, one may like to zoom these images.\label{fig:p1 plot}}
 \end{figure}
 
 % \begin{figure}
@@ -1690,7 +1692,7 @@ Emma Carberry\\
 \textsc{School of Mathematics and Statistics, University of Sydney}\\
 \texttt{emma.carberry@sydney.edu.au}\\~\\
 Ross Ogilvie \\
-\textsc{Lehrstuhl f\"ur Mathematik III, University of Mannheim}\\
-\texttt{r.ogilvie@uni-mannheim.de}
+\textsc{Lehrstuhl f\"ur Mathematik III, Universit\"at Mannheim}\\
+\texttt{r.ogilvie@math.uni-mannheim.de}
 
 \end{document}
