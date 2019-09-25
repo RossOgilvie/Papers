@@ -9,34 +9,35 @@
 \maketitle
 
 \begin{abstract}
-In this paper we give an explicit description of the moduli space of equivariant harmonic tori in $\S^3$. 
-Due to Hitchin, a harmonic torus is described by its spectral data, a hyperelliptic curve together with a pair of differentials and a line bundle. Equivariant harmonic correspond to a hyperelliptic curve with genus zero or one. The space of spectral data is naturally a discrete fibre bundle over the space of so-called spectral curves.
-For genus zero, which are the homogeneous tori, the space of spectral curves is a disc and the bundle is trivial.
-For genus one, we index the path connected components of the space of spectral curves and show that they are either `helicoids' or annuli, and that they densely foliate the parameter space. The bundle structure of the moduli space of spectral data over the annuli components is nontrivial.
-By using elliptic integrals to construct the spectral data we are able to give explicit formulae at every stage.
-% This work untilises integrable systems methods common to harmonic and constant mean curvature maps. 
-% It aims to provide a concrete model to investigate hypotheses for higher spectral genus cases.
+In this paper we give an explicit parameterisation of the moduli space of equivariant harmonic tori in $\S^3$. 
+As proved in~\cite{Hitchin1990}, a harmonic torus is described by its spectral data, which consists of a hyperelliptic curve together with a pair of differentials and a line bundle. The space of spectral data is naturally a fibre bundle over the space of spectral curves.
+For homogeneous tori the space of spectral curves is a disc and the bundle is trivial.
+For tori with a one-dimensional invariance group, we enumerate the path connected components of the space of spectral curves and show that they are either `helicoids' or annuli, and that they densely foliate the parameter space. The bundle structure of the moduli space of spectral data over the annuli components is nontrivial.
+In the two cases, the spectral data require only elementary and elliptic functions respectively and we give explicit formulae at every stage.
 Homogeneous harmonic tori and the Gauss maps of Delaunay cylinders are used as illustrative examples.
 \end{abstract}
 
 \section{Introduction}\label{sec:Introduction}
 
-In this paper we consider harmonic maps from $\mathbb{T}^2$ to $\S^3$,
-and give explicit descriptions of the moduli space of such maps whose spectral curves are genus zero or one. 
-Spectral curves arise from the correspondence between a harmonic map and a hyperelliptic curve with additional data, as described in~\cite{Hitchin1990}. The additional data of these spectral curves include marked points, differentials of the second kind, and a line bundle. The genus of the spectral curve is a natural invariant of the harmonic map.
-Given a spectral curve one can choose the differentials from a $\mathbb{Z}^2$ lattice and the line bundle from a subvariety of Jacobian. Therefore the main difficulty is \hl{in understanding} the moduli space of spectral curves.
-It was already known that the space of spectral curves of genus zero is an open disc~\cite[Section 9]{Hitchin1990}.
-For spectral curves of genus one, we are able to enumerate the path connected components and show that they are two-dimensional surfaces, either simply connected or annuli. Moreover, by constructing an adapted coordinate system we foliate the parameter space of hyperelliptic curves and exhibit the moduli space as a dense collection of leaves.
-The bundle structure of the moduli space of spectral data over the simply connected components is obviously trivial, but over the annuli components it is nontrivial. We will explain its structure in terms of a monodromy action on the $\Z^2$ lattice of differentials.
+In this paper we consider harmonic maps from a $2$-torus to the unit $\S^3$ that are equivariant with respect to the action $\SO(4)$.
+Hitchin~\cite{Hitchin1990} gave a correspondence between harmonic maps and hyperelliptic curves with additional data. A hyperelliptic curve that occurs in this correspondence is called a spectral curve. 
+The genus of the spectral curve is a natural invariant of the harmonic map; homogeneous tori are exactly those whose spectral curve is genus zero and non-homogeneous equivariant maps have spectral genus zero.
+The additional data of these spectral curves include marked points, differentials of the second kind, and a line bundle. 
+Given a spectral curve one can choose the differentials from a $\mathbb{Z}^2$ lattice and the line bundle from a real subvariety of the Jacobian. Therefore the main difficulty is to describe the moduli space of spectral curves.
+
+It was already known that the space $\mathcal{S}_0$ of spectral curves of genus zero is an open disc~\cite[Section 9]{Hitchin1990}.
+For the space $\mathcal{S}_1$ of spectral curves of genus one, we are able to enumerate the path connected components and show that they are two-dimensional surfaces, either contractible or annuli. Moreover, by constructing an appropriate coordinate system we foliate the parameter space of hyperelliptic curves and exhibit $\mathcal{S}_1$ as a dense collection of leaves.
+The bundle structure of the space $\mathcal{M}_1$ of spectral data over the contractible components is obviously trivial, but over the annuli components it is nontrivial. We will explain its structure in terms of a monodromy action on the $\Z^2$ lattice of differentials.
 
 Our investigation was motivated by~\cite{Kilian2015}, which examines constant mean curvature (CMC) tori in $\S^3$. 
-Kilian, Schmidt, and Schmitt establish that generically the spectral curves of CMC tori come in one-dimensional families. \hl{The theory of harmonic and CMC tori are overlapping in the sense that a CMC surface with zero mean curvature is exactly a conformal harmonic map.}
+Kilian, Schmidt, and Schmitt establish that generically the spectral curves of CMC tori come in one-dimensional families. The theories of harmonic and CMC surfaces overlap in the sense that a conformally parameterised surface is harmonic iff it has mean curvature zero.
 Another point of connection, due to Ruh-Vilms~\cite{Ruh1970}, is that the Gauss maps of conformally parametrised CMC surfaces in $\R^3$ are non-conformal harmonic maps to a great-sphere in $\S^3$.
-In contrast to the CMC, for harmonic tori it is known that, for any genus, the moduli space of spectral curves is generically two-dimensional~\cite{Carberry2019} (and in particular the spaces of spectral curves with genus zero, one, and two are smooth surfaces) and so there is a broader range of possibilities for the topology of the space and how it is embedded within the space of hyperelliptic curves.
+In contrast to CMC tori, for harmonic tori it is known that the moduli space of spectral curves of any genus is generically two-dimensional~\cite{Carberry2019} (and in particular the spaces of spectral curves with genus zero, one, and two are smooth surfaces) and so there is a broader range of possibilities for the topology of the space and how it is embedded within the space of hyperelliptic curves.
 
-A good illustration of the space $\mathcal{S}_1$ of spectral curves of genus one is given by its cross sections. In our context, there is a natural parameter space of curves in which $\mathcal{S}_1$ lives, but it is not simply connected. We will construct coordinate charts on the universal cover of the parameter space of the form
+A good illustration of the space $\mathcal{S}_1$ of spectral curves of genus one is given by its cross sections. In our context, there is a natural parameter space in which $\mathcal{S}_1$ lives, but it is not simply connected. We will construct coordinate charts on the universal cover of the parameter space of the form
 \[
 \left\{ \bra{p,q,k,\tilde{X}} \in I \times \R \times (0,1) \times \R \right\},
+\labelthis{eqn:parameter demo}
 \]
 where $I\subset\R^+$ is an interval. The preimage of $\mathcal{S}_1$ is given in these coordinates by $p\in\Q^+$ and $q\in\Q$. 
 This decomposes the preimage into path connected components. 
@@ -138,17 +139,25 @@ Both $p\in\Q^+$ and $k$ are unchanged by the group action, so let us take a cros
 
 One can understand the role of $p$ as determining the angle between the translation $\tilde{\lambda}$ and the coordinate axes. As $p$ tends to $1$, the translation aligns more closely with the $q$-axis. When $p=1$ lines of constant $q$ are in the direction of translation and close up into circles under the group action. We think of this exceptional case $p=1$ as the transition from left-handed to right-handed `helicoids'. The cross-section diagram is shown in Figure~\ref{fig:level set quotient p1} or in full in Figure~\ref{fig:p1 plot}.
 
-A precise statement of our results is the following. In Theorem~\ref{thm:topology_curves} we prove that the subset of the parameter space with $p\neq 1$ constant is diffeomorphic to 
+A precise statement of our results is the following. As explained above, the space $\mathcal{S}_1$ of spectral curves naturally sits within a parameter space $\mathcal{A}/\mathcal{Z}_2$ whose universal cover has coordinate charts as in Equation~\eqref{eqn:parameter demo}. Spectral curves are points of this space such that the coordinates $p$ and $q$ are rational, and thus are locally constant on the components of $\mathcal{S}_1$.
+\begin{thm}\label{thm:topology_curves}
+For $p\neq 1$, the subspace $\mathcal{A}(p)/\mathbb{Z}_2$ of $\mathcal{A}/\mathbb{Z}_2$, where $S=p$, is diffeomorphic to
 \[
-\left\{ \bra{[q],k,\tilde{X}} \in \R/(p-1)\Z \times (0,1) \times \R \right\}.
+\left\{ \bra{[q],k,\tilde{X}} \in \bra{\R/ (p-1)\Z} \times (0,1) \times \R \right\}.
 \]
-The points where $[q] \in \Q/(p-1)\Z$ correspond to spectral curves. This is a union of `helicoids'.
-For $p=1$, by contrast, Theorem~\ref{thm:topology_curves_p1} shows that the subset is 
+If $p\in\Q$ then the subspace of spectral curves is obtained by restricting $q$ to be rational;
 \[
-\left\{ \bra{q,k,\left[\tilde{X}\right]} \in \R \times (0,1) \times \R/\pi\Z \right\}.
+\mathcal{S}_1 \cap \mathcal{A}(p)/\mathbb{Z}_2  = \left\{ \bra{[q],k,\tilde{X}} \mid [q] \in \Q/ (p-1)\Z \right\}.
 \]
-This time the spectral curves are the subset where $q\in\Q$ and is a union of annuli.
-
+\end{thm}
+Our parameterisation shows that $\mathcal{S}_1 \cap \mathcal{A}(p)/\mathbb{Z}_2$ is a union of `helicoids'. For $p=1$, by contrast,
+\begin{thm}\label{thm:topology_curves_p1}
+The space of marked curves $\mathcal{A}(1)/\mathbb{Z}_2$ is diffeomorphic to
+\[
+\left\{ \bra{q,k,\left[\tilde{X}\right]} \in \R \times (0,1) \times \R/\pi\Z \right\},
+\]
+the product of $\R$ and an annulus, such that the subspace of spectral curves is the restriction of the first component of the product to $\Q$.
+\end{thm}
 
 
 
@@ -569,7 +578,7 @@ The third stage addresses this deficiency in $T$. In Part~\ref{sub:Universal Cov
 \[
 \mathcal{\tilde{A}}(p) \diffeo \left\{ \bra{q,k,\tilde{X}} \in \R \times (0,1) \times \R \right\}.
 \]
-This lemma therefore proves that the level sets $S = p$ and $\tilde{T} = q$ in $\mathcal{\tilde{A}}(p)$, which we denote $\mathcal{\tilde{A}}(p,q)$, are simply connected. Indeed, by our choice of coordinates they are coordinate planes. The decomposition of the preimage of the space of spectral curves into path connected components is
+This lemma therefore proves that the level sets $S = p$ and $\tilde{T} = q$ in $\mathcal{\tilde{A}}(p)$, which we denote $\mathcal{\tilde{A}}(p,q)$, are contractible. Indeed, by our choice of coordinates they are coordinate planes. The decomposition of the preimage of the space of spectral curves into path connected components is
 \[
 \tilde{\pi}^{-1}(\mathcal{S}_1) = \coprod_{p \in \Q^+, q\in\Q} \mathcal{\tilde{A}}(p,q).
 \]
@@ -581,7 +590,7 @@ The group of covering transformations is proved to be $\langle \tilde{\lambda} \
 Thus $\tilde{\lambda}$ maps $\mathcal{\tilde{A}}(p,q)$ to $\mathcal{\tilde{A}}(p,q + p-1)$. 
 % If $p$ and $q$ are rational, so too is $q + (p-1)$ and hence the group $\mathcal{G} = \Z\langle \tilde{\lambda}\rangle$ of covering transformations restricts to give a group action on the preimage of the space of spectral curves.
 
-\hl{Having described the path components} of $\mathcal{S}_1$, in the final stage we can examine the bundle structure of $\mathcal{M}_1$. Because it is a discrete fibre bundle, it must be trivial over the simply connected components of the base. However, over the components of $\mathcal{S}_1$ which are annuli, where $p=1$, the bundle is not trivial. We saw in the previous section that the fibre can be described in terms of matrices whose columns are independent elements of the $\Z^2$ lattice of differentials. The nontrivial structure of the bundle can be expressed in terms of a monodromy action on this lattice. The total space of the bundle $\mathcal{M}_1$ is shown to be a disjoint union of two dimensional strips.
+\hl{Having described the path components} of $\mathcal{S}_1$, in the final stage we can examine the bundle structure of $\mathcal{M}_1$. Because it is a discrete fibre bundle, it must be trivial over the contractible components of the base. However, over the components of $\mathcal{S}_1$ which are annuli, where $p=1$, the bundle is not trivial. We saw in the previous section that the fibre can be described in terms of matrices whose columns are independent elements of the $\Z^2$ lattice of differentials. The nontrivial structure of the bundle can be expressed in terms of a monodromy action on this lattice. The total space of the bundle $\mathcal{M}_1$ is shown to be a disjoint union of two dimensional strips.
 
 
 Recall that $\mathcal{A}(p)/\mathbb{Z}_2$ denotes the subspace where $p$ is fixed. These coordinates now foliate of $\mathcal{A}/\mathbb{Z}_2$. Explicitly, for $p\neq 1$ in Theorem~\ref{thm:topology_curves} we have that
@@ -1518,7 +1527,63 @@ As $u$ and $v$ are both positive, it must be that $\tilde{u},\tilde{v} \in (2\pi
     % unit circle
     \draw (0,0) circle [radius=3];
     % branch point circle
-    \draw[color=black] (0,6) circle [radius=5.7];
+    \draw[color=black] (0,6) circle [radius=5.7];\begin{thm}\label{thm:topology_curves}
+        For $p\neq 1$, the subspace $\mathcal{A}(p)/\mathbb{Z}_2$ of $\mathcal{A}/\mathbb{Z}_2$, where $S=p$, is diffeomorphic to
+        \[
+        \left\{ \bra{[q],k,\tilde{X}} \in \bra{\R/ (p-1)\Z} \times (0,1) \times \R \right\}.
+        \]
+        If $p\in\Q$ then the subspace of spectral curves is obtained by restricting $q$ to be rational;
+        \[
+        \mathcal{S}_1 \cap \mathcal{A}(p)/\mathbb{Z}_2  = \left\{ \bra{[q],k,\tilde{X}} \mid [q] \in \Q/ (p-1)\Z \right\}.
+        \]
+        \begin{proof}
+        Fix $p\neq 1$ and consider $\mathcal{A}(p)/\mathbb{Z}_2$. It is the quotient of $\mathcal{\tilde{A}}(p)$ by the group of covering transformations $\Z\langle\tilde{\lambda}\rangle$. By Lemma~\ref{lem:T_graph}, $\mathcal{\tilde{A}}(p)$ is foliated by $\mathcal{\tilde{A}}(p,q)$ and we have just shown in~\eqref{eqn:group action} how different $\mathcal{\tilde{A}}(p,q)$ can be identified if their values of $q$ differ by a multiple of $p-1$. Hence it is sufficient to take one representative from each element of $\R/(p-1)\Z$ to cover the image.
+        Further, from Lemma~\ref{lem:closing_conds} we know that a point of $\mathcal{A}/\mathbb{Z}_2$ corresponds to a spectral curve exactly when $S=p$ and $T=q$ are rationally valued.
+        \end{proof}
+        \end{thm}
+        
+        This leaves just one special case, where $p=1$\begin{thm}\label{thm:topology_curves}
+For $p\neq 1$, the subspace $\mathcal{A}(p)/\mathbb{Z}_2$ of $\mathcal{A}/\mathbb{Z}_2$, where $S=p$, is diffeomorphic to
+\[
+\left\{ \bra{[q],k,\tilde{X}} \in \bra{\R/ (p-1)\Z} \times (0,1) \times \R \right\}.
+\]
+If $p\in\Q$ then the subspace of spectral curves is obtained by restricting $q$ to be rational;
+\[
+\mathcal{S}_1 \cap \mathcal{A}(p)/\mathbb{Z}_2  = \left\{ \bra{[q],k,\tilde{X}} \mid [q] \in \Q/ (p-1)\Z \right\}.
+\]
+\begin{proof}
+Fix $p\neq 1$ and consider $\mathcal{A}(p)/\mathbb{Z}_2$. It is the quotient of $\mathcal{\tilde{A}}(p)$ by the group of covering transformations $\Z\langle\tilde{\lambda}\rangle$. By Lemma~\ref{lem:T_graph}, $\mathcal{\tilde{A}}(p)$ is foliated by $\mathcal{\tilde{A}}(p,q)$ and we have just shown in~\eqref{eqn:group action} how different $\mathcal{\tilde{A}}(p,q)$ can be identified if their values of $q$ differ by a multiple of $p-1$. Hence it is sufficient to take one representative from each element of $\R/(p-1)\Z$ to cover the image.
+Further, from Lemma~\ref{lem:closing_conds} we know that a point of $\mathcal{A}/\mathbb{Z}_2$ corresponds to a spectral curve exactly when $S=p$ and $T=q$ are rationally valued.
+\end{proof}
+\end{thm}
+
+This leaves just one special case, where $p=1$. We see that the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(1)$ fixes the value of $\tilde{T}$ and so does not identify different level sets $q=\tilde{T}$. Instead, the group action creates an equivalence relation on each level set. Specifically, the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(1,q)$ given by~\eqref{eqn:group action} reads $\bra{1,q,k,\tilde{X}} \mapsto \bra{1, q, k, \tilde{X} + \pi}$.
+
+\begin{thm}\label{thm:topology_curves_p1}
+The space of marked curves $\mathcal{A}(1)/\mathbb{Z}_2$ is diffeomorphic to
+\[
+\left\{ \bra{q,k,\left[\tilde{X}\right]} \in \R \times (0,1) \times \R/\pi\Z \right\},
+\]
+the product of $\R$ and an annulus, such that the subspace of spectral curves is the restriction of the first component of the product to $\Q$.
+
+\begin{proof}
+The orbit of a point $(1,q,k,\tilde{X})$ of $\mathcal{\tilde{A}}(1)$ is $\bra{1,q,k,\tilde{X}+\pi\Z}$,
+so the quotient sends $\tilde{X} \in \R$ to $\left[\tilde{X}\right] \in \R/\pi\Z$. The conclusion about the spectral curves again follows immediately from Lemma~\ref{lem:closing_conds}.
+\end{proof}
+\end{thm}. We see that the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(1)$ fixes the value of $\tilde{T}$ and so does not identify different level sets $q=\tilde{T}$. Instead, the group action creates an equivalence relation on each level set. Specifically, the action of $\tilde{\lambda}$ on $\mathcal{\tilde{A}}(1,q)$ given by~\eqref{eqn:group action} reads $\bra{1,q,k,\tilde{X}} \mapsto \bra{1, q, k, \tilde{X} + \pi}$.
+        
+        \begin{thm}\label{thm:topology_curves_p1}
+        The space of marked curves $\mathcal{A}(1)/\mathbb{Z}_2$ is diffeomorphic to
+        \[
+        \left\{ \bra{q,k,\left[\tilde{X}\right]} \in \R \times (0,1) \times \R/\pi\Z \right\},
+        \]
+        the product of $\R$ and an annulus, such that the subspace of spectral curves is the restriction of the first component of the product to $\Q$.
+        
+        \begin{proof}
+        The orbit of a point $(1,q,k,\tilde{X})$ of $\mathcal{\tilde{A}}(1)$ is $\bra{1,q,k,\tilde{X}+\pi\Z}$,
+        so the quotient sends $\tilde{X} \in \R$ to $\left[\tilde{X}\right] \in \R/\pi\Z$. The conclusion about the spectral curves again follows immediately from Lemma~\ref{lem:closing_conds}.
+        \end{proof}
+        \end{thm}
     
     % \gamma_+ path, from 1
     \draw[color=red,dashed,>->] (2.9,0.05)
@@ -1601,7 +1666,7 @@ so the quotient sends $\tilde{X} \in \R$ to $\left[\tilde{X}\right] \in \R/\pi\Z
 \end{thm}
 
 These two theorems deliver an understanding of the subspace of spectral curves $\mathcal{S}_1$ within $\mathcal{A}/\mathbb{Z}_2$. 
-For $p$ not equal to one, the components of $\mathcal{S}_1(p)$ are simply connected and dense within $\mathcal{A}(p)/\mathbb{Z}_2$. As can be seen in Figure~\ref{fig:p05 plot} below, they should be thought of as being intertwined around a central axis $\Delta\cap\{S=p\}$, similar to a family of helicoids. But for $p$ equal to one, instead we have a dense collection of annuli $\mathcal{S}_1(1)$, as in Figure~\ref{fig:p1 plot}.
+For $p$ not equal to one, the components of $\mathcal{S}_1(p)$ are contractible and dense within $\mathcal{A}(p)/\mathbb{Z}_2$. As can be seen in Figure~\ref{fig:p05 plot} below, they should be thought of as being intertwined around a central axis $\Delta\cap\{S=p\}$, similar to a family of helicoids. But for $p$ equal to one, instead we have a dense collection of annuli $\mathcal{S}_1(1)$, as in Figure~\ref{fig:p1 plot}.
 
 Unlike true helicoids however, cross-sections perpendicular to the central axis do not meet the axis. Instead they spiral infinitely closer. In this respect, they behave like the cone of a spiral. This aspect is especially prominent in Figure~\ref{fig:p1 plot}, which one could think of as a family of cones with a common vertex (though the plotting software has difficulty for $k\approx 1$, so the `cones' appear to be heading towards the white hole in the middle of the figure but are truncated. The centre of this white hole is the vertex). Some aspects of this vertex structure is known to the authors and will be addressed in a future paper.
 We saw in the introduction to this chapter that the parameter $p$ can be thought of as controlling the slope of the level sets as they wind around the central axis. From this point of view, $p=1$ is the intermediate case between right and left handed spirals where the slope is `flat' and the level sets `close up'.
@@ -1676,10 +1741,10 @@ b(1)
 \end{align*}
 so that $\Psi^P(1) - \Psi^P(0) = - m' \Psi^E$. This shows that every loop around the annulus shifts $\Psi^P$ by $m' \Psi^E$.
 
-However the space of triples $(\Sigma,\Theta^1,\Theta^2)$ such that $\Sigma \in \mathcal{S}_1(1,q)$ is simply connected. Given any closed path $\ell$ in it, we may project this loop down to $\mathcal{S}_1(1,q)$. 
+This causes the space of triples $(\Sigma,\Theta^1,\Theta^2)$ such that $\Sigma \in \mathcal{S}_1(1,q)$ to be simply connected. Given any closed path $\ell$ in it, we may project this loop down to $\mathcal{S}_1(1,q)$. 
 Suppose for contradiction that the projection is non-trivial; that it winds a nonzero number of times around the annulus. By assumption the differentials are unchanged from the beginning to end of the path, so either $m' = 0$ or $l_1=l_2 = 0$. The former is excluded because by definition $n'/m' = q$ and so $m'$ is never zero. The latter implies that the differentials are both multiples of $\Theta^E$, which by~\ref{P:linear independence} contradicts their linear independence. 
 Of course, if the projection of the loop is null-homotopic, then it is contained in a simply connected neighbourhood $\mathcal{V}$ of $\mathcal{S}_1(1,q)$ and we may use the frame $\langle \Psi^E,\Psi^P \rangle$ to lift to a null-homotopy of $\ell$ in the space of triples.
-This demonstrates that every closed path in $\ell$ is null-homotopic, hence each connected component is diffeomorphic to the universal cover of the annulus $\mathcal{S}_1(1,q)$, i.e. a ribbon $(0,1)\times \R$. And because this is contractible, it follows that $\mathcal{M}_1$ is trivial as a bundle over the space of triples. In other words, the choice of line bundle $E$ appears as a circle factor in $\mathcal{M}_1$.
+\hl{This demonstrates that every closed path} in $\ell$ is null-homotopic, hence each connected component is diffeomorphic to the universal cover of the annulus $\mathcal{S}_1(1,q)$, i.e. a ribbon $(0,1)\times \R$. And because this is contractible, it follows that $\mathcal{M}_1$ is trivial as a bundle over the space of triples. In other words, the choice of line bundle $E$ appears as a circle factor in $\mathcal{M}_1$.
 
 We can translate the shift of $\Psi^P$ into a statement about $\Mat_2^*\Z$. Given a tuple of spectral data $(\Sigma,\Theta^1,\Theta^2)$ in $\mathcal{M}_1(1,q)$, one is free to vary $\Sigma$ within $\mathcal{S}_1(1,q)$, but the effect on the differentials of making loop around  the annulus is
 \begin{align*}
@@ -1736,10 +1801,11 @@ In summary, $\mathcal{M}_1$ is the disjoint union
 \;\amalg
 \coprod_{\substack{p \in \Q^+,\, p \neq 1\\ [q] \in \Q/(p-1)\Z}} \Big[ \mathcal{S}_1(p,[q]) \times \Mat_2^*\Z \times \S^1 \Big] \\
 =
-\coprod_{q \in \Q} \Big[ (0,1)\times\R \times \bra{\Mat_2^*\Z / B_q} \times \S^1 \Big]
+(0,1)\times\R \times \left[
+\coprod_{q \in \Q} \Mat_2^*\Z / B_q
 \;\amalg
-\coprod_{\substack{p \in \Q^+,\, p \neq 1\\ [q] \in \Q/(p-1)\Z}}
-\Big[ (0,1)\times\R \times \Mat_2^*\Z \times \S^1 \Big].
+\coprod_{\substack{p \in \Q^+,\, p \neq 1\\ [q] \in \Q/(p-1)\Z}} \Mat_2^*\Z
+\right] \times \S^1.
 \end{gather*}
 
 
@@ -1844,7 +1910,7 @@ which is to say the branch point of the spectral curve associated to $g^{-1}$ is
 % \]
 % Recall the interpretation of span of the principal parts as the universal cover of the domain, with the lattice generated by these differentials corresponding to the lattice of periods. The previous equation then shows a rotation by $\iu$, corresponding to how we had to define $\tilde{w} = \iu w$.
 
-Returning to genus one spectral curves, of special interest are the spectral curves that are a fixed point of this transformation $\chi: \Sigma(\alpha,\beta) \mapsto \Sigma(-\alpha,-\beta)$. For these spectral curves $\chi_{(\alpha,\beta)}$ is an extra involution and $\beta=-\alpha$. If we can show that they admit spectral data these would be exactly the genus one curves that would meet the conditions for the associated harmonic map to have a totally geodesic two-sphere as its image~\cite[Theorem~8.20]{Hitchin1990}. Hitchin~\cite[p693]{Hitchin1990} identifies a particular one parameter family of these maps as the Gauss maps of Delaunay surfaces. Burstall and Kilian~\cite{Burstall2006} also examine these Delaunay surfaces and their associated families from a loop-group perspective. We shall show that all such marked curves in fact admit spectral data and further identify in which component of $\mathcal{S}_1$ they reside.
+Returning to genus one spectral curves, of special interest are the spectral curves that are a fixed point of this transformation $\chi: \Sigma(\alpha,\beta) \mapsto \Sigma(-\alpha,-\beta)$. For these spectral curves $\chi_{(\alpha,\beta)}$ is an extra involution and $\beta=-\alpha$. If we can show that they admit spectral data these would be exactly the genus one curves that would meet the conditions for the associated harmonic map to have a totally geodesic two-sphere as its image~\cite[Theorem~8.20]{Hitchin1990}. Hitchin~\cite[p693]{Hitchin1990} identifies a particular one parameter family of these maps as the Gauss maps of Delaunay surfaces. Burstall and Kilian~\cite{Burstall2006} also examine these Delaunay surfaces and their associated families from a loop-group perspective. We shall show that all such curves in fact admit spectral data and further identify in which component of $\mathcal{S}_1$ they reside.
 
 Suppose that $\Sigma(\alpha,-\alpha)$ is a curve that is fixed by $\chi$. As $\chi$ sends $p \mapsto p^{-1}$, it follows that $p$ is $1$. To show that $\Sigma(\alpha,-\alpha)$ admits spectral data it remains to shows that $T$ is rationally valued at this point $(\alpha,-\alpha) \in \mathcal{A}$. But note that $\chi$ and $\lambda$ act in the same way on $\{(\alpha,-\alpha) \in \mathcal{A}$, as one would expect because they are both swapping $\alpha$ and $-\alpha$, the two branch points inside the unit disc. Precomposing $T_0$ with $\lambda$ shifts its value by $1-p$, which in this case fixes $T_0$. On the other hand precomposing $T_0$ with $\chi$ negates the function. Together this shows that $T_0$ is zero for these curves. Conversely, the disjoint annuli that constitute $\mathcal{S}_1(1)$ are determined uniquely by the value $T_0$ takes on them.
 Therefore we have shown that $\{\Sigma(\alpha,-\alpha) \in \mathcal{A}/\mathbb{Z}_2\}$ is the only annulus of $\mathcal{S}_1(1)$ where $T_0$ is zero, and these are exactly the harmonic maps to the sphere with a genus one spectral curve.
