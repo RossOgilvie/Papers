@@ -1,5 +1,5 @@
-% \documentclass{article}
-\documentclass[CM,Submssn,SecEq]{degruyter-crelle}
+\documentclass{article}
+% \documentclass[CM,Submssn,SecEq]{degruyter-crelle}
 
 % \usepackage{latex_style}
 %% Common packages
@@ -21,10 +21,11 @@
 % For commutative diagrams
 \usepackage[heads=littlevee]{diagrams}
 
+
 % Already called by Crelle's class file
 % To adjust the formatting of captions
 % Have "Figure 1.2" and then a newline before the caption
-% \usepackage[labelsep=newline]{caption}
+\usepackage[labelsep=newline]{caption}
 
 \renewcommand{\floatpagefraction}{.8}%
 
@@ -57,7 +58,7 @@
 %useful commands
 \newcommand{\bra}[1]{\left(#1\right)}
 \newcommand{\abs}[1]{\left|#1\right|}
-\renewcommand{\norm}[1]{{\left\Vert#1\right\Vert}}
+\newcommand{\norm}[1]{{\left\Vert#1\right\Vert}}
 \newcommand{\Set}[2]{\left\{\; #1 \;\middle|\; #2 \;\right\}}
 \newcommand{\vt}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
 \newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
@@ -108,25 +109,25 @@
 \newcommand{\su}{\mathfrak{su}}
 \renewcommand{\sl}{\mathfrak{sl}}
 
+% FOR CRELLE
+% \firstpage{}\volume{}\volumeyear{}\copyrightyear{}\doiyear{}\doi{}\received{XXX}\revised{XXX}
 
-\firstpage{}\volume{}\volumeyear{}\copyrightyear{}\doiyear{}\doi{}\received{XXX}\revised{XXX}
+% \title[The space of equivariant harmonic tori in the $3$-sphere]{The space of equivariant harmonic tori in the $3$-sphere}
 
-\title[The space of equivariant harmonic tori in the $3$-sphere]{The space of equivariant harmonic tori in the $3$-sphere}
+% \author{Emma}{Carberry}{E.~Carberry}{Sydney}
+% \author{Ross}{Ogilvie}{R.~Ogilvie}{Mannheim}
 
-\author{Emma}{Carberry}{E.~Carberry}{Sydney}
-\author{Ross}{Ogilvie}{R.~Ogilvie}{Mannheim}
+% % \contact{Department, university, street, zip code, city, country}{e-mail}
+% \contact{School of Mathematics and Statistics, University of Sydney, NSW 2006, Australia}{emma.carberry@sydney.edu.au}
+% \contact{Lehrstuhl f\"ur Mathematik III, Universit\"at Mannheim, 68161 Mannheim, Germany}{r.ogilvie@math.uni-mannheim.de}
 
-% \contact{Department, university, street, zip code, city, country}{e-mail}
-\contact{School of Mathematics and Statistics, University of Sydney, NSW 2006, Australia}{emma.carberry@sydney.edu.au}
-\contact{Lehrstuhl f\"ur Mathematik III, Universit\"at Mannheim, 68161 Mannheim, Germany}{r.ogilvie@math.uni-mannheim.de}
-
-% \researchsupported{Please insert information concerning research grant support here.}
 
 \begin{document}
-% \title{The Space of Equivariant Harmonic Tori in $\S^3$}
-% \author{Emma Carberry and Ross Ogilvie}
-% \date{}
-% \maketitle
+% FOR ARXIV
+\title{The space of equivariant harmonic tori in the $3$-sphere}
+\author{Emma Carberry and Ross Ogilvie}
+\date{}
+\maketitle
 
 \begin{abstract}
 In this paper we give an explicit parametrisation of the moduli space of equivariant harmonic maps from a $2$-torus to $\S^3$. 
@@ -1975,16 +1976,22 @@ Returning to genus one spectral curves, of special interest are the spectral cur
 Suppose that $\Sigma(\alpha,-\alpha)$ is a curve that is fixed by $\chi$. As $\chi$ sends $p \mapsto p^{-1}$, it follows that $p$ is $1$. To show that $\Sigma(\alpha,-\alpha)$ admits spectral data it remains to shows that $T$ is rationally valued at this point $(\alpha,-\alpha) \in \mathcal{A}$. But note that $\chi$ and $\lambda$ act in the same way on $\{(\alpha,-\alpha) \in \mathcal{A}$, as one would expect because they are both swapping $\alpha$ and $-\alpha$, the two branch points inside the unit disc. Precomposing $T_0$ with $\lambda$ shifts its value by $1-p$, which in this case fixes $T_0$. On the other hand precomposing $T_0$ with $\chi$ negates the function. Together this shows that $T_0$ is zero for these curves. Conversely, the disjoint annuli that constitute $\mathcal{S}_1(1)$ are determined uniquely by the value $T_0$ takes on them.
 Therefore we have shown that $\{\Sigma(\alpha,-\alpha) \in \mathcal{A}/\mathbb{Z}_2\}$ is the only annulus of $\mathcal{S}_1(1)$ where $T_0$ is zero, and these are exactly the harmonic maps to the sphere with a genus one spectral curve.
 
-
-
-
-
-
-
-
-
-
-% \bibliographystyle{ross_bibsty}
+\bibliographystyle{ross_bibsty}
 \bibliography{zotero_real}
+
+\vfill
+~\\
+Dr Emma Carberry, \\
+School of Mathematics and Statistics, University of Sydney, NSW 2006, Australia \\
+email: \texttt{emma.carberry@sydney.edu.au}\\
+~\\
+Dr Ross Ogilvie, \\
+Mathematics Chair III, Universit\"at Mannheim, D-68131 Mannheim, Germany \\
+email: \texttt{r.ogilvie@math.uni-mannheim.de}
+
+
+
+
+
 
 \end{document}
